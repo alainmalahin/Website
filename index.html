@@ -3,39 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ALAIN MALAHIN</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-body{
-background:#000;
-color:white;
+html,body{
+width:100%;
+height:100%;
 font-family:Georgia,serif;
+overflow:hidden;
+background:#000;
 }
 
-
-
-.he.hero{
+.hero{
+width:100%;
 height:100vh;
-background-image:url("images/hero.webp");
-background-position:center;
-background-size:contain;
+background:url("images/hero.webp") center center;
+background-size:cover;
 background-repeat:no-repeat;
-background-color:#000;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 position:relative;
-text-align:center;
-overflow:hidden;
-}ro::before{
+}
+
+.hero::before{
 content:"";
 position:absolute;
 inset:0;
@@ -45,46 +42,49 @@ background:rgba(0,0,0,.45);
 .content{
 position:relative;
 z-index:2;
+text-align:center;
 padding:20px;
 }
 
 .logo{
 width:140px;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 h1{
-font-size:60px;
-letter-spacing:8px;
+font-size:clamp(50px,10vw,90px);
+color:white;
+letter-spacing:6px;
+line-height:.95;
 margin-bottom:20px;
 }
 
-.tagline{
+.gold{
+color:#D4AF37;
 font-size:22px;
-color:#d4af37;
-margin-bottom:18px;
+margin-bottom:15px;
 }
 
-.subtitle{
-font-size:20px;
-margin-bottom:45px;
+.sub{
+font-size:28px;
+margin-bottom:40px;
+color:white;
 }
 
-.btn{
+a{
 display:inline-block;
 padding:18px 60px;
-border:1px solid #d4af37;
-color:#fff;
+border:1px solid #D4AF37;
+color:white;
 text-decoration:none;
 letter-spacing:4px;
 transition:.3s;
 }
 
-.btn:hover{
-background:#d4af37;
-color:#000;
+a:hover{
+background:#D4AF37;
+color:black;
 }
-
 </style>
 </head>
 
@@ -98,17 +98,15 @@ color:#000;
 
 <h1>ALAIN<br>MALAHIN</h1>
 
-<p class="tagline">
+<div class="gold">
 History inspires. Identity defines.
-</p>
+</div>
 
-<p class="subtitle">
+<div class="sub">
 Enter the Universe
-</p>
+</div>
 
-<a href="#" class="btn">
-ENTER
-</a>
+<a href="#">ENTER</a>
 
 </div>
 
