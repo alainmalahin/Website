@@ -20,17 +20,22 @@ color:white;
 font-family:Georgia,serif;
 }
 
-.hero{
+
+
+.he.hero{
 height:100vh;
-background:url("images/hero.webp") center center/cover no-repeat;
+background-image:url("images/hero.webp");
+background-position:center;
+background-size:contain;
+background-repeat:no-repeat;
+background-color:#000;
 display:flex;
 align-items:center;
 justify-content:center;
 position:relative;
 text-align:center;
-}
-
-.hero::before{
+overflow:hidden;
+}ro::before{
 content:"";
 position:absolute;
 inset:0;
