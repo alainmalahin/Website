@@ -3,50 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MALAHIN ALAIN</title>
+
+<title>Alain Malahin</title>
 
 <style>
-body{
+
+*{
 margin:0;
-background:#0f0f0f;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
 color:white;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Georgia,serif;
+}
+
+.hero{
+
+height:100vh;
+
+background-image:url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 text-align:center;
 }
 
+.overlay{
+
+background:rgba(0,0,0,.55);
+
+width:100%;
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+}
+
+.logo{
+
+width:140px;
+margin-bottom:30px;
+
+}
+
 h1{
-font-size:48px;
+
+font-size:54px;
 letter-spacing:8px;
-margin:0;
+
+}
+
+h2{
+
+margin-top:15px;
+font-size:22px;
+font-weight:300;
+color:#d8c18a;
+
 }
 
 p{
-font-size:18px;
-color:#c9c9c9;
-margin-top:20px;
+
+margin-top:25px;
+font-size:20px;
+color:#ddd;
+
 }
 
-small{
-display:block;
-margin-top:40px;
-color:#777;
+.button{
+
+margin-top:45px;
+
+display:inline-block;
+
+padding:18px 40px;
+
+border:1px solid #d8c18a;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:3px;
+
+transition:.4s;
+
 }
+
+.button:hover{
+
+background:#d8c18a;
+
+color:black;
+
+}
+
 </style>
 
 </head>
+
 <body>
 
-<div>
-<h1>ALAIN MALAHIN</h1>
-<p>ERA: ORÍGENES</p>
-<p>Coming Soon</p>
+<section class="hero">
 
-<small>Premium Underwear • Apparel • Accessories</small>
+<div class="overlay">
+
+<img class="logo" src="logo.png">
+
+<h1>ALAIN MALAHIN</h1>
+
+<h2>History inspires. Identity defines.</h2>
+
+<p>Enter the Universe</p>
+
+<a class="button" href="#">ENTER</a>
+
 </div>
 
+</section>
+
 </body>
+
 </html>
