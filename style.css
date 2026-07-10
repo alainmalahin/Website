@@ -721,3 +721,63 @@ transform:translateY(0);
 }
 
 }
+/* ===== APERTURA DE PUERTAS ===== */
+
+.hero{
+position:relative;
+overflow:hidden;
+}
+
+.hero.open::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:140%;
+height:140%;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(circle,
+rgba(255,220,120,.95) 0%,
+rgba(255,190,0,.65) 25%,
+rgba(255,170,0,.20) 55%,
+transparent 80%);
+
+animation:portalFlash 1.2s forwards;
+
+pointer-events:none;
+
+z-index:20;
+
+}
+
+@keyframes portalFlash{
+
+0%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(.3);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(2.2);
+
+}
+
+}
