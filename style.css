@@ -1177,3 +1177,66 @@ filter:brightness(1);
 }
 
 }
+/* ===== TEXTO ORÍGENES ===== */
+
+.origin-text{
+
+margin-top:35px;
+
+text-align:center;
+
+}
+
+.origin-text p{
+
+margin:12px 0;
+
+font-size:22px;
+
+font-weight:300;
+
+letter-spacing:3px;
+
+color:#D4AF37;
+
+text-shadow:
+0 0 8px rgba(212,175,55,.35),
+0 0 20px rgba(212,175,55,.15);
+
+animation:goldText 5s ease-in-out infinite;
+
+}
+
+.origin-text p:last-child{
+
+font-size:19px;
+
+opacity:.82;
+
+}
+
+@keyframes goldText{
+
+0%{
+
+opacity:.78;
+
+}
+
+50%{
+
+opacity:1;
+
+text-shadow:
+0 0 15px rgba(212,175,55,.6),
+0 0 30px rgba(212,175,55,.25);
+
+}
+
+100%{
+
+opacity:.78;
+
+}
+
+}
