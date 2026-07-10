@@ -1,9 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("button");
+// ===== ALAIN MALAHIN =====
 
-  if (button) {
-    button.addEventListener("click", () => {
-      alert("Bienvenido a ALAIN MALAHIN");
-    });
-  }
+document.addEventListener("DOMContentLoaded", () => {
+
+    const enter = document.querySelector(".enter");
+
+    if (enter) {
+
+        enter.addEventListener("click", function(e){
+
+            e.preventDefault();
+
+            document.querySelector("#origins").scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        });
+
+    }
+
 });
