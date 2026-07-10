@@ -458,3 +458,10 @@ transition:.3s;
 background:#d4af37;
 color:#111;
 }
+body{
+transition:opacity .9s ease;
+}
+
+.fade-out{
+opacity:0;
+}
