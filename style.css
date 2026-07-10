@@ -432,16 +432,11 @@ font-size:17px;
 
 .origins-page{
     margin:0;
+    min-height:100vh;
     color:#fff;
     font-family:Georgia, serif;
-    overflow-x:hidden;
-    min-height:100vh;
 
-    background:url("images/9370A4FD-EAF5-46B3-A4A4-0F4CD8C42582.png") center center no-repeat;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background:url("images/origenes-bg.png") center center / cover no-repeat fixed;
 }
 
 .origins-hero{
