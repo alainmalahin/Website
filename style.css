@@ -482,27 +482,6 @@ color:#ddd;
     display:none;
 }
 
-.era-list{
-max-width:260px;
-margin:40px auto;
-text-align:left;
-background:rgba(255,255,255,.05);
-padding:25px;
-border-radius:14px;
-border:1px solid rgba(212,175,55,.25);
-}
-
-.era-list div{
-padding:8px 0;
-letter-spacing:2px;
-color:#bdbdbd;
-}
-
-.era-list .active{
-color:#d4af37;
-font-weight:bold;
-}
-
 .back-btn{
 display:inline-block;
 margin-top:40px;
