@@ -156,9 +156,13 @@ document.body.classList.add("fade-out");
 
 setTimeout(function(){
 
+setTimeout(function(){
+
 window.location.href="origenes.html";
 
-},900);
+},1700);
+
+},0);
 
 });
 
