@@ -116,27 +116,35 @@ letter-spacing:2px;
 }
 .music-btn{
 
-margin-top:30px;
+position:fixed;
 
-padding:14px 28px;
+top:20px;
 
-background:rgba(212,175,55,.15);
+right:20px;
+
+margin:0;
+
+padding:8px 14px;
+
+font-size:12px;
+
+letter-spacing:1px;
+
+background:rgba(0,0,0,.45);
 
 border:1px solid rgba(212,175,55,.6);
 
-color:#fff;
+color:#d4af37;
 
-font-size:16px;
+border-radius:25px;
 
-letter-spacing:2px;
+backdrop-filter:blur(10px);
 
 cursor:pointer;
 
-border-radius:50px;
+z-index:9999;
 
-backdrop-filter:blur(8px);
-
-transition:.4s;
+transition:.3s;
 
 }
 
