@@ -329,62 +329,71 @@ z-index:1;
 
 }
 
-/* MOBILE */
+/* ========= MÓVIL ========= */
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+.hero{
+    min-height:100dvh;
+    padding:20px;
+    background-position:center center;
+}
+
+.hero-content{
+    width:100%;
+    max-width:100%;
+    padding-top:40px;
+}
 
 .logo{
-
-width:240px;
-
+    width:180px;
+    max-width:80%;
 }
 
 h1{
-
-font-size:34px;
-
-letter-spacing:4px;
-
+    font-size:30px;
+    letter-spacing:3px;
+    margin-top:25px;
 }
 
 .tagline{
-
-font-size:16px;
-
+    font-size:15px;
+    line-height:1.6;
+    padding:0 15px;
 }
 
 .music-btn{
-
-font-size:14px;
-
-padding:12px 22px;
-
+    top:12px;
+    right:12px;
+    font-size:12px;
+    padding:8px 14px;
 }
 
 .enter-btn{
-
-padding:14px 34px;
-
-font-size:18px;
-
+    display:inline-block;
+    width:220px;
+    padding:16px 0;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-top:45px;
 }
 
 .inside{
-
-padding:80px 8%;
-
+    padding:70px 8%;
 }
 
 .inside h2{
-
-font-size:30px;
-
+    font-size:28px;
 }
 
 .inside p{
+    font-size:17px;
+    line-height:1.8;
+}
 
-font-size:17px;
-
+.doors{
+    grid-template-columns:1fr;
+    gap:25px;
 }
 
 }
