@@ -111,3 +111,38 @@ h1{
         filter: drop-shadow(0 0 5px rgba(255,190,70,.35));
     }
 }
+/* ===== LUZ DEL PORTAL ===== */
+
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+        rgba(255,215,120,.18),
+        transparent 60%);
+    animation: portalLight 6s ease-in-out infinite;
+    pointer-events:none;
+}
+
+@keyframes portalLight{
+    0%{
+        opacity:.35;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.08);
+    }
+
+    100%{
+        opacity:.35;
+        transform:scale(1);
+    }
+}
