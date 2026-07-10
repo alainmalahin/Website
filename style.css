@@ -54,12 +54,16 @@ max-width:900px;
 }
 
 .logo{
-width:170px;
-margin-bottom:35px;
-filter:
-drop-shadow(0 0 10px #d8a64d)
-drop-shadow(0 0 30px #ffcc55);
-animation:logoGlow 4s ease-in-out infinite;
+    width:280px;
+    max-width:80vw;
+    height:auto;
+    margin-bottom:35px;
+
+    filter:
+    drop-shadow(0 0 15px #d8a64d)
+    drop-shadow(0 0 40px gold);
+
+    animation:logoGlow 4s ease-in-out infinite;
 }
 
 @keyframes logoGlow{
