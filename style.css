@@ -1155,3 +1155,18 @@ transform:translateX(30px);
 }
 
 }
+@keyframes portalGlow{
+
+0%{
+filter:brightness(1);
+}
+
+50%{
+filter:brightness(1.15);
+}
+
+100%{
+filter:brightness(1);
+}
+
+}
