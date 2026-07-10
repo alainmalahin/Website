@@ -123,3 +123,22 @@ canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
 });
+const enter = document.querySelector(".enter-btn");
+
+if (enter) {
+
+    enter.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+
+            window.location = "origenes.html";
+
+        }, 900);
+
+    });
+
+}
