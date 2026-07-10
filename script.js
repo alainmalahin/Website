@@ -142,3 +142,24 @@ if (enter) {
     });
 
 }
+/* ===== TRANSICIÓN ENTER ===== */
+
+const enterBtn = document.querySelector(".enter-btn");
+
+if (enterBtn) {
+
+enterBtn.addEventListener("click", function(e){
+
+e.preventDefault();
+
+document.body.classList.add("fade-out");
+
+setTimeout(function(){
+
+window.location.href="origenes.html";
+
+},900);
+
+});
+
+}
