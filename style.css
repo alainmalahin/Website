@@ -45,20 +45,6 @@ background-size:cover;
 
 }
 
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,.45);
-
-backdrop-filter:blur(1px);
-
-}
-
 .hero-content{
 padding-top:80px;
 position:relative;
