@@ -21,7 +21,7 @@ overflow-x:hidden;
 position:relative;
 width:100%;
 height:100vh;
-background:url("images/hero.webp") center center/cover no-repeat;
+background:url("images/hero.jpg");
 display:flex;
 justify-content:center;
 align-items:center;
