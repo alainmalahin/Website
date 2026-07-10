@@ -163,3 +163,31 @@ window.location.href="origenes.html";
 });
 
 }
+/* ===== EFECTO ENTER ===== */
+
+const hero = document.querySelector(".hero");
+const enter = document.querySelector(".enter-btn");
+
+if(hero && enter){
+
+enter.addEventListener("click",function(e){
+
+e.preventDefault();
+
+hero.classList.add("open");
+
+setTimeout(function(){
+
+document.body.classList.add("fade-out");
+
+},700);
+
+setTimeout(function(){
+
+window.location.href="origenes.html";
+
+},1500);
+
+});
+
+}
