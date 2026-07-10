@@ -606,3 +606,18 @@ transform:translate(-50%,-50%) scale(.95);
 }
 
 }
+@keyframes logoFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
