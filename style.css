@@ -821,3 +821,77 @@ pointer-events:none;
 z-index:3;
 
 }
+/* ===== PUERTAS ===== */
+
+.hero{
+
+perspective:1600px;
+
+}
+
+.hero.open{
+
+animation:heroShake .8s ease;
+
+}
+
+@keyframes heroShake{
+
+0%{transform:scale(1);}
+25%{transform:scale(1.01);}
+50%{transform:scale(.995);}
+75%{transform:scale(1.01);}
+100%{transform:scale(1);}
+
+}
+/* ===== PORTAL ===== */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:260px;
+height:260px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,220,120,.55),
+rgba(255,180,0,.18),
+transparent 75%);
+
+filter:blur(30px);
+
+animation:portalGlow 5s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+@keyframes portalGlow{
+
+0%{
+opacity:.4;
+transform:translate(-50%,-50%) scale(.9);
+}
+
+50%{
+opacity:1;
+transform:translate(-50%,-50%) scale(1.2);
+}
+
+100%{
+opacity:.4;
+transform:translate(-50%,-50%) scale(.9);
+}
+
+}
