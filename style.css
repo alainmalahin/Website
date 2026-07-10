@@ -118,15 +118,15 @@ letter-spacing:2px;
 
 position:fixed;
 
-top:20px;
+top:14px;
 
-right:20px;
+right:12px;
 
 margin:0;
 
-padding:8px 14px;
+padding:5px 10px;
 
-font-size:12px;
+font-size:10px;
 
 letter-spacing:1px;
 
@@ -136,7 +136,7 @@ border:1px solid rgba(212,175,55,.6);
 
 color:#d4af37;
 
-border-radius:25px;
+border-radius:18px;
 
 backdrop-filter:blur(10px);
 
