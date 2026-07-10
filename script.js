@@ -1,3 +1,5 @@
+alert("SCRIPT OK");
+
 const musicBtn = document.getElementById("music-toggle");
 const music = document.getElementById("ambient-audio");
 
