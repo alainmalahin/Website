@@ -220,3 +220,34 @@ h1{
         transform: translateX(40px) translateY(20px);
     }
 }
+/* ===== RESPLANDOR DEL PORTAL ===== */
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at center,
+        rgba(255,210,90,.18) 0%,
+        rgba(255,170,40,.08) 35%,
+        transparent 70%);
+    mix-blend-mode:screen;
+    animation:portalGlow 4s ease-in-out infinite;
+    pointer-events:none;
+}
+
+@keyframes portalGlow{
+    0%{
+        opacity:.35;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.03);
+    }
+
+    100%{
+        opacity:.35;
+        transform:scale(1);
+    }
+}
