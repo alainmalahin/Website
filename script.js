@@ -265,3 +265,73 @@ canvas.height=window.innerHeight;
 });
 
 }
+/* ===== EXPLOSIÓN DORADA ===== */
+
+function portalBurst(){
+
+const canvas=document.getElementById("particles");
+
+if(!canvas) return;
+
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let sparks=[];
+
+for(let i=0;i<80;i++){
+
+sparks.push({
+
+x:canvas.width/2,
+
+y:canvas.height/2,
+
+vx:(Math.random()-0.5)*12,
+
+vy:(Math.random()-0.5)*12,
+
+r:Math.random()*3+1,
+
+life:100
+
+});
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+sparks.forEach(s=>{
+
+ctx.beginPath();
+
+ctx.fillStyle="rgba(212,175,55,"+(s.life/100)+")";
+
+ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+
+ctx.fill();
+
+s.x+=s.vx;
+
+s.y+=s.vy;
+
+s.life-=2;
+
+});
+
+sparks=sparks.filter(s=>s.life>0);
+
+if(sparks.length){
+
+requestAnimationFrame(animate);
+
+}
+
+}
+
+animate();
+
+}
