@@ -27,3 +27,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+const musicBtn = document.getElementById("music-toggle");
+const ambientAudio = document.getElementById("ambient-audio");
+
+if (musicBtn && ambientAudio) {
+
+    musicBtn.addEventListener("click", () => {
+
+        if (ambientAudio.paused) {
+
+            ambientAudio.volume = 0.35;
+            ambientAudio.play();
+
+            musicBtn.innerHTML = "🔇 Silenciar";
+
+        } else {
+
+            ambientAudio.pause();
+
+            musicBtn.innerHTML = "🔊 Música";
+
+        }
+
+    });
+
+}
