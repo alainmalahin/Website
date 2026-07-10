@@ -152,6 +152,50 @@ display:inline-block;
 
 margin-top:40px;
 
+padding:18px 55px;
+
+background:rgba(212,175,55,.08);
+
+border:2px solid #d4af37;
+
+border-radius:50px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:20px;
+
+letter-spacing:6px;
+
+backdrop-filter:blur(10px);
+
+transition:.45s;
+
+box-shadow:0 0 18px rgba(212,175,55,.25);
+
+}
+
+.enter-btn:hover{
+
+background:#d4af37;
+
+color:#000;
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 0 18px rgba(212,175,55,.6),
+
+0 0 40px rgba(212,175,55,.4);
+
+}
+
+display:inline-block;
+
+margin-top:40px;
+
 padding:16px 48px;
 
 border:2px solid #d4af37;
