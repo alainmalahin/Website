@@ -148,7 +148,7 @@ display:inline-block;
 
 margin-top:50px;
 
-padding:12px 30px;
+padding:8px 21px;
 width:180px;
 text-align:center;
 background:rgba(212,175,55,.08);
@@ -161,9 +161,9 @@ color:#fff;
 
 text-decoration:none;
 
-font-size:16px;
+font-size:14px;
 
-letter-spacing:3px;
+letter-spacing:2px;
 
 backdrop-filter:blur(10px);
 
