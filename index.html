@@ -1,113 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ALAIN MALAHIN</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#000;
-color:white;
-font-family:Georgia,serif;
-}
-
-.hero{
-height:100vh;
-background:url("images/hero.webp") center center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:700px;
-}
-
-.logo{
-width:130px;
-margin-bottom:30px;
-}
-
-h1{
-font-size:58px;
-letter-spacing:5px;
-margin-bottom:20px;
-}
-
-p{
-font-size:22px;
-color:#d4af37;
-margin-bottom:40px;
-}
-
-button{
-padding:18px 60px;
-background:transparent;
-border:2px solid #d4af37;
-color:white;
-font-size:20px;
-letter-spacing:3px;
-cursor:pointer;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- MÚSICA -->
+<audio id="ambient-audio" loop>
+    <source src="audio/ambient.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PARTÍCULAS -->
+<div class="particles">
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- NIEBLA -->
+<div class="fog fog1"></div>
+<div class="fog fog2"></div>
+
+<!-- PORTADA -->
+
 <section class="hero">
+
+<div class="overlay"></div>
 
 <div class="hero-content">
 
 <img src="images/logo.png" class="logo">
-<h1></h1>
 
-<p>History inspires. Identity defines.</p>
+<h1>ALAIN MALAHIN</h1>
 
-<button>ENTER</button>
-<script src="script.js"></script>
+<p>
+
+History inspires. Identity defines.
+
+</p>
+
+<button id="enter">
+
+ENTER
+
+</button>
+
 </div>
 
 </section>
+
+<!-- PRIMERA ERA -->
+
 <section id="origins">
 
-    <div class="inside">
+<div class="inside">
 
-        <h2>ERA · ORÍGENES</h2>
+<h2>ERA · ORÍGENES</h2>
 
-        <p>El comienzo de toda historia.</p>
+<p>
 
-    </div>
+El comienzo de toda historia.
+Inspirado en las primeras huellas de la humanidad.
+
+</p>
+
+</div>
 
 </section>
-<div class="particles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-    <div class="fog"></div>
-<button id="music-toggle" class="music-btn">🔊 Música</button>
 
-<audio id="ambient-audio" loop>
-    <source src="audio/ambient.mp3" type="audio/mpeg">
-</audio>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 
 </html>
