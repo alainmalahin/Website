@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  animateParticles();
+
 
   // ==========================
   // EFECTO AL PULSAR ENTER
