@@ -1,20 +1,26 @@
-// ===== ALAIN MALAHIN =====
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const enter = document.querySelector(".enter");
+    const button = document.querySelector("button");
 
-    if (enter) {
+    if(button){
 
-        enter.addEventListener("click", function(e){
+        button.addEventListener("click", () => {
 
-            e.preventDefault();
+            document.body.classList.add("fade-out");
 
-            document.querySelector("#origins").scrollIntoView({
+            setTimeout(() => {
 
-                behavior:"smooth"
+                const destino = document.getElementById("origins");
 
-            });
+                if(destino){
+                    destino.scrollIntoView({
+                        behavior:"smooth"
+                    });
+
+                    document.body.classList.remove("fade-out");
+                }
+
+            },1200);
 
         });
 
