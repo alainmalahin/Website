@@ -1112,3 +1112,47 @@ opacity:.35;
 }
 
 }
+.fog{
+
+position:fixed;
+
+left:-10%;
+
+bottom:-40px;
+
+width:120%;
+
+height:260px;
+
+pointer-events:none;
+
+z-index:2;
+
+background:
+radial-gradient(circle at 20% 100%,rgba(255,255,255,.22),transparent 55%),
+radial-gradient(circle at 50% 100%,rgba(255,255,255,.18),transparent 60%),
+radial-gradient(circle at 80% 100%,rgba(255,255,255,.22),transparent 55%);
+
+filter:blur(45px);
+
+opacity:.9;
+
+animation:fogFlow 16s ease-in-out infinite alternate;
+
+}
+
+@keyframes fogFlow{
+
+from{
+
+transform:translateX(-30px);
+
+}
+
+to{
+
+transform:translateX(30px);
+
+}
+
+}
