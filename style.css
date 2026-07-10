@@ -1047,3 +1047,14 @@ opacity:.2;
 }
 
 }
+/* ===== PARALLAX ===== */
+
+.hero{
+
+transform-style:preserve-3d;
+
+transition:transform .25s linear;
+
+will-change:transform;
+
+}
