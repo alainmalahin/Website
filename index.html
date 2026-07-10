@@ -78,7 +78,252 @@ Inspirado en las primeras huellas de la humanidad.
 </section>
 
 <script src="script.js"></script>
+<!-- ========================= -->
+<!-- PARTE 3 - EFECTOS FINALES -->
+<!-- ========================= -->
 
+<!-- Música -->
+<audio id="bgMusic" loop>
+    <source src="audio/malahin.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Pantalla de carga -->
+<div id="loader">
+    <div class="loader-logo">
+        <img src="logo.png" alt="MALAHIN ALAIN">
+        <h2>MALAHIN ALAIN</h2>
+        <p>Entering ERA...</p>
+    </div>
+</div>
+
+<style>
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:1.5s;
+}
+
+.loader-logo{
+text-align:center;
+color:white;
+font-family:serif;
+animation:pulse 2s infinite;
+}
+
+.loader-logo img{
+width:140px;
+margin-bottom:20px;
+}
+
+@keyframes pulse{
+
+0%{opacity:.4;transform:scale(.95);}
+50%{opacity:1;transform:scale(1);}
+100%{opacity:.4;transform:scale(.95);}
+
+}
+
+/* NIEBLA */
+
+.fog{
+position:fixed;
+top:0;
+left:0;
+width:200%;
+height:100%;
+pointer-events:none;
+opacity:.18;
+background:url("fog.png") repeat-x;
+background-size:cover;
+animation:fogmove 60s linear infinite;
+z-index:5;
+}
+
+@keyframes fogmove{
+
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+
+}
+
+/* HUMO */
+
+.smoke{
+position:fixed;
+bottom:-100px;
+left:0;
+width:100%;
+height:400px;
+pointer-events:none;
+background:url("smoke.png") repeat-x bottom;
+background-size:contain;
+opacity:.25;
+animation:smoke 40s linear infinite;
+z-index:4;
+}
+
+@keyframes smoke{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-800px);
+}
+
+}
+
+/* PARTÍCULAS */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:3;
+pointer-events:none;
+}
+
+</style>
+
+<div class="fog"></div>
+
+<div class="smoke"></div>
+
+<canvas id="particles"></canvas>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+
+setTimeout(()=>{
+
+loader.remove();
+
+},1500);
+
+},2500);
+
+});
+
+const music=document.getElementById("bgMusic");
+
+document.body.addEventListener("click",()=>{
+
+music.play();
+
+},{once:true});
+
+const canvas=document.getElementById("particles");
+
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<120;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+
+y:Math.random()*canvas.height,
+
+r:Math.random()*2,
+
+d:Math.random()*1.5
+
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="rgba(255,215,120,.8)";
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+ctx.fill();
+
+});
+
+update();
+
+requestAnimationFrame(draw);
+
+}
+
+function update(){
+
+particles.forEach(p=>{
+
+p.y+=p.d;
+
+if(p.y>canvas.height){
+
+p.y=0;
+
+p.x=Math.random()*canvas.width;
+
+}
+
+});
+
+}
+
+draw();
+
+window.addEventListener("resize",()=>{
+
+canvas.width=window.innerWidth;
+
+canvas.height=window.innerHeight;
+
+});
+
+const doors=document.querySelectorAll(".door");
+
+doors.forEach((door,index)=>{
+
+door.style.animationDelay=(index*.2)+"s";
+
+door.addEventListener("mouseenter",()=>{
+
+door.style.transform="scale(1.05)";
+
+});
+
+door.addEventListener("mouseleave",()=>{
+
+door.style.transform="scale(1)";
+
+});
+
+});
+
+</script>
 </body>
 
 </html>
