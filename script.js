@@ -179,7 +179,7 @@ enter.addEventListener("click",function(e){
 e.preventDefault();
 
 hero.classList.add("open");
-
+portalBurst();
 setTimeout(function(){
 
 document.body.classList.add("fade-out");
