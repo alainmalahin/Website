@@ -946,3 +946,16 @@ transform:scale(1.8);
 }
 
 }
+/* ===== LA NIEBLA AUMENTA AL ENTRAR ===== */
+
+.hero.open .fog{
+
+opacity:.9;
+
+filter:blur(70px);
+
+transform:scale(1.2);
+
+transition:all 1.5s ease;
+
+}
