@@ -81,8 +81,10 @@ display:block;
 
 margin:auto;
 
-filter:
+animation:logoFloat 6s ease-in-out infinite;
+transition:.5s;
 
+filter:
 drop-shadow(0 0 20px rgba(255,215,0,.7))
 
 drop-shadow(0 0 50px rgba(255,180,0,.5));
