@@ -636,3 +636,88 @@ transition:opacity .9s ease;
 opacity:0;
 
 }
+/* ===== FONDO ORÍGENES ===== */
+
+.origins-page{
+
+background:
+linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+url("images/cueva.webp");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+min-height:100vh;
+
+}
+/* ===== LISTA ERAS ===== */
+
+.era-list{
+
+position:fixed;
+
+right:40px;
+
+top:120px;
+
+text-align:left;
+
+padding:20px;
+
+border:1px solid rgba(212,175,55,.35);
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(12px);
+
+border-radius:16px;
+
+}
+
+.era-list div{
+
+padding:8px 0;
+
+letter-spacing:3px;
+
+transition:.3s;
+
+}
+
+.era-list div:hover{
+
+color:#d4af37;
+
+transform:translateX(8px);
+
+}
+.cave-image{
+
+animation:floatImage 7s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
