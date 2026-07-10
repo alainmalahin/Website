@@ -335,3 +335,18 @@ requestAnimationFrame(animate);
 animate();
 
 }
+/* ===== PARALLAX ===== */
+
+const hero = document.querySelector(".hero");
+
+window.addEventListener("deviceorientation", function(e){
+
+if(!hero) return;
+
+const x = (e.gamma || 0) / 25;
+const y = (e.beta || 0) / 40;
+
+hero.style.transform =
+`rotateY(${x}deg) rotateX(${-y}deg)`;
+
+});
