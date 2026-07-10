@@ -621,3 +621,18 @@ transform:translateY(0px);
 }
 
 }
+/* FUNDIDO */
+
+body{
+
+opacity:1;
+
+transition:opacity .9s ease;
+
+}
+
+.fade-out{
+
+opacity:0;
+
+}
