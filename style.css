@@ -470,12 +470,7 @@ color:#ddd;
 }
 
 .cave-image{
-width:100%;
-max-width:900px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,.4);
-box-shadow:0 0 40px rgba(212,175,55,.25);
-margin-bottom:50px;
+    display:none;
 }
 
 .era-list{
