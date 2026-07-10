@@ -431,17 +431,19 @@ font-size:17px;
 /* ========= ERA I ORÍGENES ========= */
 
 .origins-page{
-margin:0;
-color:#fff;
-font-family:Georgia, serif;
-overflow-x:hidden;
-min-height:100vh;
+    margin:0;
+    padding:0;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+    color:#fff;
+    font-family:Georgia, serif;
 
-background:url("images/origenes-bg.png.PNG") center center / cover no-repeat fixed;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
+    background-image:url("images/origenes-bg.png.PNG") !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+    background-attachment:fixed !important;
 }
 
 .origins-hero{
