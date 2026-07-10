@@ -1,354 +1,137 @@
-alert("SCRIPT OK");
+document.addEventListener("DOMContentLoaded", () => {
 
-const musicBtn = document.getElementById("music-toggle");
-const music = document.getElementById("ambient-audio");
+  // ==========================
+  // ELEMENTOS
+  // ==========================
+  const enterBtn = document.querySelector(".enter-btn");
+  const portal = document.querySelector(".portal");
+  const overlay = document.querySelector(".transition-overlay");
+  const musicBtn = document.getElementById("music-toggle");
+  const music = document.getElementById("ambient-audio");
 
-if (musicBtn && music) {
+  // ==========================
+  // MÚSICA
+  // ==========================
+  if (musicBtn && music) {
 
-musicBtn.addEventListener("click", async () => {
+    music.volume = 0.35;
 
-try{
+    musicBtn.addEventListener("click", () => {
 
-if(music.paused){
+      if (music.paused) {
 
-await music.play();
+        music.play();
+        musicBtn.textContent = "🔊 MUSIC";
 
-musicBtn.textContent="🔇 MUTE";
+      } else {
 
-}else{
+        music.pause();
+        musicBtn.textContent = "🔇 MUTE";
 
-music.pause();
-
-musicBtn.textContent="🔊 MUSIC";
-
-}
-
-}catch(e){
-
-console.log(e);
-
-}
-
-});
-
-}
-
-const enterBtn=document.querySelector(".enter-btn");
-
-if(enterBtn){
-
-enterBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:window.innerHeight,
-
-behavior:"smooth"
-
-});
-
-});
-
-}
-
-const canvas=document.getElementById("particles");
-
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-let particles=[];
-for(let i=0;i<120;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-
-y:Math.random()*canvas.height,
-
-r:Math.random()*2+1,
-
-v:Math.random()*0.8+0.2
-
-});
-
-}
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="rgba(212,175,55,.8)";
-
-particles.forEach(p=>{
-
-ctx.beginPath();
-
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-
-ctx.fill();
-
-});
-
-update();
-
-requestAnimationFrame(draw);
-
-}
-
-function update(){
-
-particles.forEach(p=>{
-
-p.y+=p.v;
-
-if(p.y>canvas.height){
-
-p.y=0;
-
-p.x=Math.random()*canvas.width;
-
-}
-
-});
-
-}
-
-draw();
-
-window.addEventListener("resize",()=>{
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-});
-const enter = document.querySelector(".enter-btn");
-
-if (enter) {
-
-    enter.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        document.body.classList.add("fade-out");
-
-        setTimeout(() => {
-
-            window.location = "origenes.html";
-
-        }, 900);
+      }
 
     });
 
-}
-/* ===== TRANSICIÓN ENTER ===== */
+  }
 
-const enterBtn = document.querySelector(".enter-btn");
+  // ==========================
+  // PARTÍCULAS DORADAS
+  // ==========================
+  const canvas = document.createElement("canvas");
+  document.body.appendChild(canvas);
 
-if (enterBtn) {
+  canvas.style.position = "fixed";
+  canvas.style.left = "0";
+  canvas.style.top = "0";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.pointerEvents = "none";
+  canvas.style.zIndex = "1";
 
-enterBtn.addEventListener("click", function(e){
+  const ctx = canvas.getContext("2d");
 
-e.preventDefault();
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
 
-document.body.classList.add("fade-out");
+  resizeCanvas();
 
-setTimeout(function(){
+  window.addEventListener("resize", resizeCanvas);
 
-setTimeout(function(){
+  const particles = [];
 
-window.location.href="origenes.html";
+  for (let i = 0; i < 80; i++) {
 
-},1700);
+    particles.push({
 
-},0);
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
 
-});
+      r: Math.random() * 2 + 1,
 
-}
-/* ===== EFECTO ENTER ===== */
+      dx: (Math.random() - 0.5) * 0.3,
 
-const hero = document.querySelector(".hero");
-const enter = document.querySelector(".enter-btn");
+      dy: Math.random() * 0.6 + 0.2
 
-if(hero && enter){
+    });
 
-enter.addEventListener("click",function(e){
+  }
+  function animateParticles() {
 
-e.preventDefault();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-hero.classList.add("open");
-portalBurst();
-setTimeout(function(){
+    particles.forEach(p => {
 
-document.body.classList.add("fade-out");
+      ctx.beginPath();
 
-},700);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
 
-setTimeout(function(){
+      ctx.fillStyle = "rgba(212,175,55,0.8)";
 
-window.location.href="origenes.html";
+      ctx.fill();
 
-},1500);
+      p.y += p.dy;
+      p.x += p.dx;
 
-});
+      if (p.y > canvas.height) {
+        p.y = -10;
+        p.x = Math.random() * canvas.width;
+      }
 
-}
-/* ===== PARTÍCULAS DORADAS ===== */
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
 
-const canvas = document.getElementById("particles");
+    });
 
-if(canvas){
+    requestAnimationFrame(animateParticles);
 
-const ctx = canvas.getContext("2d");
+  }
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  animateParticles();
 
-let particles = [];
+  // ==========================
+  // EFECTO AL PULSAR ENTER
+  // ==========================
+  if (enterBtn) {
 
-for(let i=0;i<120;i++){
+    enterBtn.addEventListener("click", (e) => {
 
-particles.push({
+      e.preventDefault();
 
-x:Math.random()*canvas.width,
+      if (portal) {
+        portal.classList.add("portal-open");
+      }
 
-y:Math.random()*canvas.height,
+      if (overlay) {
+        overlay.classList.add("active");
+      }
 
-r:Math.random()*2+1,
+      setTimeout(() => {
+        window.location.href = "origenes.html";
+      }, 1800);
 
-d:Math.random()*0.8+0.2
+    });
 
-});
-
-}
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="rgba(212,175,55,.8)";
-
-particles.forEach(p=>{
-
-ctx.beginPath();
-
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-
-ctx.fill();
-
-p.y-=p.d;
-
-if(p.y<0){
-
-p.y=canvas.height;
-
-p.x=Math.random()*canvas.width;
-
-}
-
-});
-
-requestAnimationFrame(draw);
-
-}
-
-draw();
-
-window.addEventListener("resize",()=>{
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-});
-
-}
-/* ===== EXPLOSIÓN DORADA ===== */
-
-function portalBurst(){
-
-const canvas=document.getElementById("particles");
-
-if(!canvas) return;
-
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let sparks=[];
-
-for(let i=0;i<80;i++){
-
-sparks.push({
-
-x:canvas.width/2,
-
-y:canvas.height/2,
-
-vx:(Math.random()-0.5)*12,
-
-vy:(Math.random()-0.5)*12,
-
-r:Math.random()*3+1,
-
-life:100
-
-});
-
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-sparks.forEach(s=>{
-
-ctx.beginPath();
-
-ctx.fillStyle="rgba(212,175,55,"+(s.life/100)+")";
-
-ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-
-ctx.fill();
-
-s.x+=s.vx;
-
-s.y+=s.vy;
-
-s.life-=2;
-
-});
-
-sparks=sparks.filter(s=>s.life>0);
-
-if(sparks.length){
-
-requestAnimationFrame(animate);
-
-}
-
-}
-
-animate();
-
-}
-/* ===== PARALLAX ===== */
-
-const hero = document.querySelector(".hero");
-
-window.addEventListener("deviceorientation", function(e){
-
-if(!hero) return;
-
-const x = (e.gamma || 0) / 25;
-const y = (e.beta || 0) / 40;
-
-hero.style.transform =
-`rotateY(${x}deg) rotateX(${-y}deg)`;
-
+  }
 });
