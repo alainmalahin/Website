@@ -1082,3 +1082,35 @@ opacity:.78;
 }
 
 }
+/* ========= ORDENADOR ========= */
+
+@media (min-width:1200px){
+
+.hero-content{
+    max-width:1200px;
+}
+
+.logo{
+    width:420px;
+}
+
+h1{
+    font-size:68px;
+    letter-spacing:10px;
+}
+
+.tagline{
+    font-size:24px;
+}
+
+.enter-btn{
+    font-size:24px;
+    padding:22px 70px;
+}
+
+.music-btn{
+    font-size:14px;
+    padding:12px 20px;
+}
+
+}
