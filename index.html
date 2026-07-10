@@ -1,318 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ALAIN MALAHIN</title>
 
+<meta name="description" content="History inspires. Identity defines.">
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- MÚSICA -->
 <audio id="ambient-audio" loop>
-    <source src="audio/ambient.mp3" type="audio/mpeg">
+<source src="audio/ambient.mp3" type="audio/mpeg">
 </audio>
-
-<!-- PARTÍCULAS -->
-<div class="particles">
-<span></span><span></span><span></span><span></span><span></span>
-<span></span><span></span><span></span><span></span><span></span>
-<span></span><span></span><span></span><span></span><span></span>
-<span></span><span></span><span></span><span></span><span></span>
-</div>
-
-<!-- NIEBLA -->
-<div class="fog fog1"></div>
-<div class="fog fog2"></div>
-
-<!-- PORTADA -->
-
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-<button id="music-toggle" class="music-btn">🔊 Música</button>
-<img class="logo" src="images/hero.webp" alt="ALAIN MALAHIN" onerror="this.style.display='none'">"
-
-<h1>ALAIN MALAHIN</h1>
-
-<p>
-
-History inspires. Identity defines.
-
-</p>
-
-<button id="enter">
-
-ENTER
-
-</button>
-
-</div>
-
-</section>
-
-<!-- PRIMERA ERA -->
-
-<section id="origins">
-
-<div class="inside">
-
-<h2>ERA · ORÍGENES</h2>
-
-<p>
-
-El comienzo de toda historia.
-Inspirado en las primeras huellas de la humanidad.
-
-</p>
-
-</div>
-
-</section>
-
-<script src="script.js"></script>
-<!-- ========================= -->
-<!-- PARTE 3 - EFECTOS FINALES -->
-<!-- ========================= -->
-
-<!-- Música -->
-<audio id="bgMusic" loop>
-    <source src="audio/ambiente.mp3" type="audio/mpeg">
-</audio>
-<style>
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:auto;
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:99999;
-transition:1.5s;
-}
-
-.loader-logo{
-text-align:center;
-color:white;
-font-family:serif;
-animation:pulse 2s infinite;
-}
-
-img{
-width:260px;
-margin-bottom:30px;
-}
-
-@keyframes pulse{
-
-0%{opacity:.4;transform:scale(.95);}
-50%{opacity:1;transform:scale(1);}
-100%{opacity:.4;transform:scale(.95);}
-
-}
-
-/* NIEBLA */
-
-.fog{
-position:fixed;
-top:0;
-left:0;
-width:200%;
-height:100%;
-pointer-events:none;
-opacity:.18;
-background:url("fog.png") repeat-x;
-background-size:cover;
-animation:fogmove 60s linear infinite;
-z-index:5;
-}
-
-@keyframes fogmove{
-
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-
-}
-
-/* HUMO */
-
-.smoke{
-position:fixed;
-bottom:-100px;
-left:0;
-width:100%;
-height:400px;
-pointer-events:none;
-background:url("smoke.png") repeat-x bottom;
-background-size:contain;
-opacity:.25;
-animation:smoke 40s linear infinite;
-z-index:4;
-}
-
-@keyframes smoke{
-
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-800px);
-}
-
-}
-
-/* PARTÍCULAS */
-
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:3;
-pointer-events:none;
-}
-
-</style>
 
 <div class="fog"></div>
 
 <div class="smoke"></div>
 
 <canvas id="particles"></canvas>
-<script>
-window.addEventListener("load", () => {
 
-    setTimeout(() => {
+<header class="hero">
 
-        const loader = document.getElementById("loader");
+<div class="hero-content">
 
-        if(loader){
-            loader.style.opacity = "0";
+<button id="music-toggle" class="music-btn">
+🔊 MUSIC
+</button>
 
-            setTimeout(() => {
-                loader.remove();
-            },800);
-        }
+<img
+class="logo"
+src="images/hero.jpg"
+alt="ALAIN MALAHIN">
 
-    },1800);
+<h1>ALAIN MALAHIN</h1>
 
-});
+<p class="tagline">
+History inspires. Identity defines.
+</p>
 
-const music=document.getElementById("ambient-audio")
+<a href="#inside" class="enter-btn">
+ENTER
+</a>
 
-document.body.addEventListener("click",()=>{
+</div>
 
-music.play();
+</header>
 
-},{once:true});
+<section id="inside" class="inside">
 
-const canvas=document.getElementById("particles");
+<h2>ERA ORÍGENES</h2>
 
-const ctx=canvas.getContext("2d");
+<p>
+The first chapter of ALAIN MALAHIN.
+A tribute to humanity's origins, where every symbol,
+every stone and every mark tells a story.
+</p>
+<div class="doors">
 
-canvas.width=window.innerWidth;
+<div class="door">
+<img src="images/door1.jpg" alt="Past">
+<h3>PAST</h3>
+</div>
 
-canvas.height=window.innerHeight;
+<div class="door">
+<img src="images/door2.jpg" alt="Present">
+<h3>PRESENT</h3>
+</div>
 
-let particles=[];
+<div class="door">
+<img src="images/door3.jpg" alt="Future">
+<h3>FUTURE</h3>
+</div>
 
-for(let i=0;i<120;i++){
+</div>
 
-particles.push({
+</section>
 
-x:Math.random()*canvas.width,
+<script src="script.js"></script>
 
-y:Math.random()*canvas.height,
-
-r:Math.random()*2,
-
-d:Math.random()*1.5
-
-});
-
-}
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="rgba(255,215,120,.8)";
-
-particles.forEach(p=>{
-
-ctx.beginPath();
-
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-
-ctx.fill();
-
-});
-
-update();
-
-requestAnimationFrame(draw);
-
-}
-
-function update(){
-
-particles.forEach(p=>{
-
-p.y+=p.d;
-
-if(p.y>canvas.height){
-
-p.y=0;
-
-p.x=Math.random()*canvas.width;
-
-}
-
-});
-
-}
-
-draw();
-
-window.addEventListener("resize",()=>{
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-});
-
-const doors=document.querySelectorAll(".door");
-
-doors.forEach((door,index)=>{
-
-door.style.animationDelay=(index*.2)+"s";
-
-door.addEventListener("mouseenter",()=>{
-
-door.style.transform="scale(1.05)";
-
-});
-
-door.addEventListener("mouseleave",()=>{
-
-door.style.transform="scale(1)";
-
-});
-
-});
-
-</script>
 </body>
 </html>
