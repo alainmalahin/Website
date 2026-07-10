@@ -375,3 +375,86 @@ font-size:17px;
 }
 
 }
+/* ========= ERA I ORÍGENES ========= */
+
+.origins-page{
+background:#080808;
+color:#fff;
+margin:0;
+font-family:Georgia,serif;
+overflow-x:hidden;
+}
+
+.origins-hero{
+max-width:1200px;
+margin:auto;
+padding:80px 25px;
+text-align:center;
+}
+
+.origins-hero h1{
+font-size:22px;
+letter-spacing:8px;
+color:#caa54a;
+margin-bottom:8px;
+}
+
+.origins-hero h2{
+font-size:54px;
+color:#e3c66b;
+margin-bottom:25px;
+}
+
+.origins-hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+margin-bottom:45px;
+color:#ddd;
+}
+
+.cave-image{
+width:100%;
+max-width:900px;
+border-radius:18px;
+border:1px solid rgba(212,175,55,.4);
+box-shadow:0 0 40px rgba(212,175,55,.25);
+margin-bottom:50px;
+}
+
+.era-list{
+max-width:260px;
+margin:40px auto;
+text-align:left;
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:14px;
+border:1px solid rgba(212,175,55,.25);
+}
+
+.era-list div{
+padding:8px 0;
+letter-spacing:2px;
+color:#bdbdbd;
+}
+
+.era-list .active{
+color:#d4af37;
+font-weight:bold;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:40px;
+padding:14px 35px;
+border:2px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.back-btn:hover{
+background:#d4af37;
+color:#111;
+}
