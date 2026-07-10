@@ -124,9 +124,9 @@ right:12px;
 
 margin:0;
 
-padding:5px 10px;
+padding:5px;
 
-font-size:10px;
+font-size:9px;
 
 letter-spacing:1px;
 
@@ -168,7 +168,7 @@ background:rgba(212,175,55,.08);
 
 border:2px solid #d4af37;
 
-border-radius:50px;
+border-radius:50%;
 
 color:#fff;
 
