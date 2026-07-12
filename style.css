@@ -60,23 +60,21 @@ body{
 .sound-toggle{
     position:absolute;
 
-    top:calc(50% - 27vw);
+    top:calc(50% - 30vw);
     right:8%;
 
     z-index:100;
 
-    padding:8px 16px;
+    padding:4px 8px;
 
     border:1px solid #d4af37;
-    border-radius:0;
-
     background:rgba(0,0,0,.75);
 
     color:#e8c45b;
 
     font-family:"Cinzel",serif;
-    font-size:10px;
-    letter-spacing:2px;
+    font-size:7px;
+    letter-spacing:1px;
 
     cursor:pointer;
 }
