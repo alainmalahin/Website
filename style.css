@@ -1560,3 +1560,78 @@ h1{
 .era-intro{
     background:transparent !important;
 }
+/* NUEVA PORTADA ALAIN MALAHIN */
+
+.hero-content{
+    position:absolute;
+    inset:0;
+    z-index:10;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+.brand-slogan{
+    margin:0 0 40px;
+    font-family:"Cinzel", serif;
+    font-size:clamp(27px, 5vw, 60px);
+    font-weight:600;
+    letter-spacing:5px;
+    line-height:1.3;
+    color:#e5c45b;
+
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 10px #d4af37,
+    0 0 25px rgba(212,175,55,.7);
+}
+
+.main-menu{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    width:min(520px,88vw);
+}
+
+.main-menu a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:62px;
+    padding:12px 20px;
+
+    border:1px solid #d4af37;
+    background:rgba(0,0,0,.58);
+
+    color:#e5c45b;
+    text-decoration:none;
+
+    font-family:"Cinzel",serif;
+    font-size:clamp(11px,2.5vw,17px);
+    letter-spacing:3px;
+
+    box-shadow:
+    0 0 10px rgba(212,175,55,.55),
+    inset 0 0 10px rgba(212,175,55,.08);
+}
+
+@media(max-width:768px){
+
+    .brand-slogan{
+        font-size:25px;
+        letter-spacing:3px;
+        margin-bottom:35px;
+    }
+
+    .main-menu a{
+        min-height:58px;
+        font-size:12px;
+        letter-spacing:2px;
+    }
+}
