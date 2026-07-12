@@ -86,14 +86,10 @@ body{
 
 #hero{
     position:absolute;
-
-    left:0;
-    top:50%;
+    inset:0;
 
     width:100%;
-    aspect-ratio:16 / 9;
-
-    transform:translateY(-50%);
+    height:100%;
 
     z-index:20;
 
@@ -102,6 +98,12 @@ body{
 
     transition:opacity 1s ease;
 }
+
+#hero.show{
+    opacity:1;
+    visibility:visible;
+}
+
 
 #hero.show{
     opacity:1;
