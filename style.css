@@ -262,14 +262,7 @@ body{
         padding:3px 8px;
     }
 
-    .sound-toggle{
-        top:calc(50% - 27vw);
-        right:8%;
 
-        padding:6px 11px;
-
-        font-size:8px;
-    }
 
 }
 
