@@ -1333,26 +1333,29 @@ h1{
     object-fit:contain;
     background:#000;
 }
-
 .scene-closed{
     z-index:2;
     opacity:1;
-    transition:opacity 2.8s ease;
+    transform:scale(1);
+    transition:
+        opacity 2.8s ease,
+        transform 6s ease-in;
 }
 
 .scene-open{
     z-index:1;
     opacity:1;
     transform:scale(1);
-    transition:transform 6s ease-in-out;
+    transition:transform 7s ease-in;
 }
 
 .cinematic-entry.open .scene-closed{
     opacity:0;
+    transform:scale(2.8);
 }
 
 .cinematic-entry.open .scene-open{
-    transform:scale(2.2);
+    transform:scale(3.5);
 }
 
 #door-enter{
