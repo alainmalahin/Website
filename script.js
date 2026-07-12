@@ -66,23 +66,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 });
-/* ===== ABRIR PUERTAS ===== */
+/* ===== ENTRADA CINEMATOGRÁFICA ===== */
 
-const doorOverlay = document.querySelector(".door-overlay");
+const cinematicEntry = document.querySelector(".cinematic-entry");
 const doorEnter = document.querySelector("#door-enter");
 
-if (doorOverlay && doorEnter) {
+if (cinematicEntry && doorEnter) {
 
     doorEnter.addEventListener("click", () => {
 
         doorEnter.style.opacity = "0";
         doorEnter.style.pointerEvents = "none";
 
-        doorOverlay.classList.add("open");
+        cinematicEntry.classList.add("open");
 
         setTimeout(() => {
-            doorOverlay.style.pointerEvents = "none";
-        }, 2600);
+            cinematicEntry.style.opacity = "0";
+            cinematicEntry.style.transition = "opacity 2s ease";
+        }, 5500);
+
+        setTimeout(() => {
+            cinematicEntry.style.display = "none";
+        }, 7500);
 
     });
 
