@@ -66,3 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 });
+/* ===== ABRIR PUERTAS ===== */
+
+const doorOverlay = document.querySelector(".door-overlay");
+const doorEnter = document.querySelector("#door-enter");
+
+if (doorOverlay && doorEnter) {
+
+    doorEnter.addEventListener("click", () => {
+
+        doorEnter.style.opacity = "0";
+        doorEnter.style.pointerEvents = "none";
+
+        doorOverlay.classList.add("open");
+
+        setTimeout(() => {
+            doorOverlay.style.pointerEvents = "none";
+        }, 2600);
+
+    });
+
+}
