@@ -1533,3 +1533,30 @@ h1{
 #hero{
     z-index:9999 !important;
 }
+/* TEXTO SOBRE EL AMANECER */
+
+#hero{
+    background:none !important;
+    background-image:none !important;
+}
+
+#hero::before,
+#hero::after{
+    display:none !important;
+    content:none !important;
+}
+
+.video-entry{
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    z-index:1 !important;
+}
+
+#hero{
+    z-index:10 !important;
+}
+
+.era-intro{
+    background:transparent !important;
+}
