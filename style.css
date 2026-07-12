@@ -1295,3 +1295,12 @@ h1{
     font-size:7px !important;
     letter-spacing:.7px !important;
 }
+/* ===== PUERTAS CERRADAS ===== */
+
+.hero{
+    background-image:url("images/puertas-cerradas.png.PNG") !important;
+    background-size:contain !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+    background-color:#000 !important;
+}
