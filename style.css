@@ -41,7 +41,7 @@ overflow:hidden;
 
 background: url("images/48D1C792-F3D3-43AD-A2A8-C3E4344AA3B9.png") center center / cover no-repeat;
 
-background-size:cover;
+background-size:contain;
 background-repeat: no-repeat;
 
 background-position: center;
