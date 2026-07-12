@@ -254,12 +254,12 @@ body{
     }
 
     .main-menu a{
-        height:62px;
+        height:48px;
 
         font-size:19px;
-        line-height:1.15;
+        line-height:1.05;
 
-        padding:3px 8px;
+        padding:2px 8px;
     }
 
 
