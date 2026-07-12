@@ -1265,3 +1265,18 @@ h1{
     top:38% !important;
     transform:translateY(-50%) !important;
 }
+.main-menu{
+    position:fixed !important;
+    left:auto !important;
+    right:3px !important;
+    top:32% !important;
+    transform:none !important;
+}
+
+.main-menu a{
+    width:105px !important;
+    min-width:105px !important;
+    padding:5px 2px !important;
+    font-size:8px !important;
+    letter-spacing:1px !important;
+}
