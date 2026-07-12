@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -26,42 +24,42 @@
 <audio id="ambient-audio" loop>
 <source src="audio/ambient.mp3" type="audio/mpeg">
 </audio>
-<canvas id="particles"></canvas>
 
-<div class="transition-overlay"></div>
+<div class="video-entry" id="video-entry">
 
-<header class="hero">
-<div class="cinematic-entry">
-    <img src="images/puertas-cerradas.png.PNG" class="scene scene-closed">
-    <img src="images/puertas-abiertas.png.PNG" class="scene scene-open">
+<video
+id="entrance-video"
+autoplay
+muted
+playsinline
+preload="auto"
+>
+<source src="entrada-alain-malahin-nuevo.mp4" type="video/mp4">
+</video>
 
-    <button id="door-enter">ENTER</button>
 </div>
-<div class="portal">
-    <div class="hero-content">
+
+<header class="hero" id="hero">
+
+<div class="hero-content">
 
 <button id="music-toggle" class="music-btn">
 🔊 MUSIC
 </button>
+
 <nav class="main-menu">
 
 <a href="story.html">THE STORY</a>
 
 <a href="collections.html">COLLECTIONS</a>
 
-
-
 </nav>
-
-</a>
-
-</div>
 
 </div>
 
 </header>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 
 </body>
 
