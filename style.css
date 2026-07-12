@@ -1526,3 +1526,10 @@ h1{
     align-items:center !important;
     flex-direction:column !important;
 }
+.video-entry{
+    z-index:1 !important;
+}
+
+#hero{
+    z-index:9999 !important;
+}
