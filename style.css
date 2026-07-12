@@ -1157,3 +1157,28 @@ h1{
     }
 
 }
+/* ===== AJUSTE FINAL MENÚ DERECHA ===== */
+
+.main-menu{
+    left:auto !important;
+    right:8px !important;
+    top:50% !important;
+    align-items:flex-end !important;
+}
+
+.main-menu a{
+    min-width:0 !important;
+    width:auto !important;
+    padding:6px 10px !important;
+
+    font-size:10px !important;
+    font-weight:600 !important;
+    letter-spacing:1px !important;
+
+    color:#e3c66b !important;
+
+    border:1px solid rgba(212,175,55,.75) !important;
+    border-radius:20px !important;
+
+    background:rgba(0,0,0,.55) !important;
+}
