@@ -2141,3 +2141,77 @@ h1{
         0 0 12px rgba(255,200,40,.9),
         inset 0 0 18px rgba(212,175,55,.12) !important;
 }
+/* ===== BOTONES COMO FOTO 2 ===== */
+
+#hero .brand-slogan{
+    position:absolute !important;
+    top:7% !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+    width:94% !important;
+    margin:0 !important;
+
+    font-family:"Cinzel",serif !important;
+    font-size:34px !important;
+    font-weight:700 !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+
+    color:#f0c85a !important;
+
+    text-shadow:
+    -2px -2px 1px #000,
+    2px -2px 1px #000,
+    -2px 2px 1px #000,
+    2px 2px 1px #000,
+    0 0 10px #d4af37 !important;
+}
+
+#hero .main-menu{
+    position:absolute !important;
+    left:50% !important;
+    right:auto !important;
+    top:55% !important;
+    bottom:auto !important;
+
+    transform:translateX(-50%) !important;
+
+    width:82% !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    gap:28px !important;
+}
+
+#hero .main-menu a{
+    width:100% !important;
+    min-width:100% !important;
+    height:118px !important;
+    padding:0 15px !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    border:3px solid #e5bd42 !important;
+    border-radius:0 !important;
+
+    background:rgba(0,0,0,.85) !important;
+
+    color:#efc75c !important;
+
+    font-family:"Cinzel",serif !important;
+    font-size:27px !important;
+    font-weight:600 !important;
+    line-height:1.35 !important;
+    letter-spacing:1px !important;
+    text-align:center !important;
+
+    text-shadow:
+    1px 1px 2px #000,
+    0 0 8px rgba(212,175,55,.8) !important;
+
+    box-shadow:
+    0 0 12px rgba(255,200,40,.9),
+    inset 0 0 18px rgba(212,175,55,.15) !important;
+}
