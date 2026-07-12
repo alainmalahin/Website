@@ -1304,3 +1304,56 @@ h1{
     background-repeat:no-repeat !important;
     background-color:#000 !important;
 }
+/* ===== PUERTAS ANIMADAS ===== */
+
+.door-overlay{
+    position:absolute;
+    inset:0;
+    z-index:100;
+    overflow:hidden;
+}
+
+.door-left,
+.door-right{
+    position:absolute;
+    inset:0;
+    background-image:url("images/puertas-cerradas.png.PNG");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    transition:transform 2.5s ease-in-out;
+}
+
+.door-left{
+    clip-path:inset(0 50% 0 0);
+}
+
+.door-right{
+    clip-path:inset(0 0 0 50%);
+}
+
+.door-overlay.open .door-left{
+    transform:translateX(-55%);
+}
+
+.door-overlay.open .door-right{
+    transform:translateX(55%);
+}
+
+#door-enter{
+    position:absolute;
+    left:50%;
+    top:62%;
+    transform:translate(-50%,-50%);
+    z-index:110;
+
+    padding:7px 24px;
+    border:1px solid #d4af37;
+    border-radius:30px;
+
+    background:rgba(0,0,0,.55);
+    color:#d4af37;
+
+    font-size:11px;
+    letter-spacing:4px;
+}
