@@ -339,3 +339,93 @@ body{
     }
 
 }
+/* =========================================
+   AJUSTE FINAL — TODO DENTRO DEL VÍDEO
+   VERTICAL + HORIZONTAL
+========================================= */
+
+#hero{
+    position:absolute !important;
+    left:0 !important;
+    top:50% !important;
+
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:16 / 9 !important;
+
+    transform:translateY(-50%) !important;
+}
+
+.brand-slogan{
+    top:5% !important;
+}
+
+.main-menu{
+    top:48% !important;
+}
+
+
+/* MÓVIL VERTICAL */
+
+@media screen and (orientation:portrait){
+
+    .brand-slogan{
+        top:5% !important;
+        width:94% !important;
+        font-size:27px !important;
+        line-height:1.15 !important;
+    }
+
+    .main-menu{
+        top:48% !important;
+        width:65% !important;
+        gap:8px !important;
+    }
+
+    .main-menu a{
+        height:48px !important;
+        font-size:18px !important;
+        line-height:1.05 !important;
+        padding:2px 8px !important;
+    }
+
+    .sound-toggle{
+        top:calc(50% - 27vw) !important;
+        right:2% !important;
+        padding:3px 6px !important;
+        font-size:6px !important;
+    }
+}
+
+
+/* MÓVIL HORIZONTAL */
+
+@media screen and (orientation:landscape) and (max-height:600px){
+
+    .brand-slogan{
+        top:5% !important;
+        width:90% !important;
+        font-size:4vw !important;
+        line-height:1.05 !important;
+    }
+
+    .main-menu{
+        top:48% !important;
+        width:64% !important;
+        gap:8px !important;
+    }
+
+    .main-menu a{
+        height:48px !important;
+        font-size:18px !important;
+        line-height:1.05 !important;
+        padding:2px 8px !important;
+    }
+
+    .sound-toggle{
+        top:calc(50% - 27vw) !important;
+        right:2% !important;
+        padding:3px 6px !important;
+        font-size:6px !important;
+    }
+}
