@@ -1946,3 +1946,119 @@ h1{
     font-size:7px !important;
     letter-spacing:1px !important;
 }
+/* ===== PORTADA FINAL ALAIN MALAHIN ===== */
+
+#hero .hero-content{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+}
+
+/* SLOGAN GRANDE */
+
+#hero .brand-slogan{
+    position:absolute !important;
+    top:5% !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+
+    width:95% !important;
+    margin:0 !important;
+
+    font-family:"Cinzel",serif !important;
+    font-size:clamp(27px,5vw,60px) !important;
+    font-weight:700 !important;
+    line-height:1.25 !important;
+    letter-spacing:2px !important;
+
+    color:#f1cf68 !important;
+
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 12px #d4af37,
+    0 0 25px rgba(212,175,55,.8) !important;
+}
+
+/* ZONA DE BOTONES */
+
+#hero .main-menu{
+    position:absolute !important;
+
+    left:50% !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:7% !important;
+
+    transform:translateX(-50%) !important;
+
+    width:82% !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+
+    pointer-events:auto !important;
+}
+
+/* BOTONES GRANDES */
+
+#hero .main-menu a{
+    width:100% !important;
+    min-width:100% !important;
+    min-height:72px !important;
+
+    padding:12px 15px !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    border:2px solid #d4af37 !important;
+    border-radius:0 !important;
+
+    background:rgba(0,0,0,.78) !important;
+
+    color:#f1cf68 !important;
+
+    font-family:"Cinzel",serif !important;
+    font-size:16px !important;
+    font-weight:700 !important;
+    line-height:1.35 !important;
+    letter-spacing:1.5px !important;
+
+    text-align:center !important;
+
+    text-shadow:
+    0 0 8px rgba(212,175,55,.8) !important;
+
+    box-shadow:
+    0 0 10px rgba(212,175,55,.8),
+    inset 0 0 12px rgba(212,175,55,.15) !important;
+}
+
+/* MÓVIL */
+
+@media(max-width:768px){
+
+    #hero .brand-slogan{
+        font-size:28px !important;
+    }
+
+    #hero .main-menu{
+        width:82% !important;
+        bottom:6% !important;
+        gap:14px !important;
+    }
+
+    #hero .main-menu a{
+        min-height:68px !important;
+        font-size:15px !important;
+        padding:10px !important;
+    }
+
+}
