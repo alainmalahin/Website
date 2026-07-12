@@ -1,1384 +1,29 @@
+/* =========================================
+   ALAIN MALAHIN — PORTADA LIMPIA
+========================================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:#000;
-color:#fff;
-
-font-family:'Inter',sans-serif;
-
-overflow-x:hidden;
-
-}
-
-/* HERO */
-
-.hero{
-
-position:relative;
-
-width:100%;
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-overflow:hidden;
-
-background: url("images/48D1C792-F3D3-43AD-A2A8-C3E4344AA3B9.png") center center / cover no-repeat;
-
-background-size:contain;
-background-repeat: no-repeat;
-
-background-position: center;
-
-background-color: #000;
-}
-
-.hero-content{
-padding-top:80px;
-position:relative;
-
-z-index:20;
-
-width:90%;
-
-max-width:900px;
-
-}
-
-.logo{
-
-width:220px;
-
-max-width:70%;
-
-display:block;
-
-margin:auto;
-
-animation:logoFloat 6s ease-in-out infinite;
-transition:.5s;
-
-filter:
-drop-shadow(0 0 20px rgba(255,215,0,.7))
-
-drop-shadow(0 0 50px rgba(255,180,0,.5));
-
-}
-
-h1{
-
-margin-top:45px;
-
-font-size:34px;
-
-font-family:"Cinzel",serif;
-
-letter-spacing:8px;
-
-}
-
-.tagline{
-
-margin-top:18px;
-
-font-size:20px;
-
-opacity:.9;
-
-letter-spacing:2px;
-
-}
-.music-btn{
-
-position:fixed;
-
-top:14px;
-
-right:12px;
-
-margin:0;
-
-padding:5px;
-
-font-size:9px;
-
-letter-spacing:1px;
-
-background:rgba(0,0,0,.45);
-
-border:1px solid rgba(212,175,55,.6);
-
-color:#d4af37;
-
-border-radius:18px;
-
-backdrop-filter:blur(10px);
-
-cursor:pointer;
-
-z-index:9999;
-
-transition:.3s;
-
-}
-
-.music-btn:hover{
-
-background:rgba(212,175,55,.35);
-
-transform:scale(1.05);
-
-}
-
-.enter-btn{
-
-display:inline-block;
-
-margin-top:50px;
-
-padding:8px 21px;
-width:180px;
-text-align:center;
-background:rgba(212,175,55,.08);
-
-border:2px solid #d4af37;
-
-border-radius:50%;
-
-color:#fff;
-
-text-decoration:none;
-
-font-size:14px;
-
-letter-spacing:2px;
-
-backdrop-filter:blur(10px);
-
-transition:.45s;
-
-box-shadow:0 0 18px rgba(212,175,55,.25);
-
-}
-
-.enter-btn:hover{
-
-background:#d4af37;
-
-color:#000;
-
-transform:translateY(-4px);
-
-box-shadow:
-
-0 0 18px rgba(212,175,55,.6),
-
-0 0 40px rgba(212,175,55,.4);
-
-}
-
-display:inline-block;
-
-margin-top:40px;
-
-padding:16px 48px;
-
-border:2px solid #d4af37;
-
-color:#d4af37;
-
-text-decoration:none;
-
-font-size:20px;
-
-letter-spacing:4px;
-
-transition:.4s;
-
-}
-
-.enter-btn:hover{
-
-background:#d4af37;
-
-color:#000;
-
-box-shadow:0 0 30px rgba(212,175,55,.7);
-
-}
-
-.inside{
-
-background:#050505;
-
-padding:120px 10%;
-
-text-align:center;
-
-}
-
-.inside h2{
-
-font-family:"Cinzel",serif;
-
-font-size:42px;
-
-margin-bottom:30px;
-
-letter-spacing:5px;
-
-color:#d4af37;
-
-}
-
-.inside p{
-
-max-width:900px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:1.8;
-
-color:#ddd;
-
-}
-/* DOORS */
-
-.doors{
-
-margin-top:80px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:35px;
-
-}
-
-.door{
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(212,175,55,.25);
-
-border-radius:18px;
-
-overflow:hidden;
-
-transition:.4s;
-
-backdrop-filter:blur(8px);
-
-}
-
-.door:hover{
-
-transform:translateY(-10px) scale(1.02);
-
-box-shadow:0 0 35px rgba(212,175,55,.35);
-
-}
-
-.door img{
-
-width:100%;
-
-display:block;
-
-}
-
-.door h3{
-
-padding:22px;
-
-font-family:"Cinzel",serif;
-
-letter-spacing:4px;
-
-font-size:24px;
-
-color:#d4af37;
-
-}
-
-
-/* ========= MÓVIL ========= */
-
-@media (max-width:768px){
-
-.hero{
-    min-height:100dvh;
-    padding:20px;
-    background-position:center center;
-}
-
-.hero-content{
-    width:100%;
-    max-width:100%;
-    padding-top:40px;
-}
-
-.logo{
-    width:180px;
-    max-width:80%;
-}
-
-h1{
-    font-size:30px;
-    letter-spacing:3px;
-    margin-top:25px;
-}
-
-.tagline{
-    font-size:15px;
-    line-height:1.6;
-    padding:0 15px;
-}
-
-.music-btn{
-    top:12px;
-    right:12px;
-    font-size:12px;
-    padding:8px 14px;
-}
-
-.enter-btn{
-    display:inline-block;
-    width:140px;
-    padding:8px 0;
-    font-size:14px;
-    letter-spacing:2px;
-    margin-top:35px;
-}
-
-.inside{
-    padding:70px 8%;
-}
-
-.inside h2{
-    font-size:28px;
-}
-
-.inside p{
-    font-size:17px;
-    line-height:1.8;
-}
-
-.doors{
-    grid-template-columns:1fr;
-    gap:25px;
-}
-
-}
-/* ========= ERA I ORÍGENES ========= */
-
-.origins-page{
     margin:0;
     padding:0;
-    width:100%;
-    min-height:100vh;
-    overflow:hidden;
-    color:#fff;
-    font-family:Georgia, serif;
-
-    background-image:url("images/origenes-bg.png.PNG") !important;
-    background-size:contain !important;
-    background-position:center !important;
-    background-repeat:no-repeat !important;
-    background-attachment:fixed !important;
+    box-sizing:border-box;
 }
 
-.origins-hero{
-min-height:100vh;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:60px 25px;
-}
-
-.origins-hero h1{
-font-size:22px;
-letter-spacing:8px;
-color:#caa54a;
-margin-bottom:8px;
-}
-
-.origins-hero h2{
-font-size:54px;
-color:#e3c66b;
-margin-bottom:25px;
-}
-
-.origins-hero p{
-font-size:20px;
-max-width:700px;
-margin:auto;
-margin-bottom:45px;
-color:#ddd;
-}
-
-.cave-image{
-    display:none;
-}
-
-.back-btn{
-display:inline-block;
-margin-top:40px;
-padding:14px 35px;
-border:2px solid #d4af37;
-color:#d4af37;
-text-decoration:none;
-border-radius:40px;
-transition:.3s;
-}
-
-.back-btn:hover{
-background:#d4af37;
-color:#111;
-}
+html,
 body{
-transition:opacity .9s ease;
-}
-
-.fade-out{
-opacity:0;
-}
-
-100%{
-
-transform:translateX(30px);
-
-opacity:.55;
-
-}
-
-}
-/* LUZ DORADA */
-
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-top:50%;
-
-width:500px;
-height:500px;
-
-transform:translate(-50%,-50%);
-
-background:radial-gradient(circle,
-rgba(255,215,80,.45) 0%,
-rgba(255,180,0,.18) 35%,
-transparent 70%);
-
-filter:blur(45px);
-
-animation:goldLight 6s ease-in-out infinite;
-
-pointer-events:none;
-
-z-index:1;
-
-}
-
-@keyframes goldLight{
-
-0%{
-opacity:.35;
-transform:translate(-50%,-50%) scale(.95);
-}
-
-50%{
-opacity:.8;
-transform:translate(-50%,-50%) scale(1.08);
-}
-
-100%{
-opacity:.35;
-transform:translate(-50%,-50%) scale(.95);
-}
-
-}
-@keyframes logoFloat{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-/* FUNDIDO */
-
-body{
-
-opacity:1;
-
-transition:opacity .9s ease;
-
-}
-
-.fade-out{
-
-opacity:0;
-
-}
-/* ===== FONDO ORÍGENES ===== */
-
-.origins-page{
-
-background:
-linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
-url("images/origenes-bg.png.PNG")
-
-background-size:cover;
-
-background-position:center;
-
-background-attachment:fixed;
-
-min-height:100vh;
-
-}
-/* ===== LISTA ERAS ===== */
-
-.era-list{
-
-position:fixed;
-
-right:40px;
-
-top:120px;
-
-text-align:left;
-
-padding:20px;
-
-border:1px solid rgba(212,175,55,.35);
-
-background:rgba(0,0,0,.45);
-
-backdrop-filter:blur(12px);
-
-border-radius:16px;
-
-}
-
-.era-list div{
-
-padding:8px 0;
-
-letter-spacing:3px;
-
-transition:.3s;
-
-}
-
-.era-list div:hover{
-
-color:#d4af37;
-
-transform:translateX(8px);
-
-}
-.cave-image{
-
-animation:floatImage 7s ease-in-out infinite;
-
-}
-
-@keyframes floatImage{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-/* ===== APERTURA DE PUERTAS ===== */
-
-.hero{
-position:relative;
-overflow:hidden;
-}
-
-.hero.open::before{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-top:50%;
-
-width:140%;
-height:140%;
-
-transform:translate(-50%,-50%);
-
-background:radial-gradient(circle,
-rgba(255,220,120,.95) 0%,
-rgba(255,190,0,.65) 25%,
-rgba(255,170,0,.20) 55%,
-transparent 80%);
-
-animation:portalFlash 1.2s forwards;
-
-pointer-events:none;
-
-z-index:20;
-
-}
-
-@keyframes portalFlash{
-
-0%{
-
-opacity:0;
-
-transform:translate(-50%,-50%) scale(.3);
-
-}
-
-40%{
-
-opacity:1;
-
-}
-
-100%{
-
-opacity:0;
-
-transform:translate(-50%,-50%) scale(2.2);
-
-}
-
-}
-/* ===== DESTELLO ===== */
-
-.fade-out{
-
-animation:fadeOut .8s forwards;
-
-}
-
-@keyframes fadeOut{
-
-from{
-
-opacity:1;
-
-}
-
-to{
-
-opacity:0;
-
-}
-
-}
-/* ===== PARTÍCULAS DORADAS ===== */
-
-#particles{
-
-position:fixed;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-pointer-events:none;
-
-z-index:3;
-
-}
-/* ===== PUERTAS ===== */
-
-.hero{
-
-perspective:1600px;
-
-}
-
-.hero.open{
-
-animation:heroShake .8s ease;
-
-}
-
-@keyframes heroShake{
-
-0%{transform:scale(1);}
-25%{transform:scale(1.01);}
-50%{transform:scale(.995);}
-75%{transform:scale(1.01);}
-100%{transform:scale(1);}
-
-}
-/* ===== PORTAL ===== */
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-top:50%;
-
-width:260px;
-height:260px;
-
-transform:translate(-50%,-50%);
-
-border-radius:50%;
-
-background:radial-gradient(circle,
-rgba(255,220,120,.55),
-rgba(255,180,0,.18),
-transparent 75%);
-
-filter:blur(30px);
-
-animation:portalGlow 5s ease-in-out infinite;
-
-pointer-events:none;
-
-z-index:0;
-
-}
-
-@keyframes portalGlow{
-
-0%{
-opacity:.4;
-transform:translate(-50%,-50%) scale(.9);
-}
-
-50%{
-opacity:1;
-transform:translate(-50%,-50%) scale(1.2);
-}
-
-100%{
-opacity:.4;
-transform:translate(-50%,-50%) scale(.9);
-}
-
-}
-/* ===== DESTELLO AL ENTRAR ===== */
-
-.hero.open::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:radial-gradient(circle,
-rgba(255,235,180,.95) 0%,
-rgba(255,210,120,.55) 35%,
-rgba(255,180,0,.12) 70%,
-transparent 100%);
-
-animation:enterFlash 1.2s ease forwards;
-
-pointer-events:none;
-
-z-index:50;
-
-}
-
-@keyframes enterFlash{
-
-0%{
-
-opacity:0;
-
-transform:scale(.2);
-
-}
-
-35%{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-100%{
-
-opacity:0;
-
-transform:scale(1.8);
-
-}
-
-}
-/* ===== LA NIEBLA AUMENTA AL ENTRAR ===== */
-
-.hero.open .fog{
-
-opacity:.9;
-
-filter:blur(70px);
-
-transform:scale(1.2);
-
-transition:all 1.5s ease;
-
-}
-/* ===== BOTÓN PORTAL ===== */
-
-.enter-btn{
-
-position:relative;
-
-overflow:hidden;
-
-box-shadow:
-0 0 15px rgba(212,175,55,.4),
-0 0 40px rgba(212,175,55,.25);
-
-animation:portalButton 3s ease-in-out infinite;
-
-}
-
-@keyframes portalButton{
-
-0%{
-
-box-shadow:
-0 0 10px rgba(212,175,55,.25),
-0 0 30px rgba(212,175,55,.15);
-
-}
-
-50%{
-
-box-shadow:
-0 0 25px rgba(212,175,55,.9),
-0 0 70px rgba(212,175,55,.45);
-
-}
-
-100%{
-
-box-shadow:
-0 0 10px rgba(212,175,55,.25),
-0 0 30px rgba(212,175,55,.15);
-
-}
-
-}
-.enter-btn::before{
-
-content:"";
-
-position:absolute;
-
-inset:-8px;
-
-border-radius:60px;
-
-border:1px solid rgba(212,175,55,.35);
-
-animation:ring 3s infinite;
-
-pointer-events:none;
-
-}
-
-@keyframes ring{
-
-0%{
-
-transform:scale(.96);
-
-opacity:.2;
-
-}
-
-50%{
-
-transform:scale(1.08);
-
-opacity:.8;
-
-}
-
-100%{
-
-transform:scale(.96);
-
-opacity:.2;
-
-}
-
-}
-/* ===== PARALLAX ===== */
-
-.hero{
-
-transform-style:preserve-3d;
-
-transition:transform .25s linear;
-
-will-change:transform;
-
-}
-
-@keyframes fogMove{
-
-0%{
-transform:translateX(-40px);
-opacity:.35;
-}
-
-50%{
-transform:translateX(40px);
-opacity:.6;
-}
-
-100%{
-transform:translateX(-40px);
-opacity:.35;
-}
-
-}
-
-@keyframes portalGlow{
-
-0%{
-filter:brightness(1);
-}
-
-50%{
-filter:brightness(1.15);
-}
-
-100%{
-filter:brightness(1);
-}
-
-}
-/* ===== TEXTO ORÍGENES ===== */
-
-.origin-text{
-
-margin-top:35px;
-
-text-align:center;
-
-}
-
-.origin-text p{
-
-margin:12px 0;
-
-font-size:22px;
-
-font-weight:300;
-
-letter-spacing:3px;
-
-color:#D4AF37;
-
-text-shadow:
-0 0 8px rgba(212,175,55,.35),
-0 0 20px rgba(212,175,55,.15);
-
-animation:goldText 5s ease-in-out infinite;
-
-}
-
-.origin-text p:last-child{
-
-font-size:19px;
-
-opacity:.82;
-
-}
-
-@keyframes goldText{
-
-0%{
-
-opacity:.78;
-
-}
-
-50%{
-
-opacity:1;
-
-text-shadow:
-0 0 15px rgba(212,175,55,.6),
-0 0 30px rgba(212,175,55,.25);
-
-}
-
-100%{
-
-opacity:.78;
-
-}
-
-}
-/* ========= ORDENADOR ========= */
-
-@media (min-width:1200px){
-
-.hero-content{
-    max-width:1200px;
-}
-
-.logo{
-    width:420px;
-}
-
-h1{
-    font-size:68px;
-    letter-spacing:10px;
-}
-
-.tagline{
-    font-size:24px;
-}
-
-.enter-btn{
-    font-size:24px;
-    padding:22px 70px;
-}
-
-.music-btn{
-    font-size:14px;
-    padding:12px 20px;
-}
-
-}
-/* ===== MENÚ IZQUIERDA ===== */
-
-.main-menu{
-    position:absolute;
-    left:25px;
-    top:50%;
-    transform:translateY(-50%);
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-    z-index:100;
-}
-
-.main-menu a{
-    min-width:145px;
-    padding:7px 14px;
-    color:#d4af37;
-    text-decoration:none;
-    font-size:15px !important;
-    font-weight:600 !important;
-    letter-spacing:2px;
-    border:1px solid rgba(212,175,55,.55);
-    border-radius:30px;
-    background:rgba(0,0,0,.35);
-    text-align:center;
-    transition:.4s;
-}
-
-.main-menu a:hover{
-    background:#d4af37;
-    color:#000;
-    box-shadow:0 0 20px rgba(212,175,55,.6);
-}
-
-/* ===== MÓVIL ===== */
-
-@media(max-width:768px){
-
-    .main-menu{
-        left:12px;
-        top:50%;
-    }
-
-    .main-menu a{
-        min-width:115px;
-        padding:6px 8px;
-        font-size:7px;
-        letter-spacing:1px;
-    }
-
-}
-/* ===== AJUSTE FINAL MENÚ DERECHA ===== */
-
-.main-menu{
-    left:auto !important;
-    right:8px !important;
-    top:50% !important;
-    align-items:flex-end !important;
-}
-
-.main-menu a{
-    min-width:0 !important;
-    width:auto !important;
-    padding:6px 10px !important;
-
-    font-size:10px !important;
-    font-weight:600 !important;
-    letter-spacing:1px !important;
-
-    color:#e3c66b !important;
-
-    border:1px solid rgba(212,175,55,.75) !important;
-    border-radius:20px !important;
-
-    background:rgba(0,0,0,.55) !important;
-}
-.main-menu{
-    right:0px !important;
-}
-
-.main-menu a{
-    padding:5px 8px !important;
-}
-/* ===== COLLECTIONS ===== */
-
-.collections-page{
-    margin:0;
-    min-height:100vh;
-    background:#000;
-    color:#d4af37;
-}
-
-.collections-content{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
-}
-
-.collections-content h1{
-    font-family:"Cinzel",serif;
-    font-size:24px;
-    letter-spacing:8px;
-}
-
-.era-card{
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    text-decoration:none;
-    color:#d4af37;
-    padding:20px 45px;
-    border:1px solid rgba(212,175,55,.6);
-    border-radius:40px;
-}
-
-.era-card span{
-    font-size:10px;
-    letter-spacing:4px;
-}
-
-.era-card strong{
-    margin-top:8px;
-    font-size:18px;
-    letter-spacing:5px;
-}
-
-.collections-back{
-    color:#888;
-    text-decoration:none;
-    font-size:9px;
-    letter-spacing:3px;
-}
-/* ===== POSICIÓN FINAL MENÚ ===== */
-
-.main-menu{
-    left:auto !important;
-    right:5% !important;
-    top:52% !important;
-    transform:translateY(-50%) !important;
-    align-items:center !important;
-}
-
-.main-menu a{
-    width:120px !important;
-    min-width:120px !important;
-    padding:6px 4px !important;
-    font-size:9px !important;
-    letter-spacing:1px !important;
-    text-align:center !important;
-}
-.main-menu{
-    left:auto !important;
-    right:1px !important;
-    top:38% !important;
-    transform:translateY(-50%) !important;
-}
-.main-menu{
-    position:fixed !important;
-    left:auto !important;
-    right:3px !important;
-    top:32% !important;
-    transform:none !important;
-}
-
-.main-menu a{
-    width:105px !important;
-    min-width:105px !important;
-    padding:5px 2px !important;
-    font-size:8px !important;
-    letter-spacing:1px !important;
-}
-.main-menu{
-    position:fixed !important;
-    left:3px !important;
-    right:auto !important;
-    top:32% !important;
-    transform:none !important;
-}
-
-.main-menu a{
-    width:88px !important;
-    min-width:88px !important;
-    padding:4px 2px !important;
-    font-size:7px !important;
-    letter-spacing:.7px !important;
-}
-/* ===== PUERTAS CERRADAS ===== */
-
-.hero{
-    background-image:url("images/puertas-cerradas.png.PNG") !important;
-    background-size:contain !important;
-    background-position:center !important;
-    background-repeat:no-repeat !important;
-    background-color:#000 !important;
-}
-/* ===== PUERTAS REALES ===== */
-
-.hero{
-    perspective:1600px;
-    background-image:url("images/48D1C792-F3D3-43AD-A2A8-C3E4344AA3B9.png") !important;
-    background-size:contain !important;
-    background-position:center !important;
-    background-repeat:no-repeat !important;
-    background-color:#000 !important;
-}
-
-/* ===== ENTRADA CINEMATOGRÁFICA ===== */
-
-.cinematic-entry{
-    position:absolute;
-    inset:0;
-    z-index:100;
-    overflow:hidden;
-    background:#000;
-}
-
-.scene{
-    position:absolute;
-    inset:0;
     width:100%;
     height:100%;
-    object-fit:contain;
     background:#000;
 }
-.scene-closed{
-    z-index:2;
-    opacity:1;
-    transform:scale(1);
-    transition:
-        opacity 2.8s ease,
-        transform 6s ease-in;
+
+body{
+    overflow:hidden;
+    font-family:"Inter",sans-serif;
 }
 
-.scene-open{
-    z-index:1;
-    opacity:1;
-    transform:scale(1);
-    transition:transform 7s ease-in;
-}
 
-.cinematic-entry.open .scene-closed{
-    opacity:0;
-    transform:scale(2.8);
-}
-
-.cinematic-entry.open .scene-open{
-    transform:scale(3.5);
-}
-
-#door-enter{
-    position:absolute;
-    left:50%;
-    top:62%;
-    transform:translate(-50%,-50%);
-    z-index:10;
-
-    padding:6px 20px;
-    border:1px solid #d4af37;
-    border-radius:30px;
-    background:rgba(0,0,0,.65);
-    color:#d4af37;
-
-    font-size:10px;
-    letter-spacing:4px;
-}
-.enter-btn{
-    display:none !important;
-}
-/* ===== VIDEO ENTRADA ===== */
+/* =========================================
+   CONTENEDOR DEL VÍDEO
+========================================= */
 
 .video-entry{
     position:fixed;
@@ -1386,832 +31,268 @@ h1{
     width:100%;
     height:100%;
     background:#000;
-    z-index:9999;
     overflow:hidden;
 }
 
+
+/* =========================================
+   VÍDEO
+========================================= */
+
 #entrance-video{
+    position:absolute;
+    inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:contain;
     object-position:center;
+
+    background:#000;
 }
 
+
+/* =========================================
+   BOTÓN SOUND
+========================================= */
+
+.sound-toggle{
+    position:absolute;
+
+    top:calc(50% - 27vw);
+    right:8%;
+
+    z-index:100;
+
+    padding:8px 16px;
+
+    border:1px solid #d4af37;
+    border-radius:0;
+
+    background:rgba(0,0,0,.75);
+
+    color:#e8c45b;
+
+    font-family:"Cinzel",serif;
+    font-size:10px;
+    letter-spacing:2px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   CAPA DE TEXTO
+========================================= */
+
 #hero{
+    position:absolute;
+
+    left:0;
+    top:50%;
+
+    width:100%;
+    aspect-ratio:16 / 9;
+
+    transform:translateY(-50%);
+
+    z-index:20;
+
     opacity:0;
     visibility:hidden;
-    transition:opacity 1.5s ease;
+
+    transition:opacity 1s ease;
 }
 
 #hero.show{
     opacity:1;
     visibility:visible;
 }
-/* ERA INTRO */
 
-.era-intro{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#d4af37;
-    z-index:20;
-}
 
-.era-intro h1{
-    font-family:'Cinzel', serif;
-    font-size:clamp(30px,5vw,70px);
-    letter-spacing:8px;
-    margin:0;
-    text-shadow:0 2px 20px rgba(0,0,0,.8);
-}
-
-.era-intro p{
-    font-family:'Cinzel', serif;
-    letter-spacing:6px;
-    font-size:12px;
-    margin:18px 0 40px;
-}
-
-.discover-btn{
-    padding:14px 28px;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-    font-family:'Cinzel', serif;
-    letter-spacing:3px;
-    font-size:11px;
-    background:rgba(0,0,0,.35);
-}
-
-.story-link{
-    margin-top:25px;
-    color:#d4af37;
-    text-decoration:none;
-    font-family:'Cinzel', serif;
-    letter-spacing:3px;
-    font-size:9px;
-}
-/* ERA INTRO */
-
-.era-intro{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#d4af37;
-    z-index:20;
-}
-
-.era-intro h1{
-    font-family:'Cinzel', serif;
-    font-size:clamp(30px,5vw,70px);
-    letter-spacing:8px;
-    margin:0;
-    text-shadow:0 2px 20px rgba(0,0,0,.8);
-}
-
-.era-intro p{
-    font-family:'Cinzel', serif;
-    letter-spacing:6px;
-    font-size:12px;
-    margin:18px 0 40px;
-}
-
-.discover-btn{
-    padding:14px 28px;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-    font-family:'Cinzel', serif;
-    letter-spacing:3px;
-    font-size:11px;
-    background:rgba(0,0,0,.35);
-}
-
-.story-link{
-    margin-top:25px;
-    color:#d4af37;
-    text-decoration:none;
-    font-family:'Cinzel', serif;
-    letter-spacing:3px;
-    font-size:9px;
-}
-/* FORZAR ERA FINAL */
-
-#hero.show{
-    display:flex !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-#hero.show .hero-content,
-#hero.show .era-intro{
-    display:flex !important;
-    opacity:1 !important;
-    visibility:visible !important;
-    transform:none !important;
-}
-
-.era-intro{
-    position:fixed !important;
-    inset:0 !important;
-    z-index:999 !important;
-    justify-content:center !important;
-    align-items:center !important;
-    flex-direction:column !important;
-}
-.video-entry{
-    z-index:1 !important;
-}
-
-#hero{
-    z-index:9999 !important;
-}
-/* TEXTO SOBRE EL AMANECER */
-
-#hero{
-    background:none !important;
-    background-image:none !important;
-}
-
-#hero::before,
-#hero::after{
-    display:none !important;
-    content:none !important;
-}
-
-.video-entry{
-    display:block !important;
-    opacity:1 !important;
-    visibility:visible !important;
-    z-index:1 !important;
-}
-
-#hero{
-    z-index:10 !important;
-}
-
-.era-intro{
-    background:transparent !important;
-}
-/* NUEVA PORTADA ALAIN MALAHIN */
+/* =========================================
+   CONTENIDO
+========================================= */
 
 .hero-content{
     position:absolute;
     inset:0;
-    z-index:10;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+
+    width:100%;
+    height:100%;
+
     text-align:center;
-    padding:25px;
 }
+
+
+/* =========================================
+   SLOGAN
+========================================= */
 
 .brand-slogan{
-    margin:0 0 40px;
-    font-family:"Cinzel", serif;
-    font-size:clamp(27px, 5vw, 60px);
-    font-weight:600;
-    letter-spacing:5px;
-    line-height:1.3;
-    color:#e5c45b;
+    position:absolute;
+
+    top:5%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:94%;
+
+    margin:0;
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(26px,5vw,48px);
+    font-weight:700;
+
+    line-height:1.15;
+    letter-spacing:0;
+
+    color:#efca62;
 
     text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    0 0 10px #d4af37,
-    0 0 25px rgba(212,175,55,.7);
+        -2px -2px 1px #000,
+        2px -2px 1px #000,
+        -2px 2px 1px #000,
+        2px 2px 1px #000,
+        0 0 8px rgba(212,175,55,.8);
 }
+
+
+/* =========================================
+   MENÚ
+========================================= */
 
 .main-menu{
+    position:absolute;
+
+    left:50%;
+    top:48%;
+
+    transform:translateX(-50%);
+
+    width:82%;
+
     display:flex;
     flex-direction:column;
-    gap:18px;
-    width:min(520px,88vw);
+
+    gap:12px;
 }
 
+
+/* =========================================
+   BOTONES
+========================================= */
+
 .main-menu a{
+    width:100%;
+    height:68px;
+
     display:flex;
+
     justify-content:center;
     align-items:center;
-    min-height:62px;
-    padding:12px 20px;
 
-    border:1px solid #d4af37;
-    background:rgba(0,0,0,.58);
+    padding:4px 10px;
 
-    color:#e5c45b;
+    border:2px solid #e4bd43;
+
+    background:rgba(0,0,0,.78);
+
+    color:#efca62;
+
     text-decoration:none;
 
     font-family:"Cinzel",serif;
-    font-size:clamp(11px,2.5vw,17px);
-    letter-spacing:3px;
+
+    font-size:22px;
+    font-weight:600;
+
+    line-height:1.15;
+    letter-spacing:.5px;
+
+    text-align:center;
+
+    text-shadow:
+        1px 1px 2px #000,
+        0 0 7px rgba(212,175,55,.65);
 
     box-shadow:
-    0 0 10px rgba(212,175,55,.55),
-    inset 0 0 10px rgba(212,175,55,.08);
+        0 0 8px rgba(212,175,55,.65),
+        inset 0 0 10px rgba(212,175,55,.10);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
 }
+
+.main-menu a:active{
+    transform:scale(.97);
+    background:rgba(212,175,55,.18);
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
 
 @media(max-width:768px){
 
     .brand-slogan{
-        font-size:25px;
-        letter-spacing:3px;
-        margin-bottom:35px;
+        top:5%;
+        width:94%;
+
+        font-size:27px;
+        line-height:1.15;
+    }
+
+    .main-menu{
+        top:48%;
+        width:82%;
+        gap:10px;
     }
 
     .main-menu a{
-        min-height:58px;
-        font-size:12px;
-        letter-spacing:2px;
-    }
-}
-/* ===== PORTADA FINAL ===== */
+        height:62px;
 
-.hero-content{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    max-width:none !important;
-    padding:0 !important;
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-}
+        font-size:19px;
+        line-height:1.15;
 
-/* SLOGAN ARRIBA */
-
-.brand-slogan{
-    position:absolute !important;
-    top:8% !important;
-    left:50% !important;
-    transform:translateX(-50%) !important;
-
-    width:95% !important;
-    margin:0 !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:clamp(24px,5vw,58px) !important;
-    line-height:1.35 !important;
-    letter-spacing:5px !important;
-
-    color:#e8c85f !important;
-
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    0 0 12px rgba(212,175,55,.9) !important;
-}
-
-/* BOTONES ABAJO */
-
-.main-menu{
-    position:absolute !important;
-    left:50% !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:8% !important;
-
-    transform:translateX(-50%) !important;
-
-    width:min(600px,92vw) !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    gap:14px !important;
-}
-
-/* BOTONES LARGOS */
-
-.main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    min-height:58px !important;
-
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-
-    padding:12px 25px !important;
-
-    border:1px solid #d4af37 !important;
-    border-radius:0 !important;
-
-    background:rgba(0,0,0,.58) !important;
-
-    color:#e8c85f !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:12px !important;
-    letter-spacing:3px !important;
-
-    box-shadow:
-    0 0 14px rgba(212,175,55,.4),
-    inset 0 0 12px rgba(212,175,55,.08) !important;
-}
-/* ===== TEXTO Y BOTONES DENTRO DEL VÍDEO ===== */
-
-#hero{
-    position:absolute !important;
-    left:50% !important;
-    top:50% !important;
-
-    width:min(100vw,100vh) !important;
-    height:min(100vw,100vh) !important;
-
-    transform:translate(-50%,-50%) !important;
-
-    background:transparent !important;
-    pointer-events:none;
-}
-
-#hero.show{
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-.hero-content{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-    padding:0 !important;
-}
-
-/* HISTORY ARRIBA DENTRO DE LA IMAGEN */
-
-.brand-slogan{
-    position:absolute !important;
-    top:7% !important;
-    left:50% !important;
-
-    transform:translateX(-50%) !important;
-
-    width:94% !important;
-
-    font-size:clamp(20px,5vw,55px) !important;
-    line-height:1.25 !important;
-    letter-spacing:4px !important;
-
-    color:#f0ce5b !important;
-
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    0 0 15px #d4af37 !important;
-}
-
-/* BOTONES ABAJO DENTRO DE LA IMAGEN */
-
-.main-menu{
-    position:absolute !important;
-
-    left:50% !important;
-    right:auto !important;
-
-    top:auto !important;
-    bottom:7% !important;
-
-    transform:translateX(-50%) !important;
-
-    width:88% !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    gap:12px !important;
-
-    pointer-events:auto;
-}
-
-.main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    min-height:54px !important;
-
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-
-    border:1px solid #d4af37 !important;
-
-    background:rgba(0,0,0,.60) !important;
-
-    color:#f0ce5b !important;
-
-    font-size:11px !important;
-    letter-spacing:2px !important;
-
-    box-shadow:
-    0 0 15px rgba(212,175,55,.55),
-    inset 0 0 15px rgba(212,175,55,.10) !important;
-}
-/* ===== AJUSTE DENTRO DEL VIDEO ===== */
-
-#hero{
-    position:absolute !important;
-    left:50% !important;
-    top:50% !important;
-
-    width:min(100vw,150vh) !important;
-    height:min(66.666vw,100vh) !important;
-
-    transform:translate(-50%,-50%) !important;
-    pointer-events:none !important;
-}
-
-.hero-content{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-}
-
-.brand-slogan{
-    top:8% !important;
-    font-size:clamp(18px,3.5vw,46px) !important;
-}
-
-.main-menu{
-    bottom:6% !important;
-    width:min(380px,70%) !important;
-    gap:9px !important;
-    pointer-events:auto !important;
-}
-
-.main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    min-height:40px !important;
-    padding:7px 12px !important;
-    font-size:9px !important;
-    letter-spacing:1.5px !important;
-}
-/* ===== CONTENIDO DENTRO DEL VIDEO ===== */
-
-#hero{
-    position:absolute !important;
-    left:50% !important;
-    top:50% !important;
-    width:min(100vw,150vh) !important;
-    height:min(66.666vw,100vh) !important;
-    transform:translate(-50%,-50%) !important;
-    pointer-events:none !important;
-}
-
-.hero-content{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-}
-
-.brand-slogan{
-    top:5% !important;
-    width:90% !important;
-    font-size:clamp(17px,3.2vw,42px) !important;
-    letter-spacing:3px !important;
-}
-
-.main-menu{
-    left:50% !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:5% !important;
-    transform:translateX(-50%) !important;
-
-    width:min(330px,62%) !important;
-    gap:8px !important;
-
-    pointer-events:auto !important;
-}
-
-.main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    min-height:38px !important;
-
-    padding:6px 10px !important;
-
-    font-size:8px !important;
-    letter-spacing:1.3px !important;
-}
-
-/* SONIDO */
-
-.sound-toggle{
-    position:absolute;
-    top:4%;
-    right:4%;
-
-    z-index:99999;
-
-    padding:7px 12px;
-
-    border:1px solid #d4af37;
-    background:rgba(0,0,0,.55);
-    color:#e8c85f;
-
-    font-family:"Cinzel",serif;
-    font-size:8px;
-    letter-spacing:2px;
-
-    cursor:pointer;
-}
-.sound-toggle{
-    position:absolute !important;
-    top:3% !important;
-    right:18% !important;
-    z-index:99999 !important;
-
-    padding:5px 9px !important;
-    border:1px solid #d4af37 !important;
-    background:rgba(0,0,0,.60) !important;
-    color:#e8c85f !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:7px !important;
-    letter-spacing:1px !important;
-}
-/* ===== PORTADA FINAL ALAIN MALAHIN ===== */
-
-#hero .hero-content{
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-    padding:0 !important;
-}
-
-/* SLOGAN GRANDE */
-
-#hero .brand-slogan{
-    position:absolute !important;
-    top:5% !important;
-    left:50% !important;
-    transform:translateX(-50%) !important;
-
-    width:95% !important;
-    margin:0 !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:clamp(27px,5vw,60px) !important;
-    font-weight:700 !important;
-    line-height:1.25 !important;
-    letter-spacing:2px !important;
-
-    color:#f1cf68 !important;
-
-    text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000,
-    0 0 12px #d4af37,
-    0 0 25px rgba(212,175,55,.8) !important;
-}
-
-/* ZONA DE BOTONES */
-
-#hero .main-menu{
-    position:absolute !important;
-
-    left:50% !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:7% !important;
-
-    transform:translateX(-50%) !important;
-
-    width:82% !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    gap:18px !important;
-
-    pointer-events:auto !important;
-}
-
-/* BOTONES GRANDES */
-
-#hero .main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    min-height:72px !important;
-
-    padding:12px 15px !important;
-
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-
-    border:2px solid #d4af37 !important;
-    border-radius:0 !important;
-
-    background:rgba(0,0,0,.78) !important;
-
-    color:#f1cf68 !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:16px !important;
-    font-weight:700 !important;
-    line-height:1.35 !important;
-    letter-spacing:1.5px !important;
-
-    text-align:center !important;
-
-    text-shadow:
-    0 0 8px rgba(212,175,55,.8) !important;
-
-    box-shadow:
-    0 0 10px rgba(212,175,55,.8),
-    inset 0 0 12px rgba(212,175,55,.15) !important;
-}
-
-/* MÓVIL */
-
-@media(max-width:768px){
-
-    #hero .brand-slogan{
-        font-size:28px !important;
+        padding:3px 8px;
     }
 
-    #hero .main-menu{
-        width:82% !important;
-        bottom:6% !important;
-        gap:14px !important;
-    }
+    .sound-toggle{
+        top:calc(50% - 27vw);
+        right:8%;
 
-    #hero .main-menu a{
-        min-height:68px !important;
-        font-size:15px !important;
-        padding:10px !important;
+        padding:6px 11px;
+
+        font-size:8px;
     }
 
 }
-/* ===== PORTADA FOTO 2 ===== */
 
-#hero .brand-slogan{
-    position:absolute !important;
-    top:7% !important;
-    left:50% !important;
-    transform:translateX(-50%) !important;
 
-    width:94% !important;
-    margin:0 !important;
+/* =========================================
+   ORDENADOR
+========================================= */
 
-    font-family:"Cinzel",serif !important;
-    font-size:34px !important;
-    font-weight:700 !important;
-    line-height:1.25 !important;
-    letter-spacing:0 !important;
+@media(min-width:1200px){
 
-    color:#f0c85a !important;
+    .brand-slogan{
+        font-size:52px;
+    }
 
-    text-shadow:
-        2px 2px 2px #000,
-        -1px -1px 1px #000,
-        0 0 8px rgba(212,175,55,.7) !important;
-}
+    .main-menu{
+        width:65%;
+        max-width:850px;
+    }
 
-/* BOTONES */
+    .main-menu a{
+        height:90px;
+        font-size:30px;
+    }
 
-#hero .main-menu{
-    position:absolute !important;
-    left:50% !important;
-    right:auto !important;
-    top:48% !important;
-    bottom:auto !important;
-
-    transform:translateX(-50%) !important;
-
-    width:82% !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    gap:28px !important;
-}
-
-/* CAJAS FOTO 2 */
-
-#hero .main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    height:118px !important;
-
-    padding:0 15px !important;
-
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-
-    border:3px solid #e5bd42 !important;
-    border-radius:0 !important;
-
-    background:rgba(0,0,0,.82) !important;
-
-    color:#efc75c !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:27px !important;
-    font-weight:600 !important;
-    line-height:1.35 !important;
-    letter-spacing:1px !important;
-
-    text-align:center !important;
-
-    text-shadow:
-        1px 1px 2px #000,
-        0 0 8px rgba(212,175,55,.65) !important;
-
-    box-shadow:
-        0 0 12px rgba(255,200,40,.9),
-        inset 0 0 18px rgba(212,175,55,.12) !important;
-}
-/* ===== BOTONES COMO FOTO 2 ===== */
-
-#hero .brand-slogan{
-    position:absolute !important;
-    top:7% !important;
-    left:50% !important;
-    transform:translateX(-50%) !important;
-    width:94% !important;
-    margin:0 !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:34px !important;
-    font-weight:700 !important;
-    line-height:1.25 !important;
-    letter-spacing:0 !important;
-
-    color:#f0c85a !important;
-
-    text-shadow:
-    -2px -2px 1px #000,
-    2px -2px 1px #000,
-    -2px 2px 1px #000,
-    2px 2px 1px #000,
-    0 0 10px #d4af37 !important;
-}
-
-#hero .main-menu{
-    position:absolute !important;
-    left:50% !important;
-    right:auto !important;
-    top:55% !important;
-    bottom:auto !important;
-
-    transform:translateX(-50%) !important;
-
-    width:82% !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    gap:28px !important;
-}
-
-#hero .main-menu a{
-    width:100% !important;
-    min-width:100% !important;
-    height:118px !important;
-    padding:0 15px !important;
-
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-
-    border:3px solid #e5bd42 !important;
-    border-radius:0 !important;
-
-    background:rgba(0,0,0,.85) !important;
-
-    color:#efc75c !important;
-
-    font-family:"Cinzel",serif !important;
-    font-size:27px !important;
-    font-weight:600 !important;
-    line-height:1.35 !important;
-    letter-spacing:1px !important;
-    text-align:center !important;
-
-    text-shadow:
-    1px 1px 2px #000,
-    0 0 8px rgba(212,175,55,.8) !important;
-
-    box-shadow:
-    0 0 12px rgba(255,200,40,.9),
-    inset 0 0 18px rgba(212,175,55,.15) !important;
 }
