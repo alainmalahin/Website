@@ -401,7 +401,7 @@ h1{
     font-family:Georgia, serif;
 
     background-image:url("images/origenes-bg.png.PNG") !important;
-    background-size:cover !important;
+    background-size:contain !important;
     background-position:center !important;
     background-repeat:no-repeat !important;
     background-attachment:fixed !important;
