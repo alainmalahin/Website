@@ -1280,3 +1280,18 @@ h1{
     font-size:8px !important;
     letter-spacing:1px !important;
 }
+.main-menu{
+    position:fixed !important;
+    left:3px !important;
+    right:auto !important;
+    top:32% !important;
+    transform:none !important;
+}
+
+.main-menu a{
+    width:88px !important;
+    min-width:88px !important;
+    padding:4px 2px !important;
+    font-size:7px !important;
+    letter-spacing:.7px !important;
+}
