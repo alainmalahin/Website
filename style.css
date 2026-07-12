@@ -1259,3 +1259,9 @@ h1{
     letter-spacing:1px !important;
     text-align:center !important;
 }
+.main-menu{
+    left:auto !important;
+    right:1px !important;
+    top:38% !important;
+    transform:translateY(-50%) !important;
+}
