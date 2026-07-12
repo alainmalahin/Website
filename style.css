@@ -1377,3 +1377,32 @@ h1{
 .enter-btn{
     display:none !important;
 }
+/* ===== VIDEO ENTRADA ===== */
+
+.video-entry{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    z-index:9999;
+    overflow:hidden;
+}
+
+#entrance-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+#hero{
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 1.5s ease;
+}
+
+#hero.show{
+    opacity:1;
+    visibility:visible;
+}
