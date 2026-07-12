@@ -1125,7 +1125,8 @@ h1{
     padding:7px 14px;
     color:#d4af37;
     text-decoration:none;
-    font-size:9px;
+    font-size:15px !important;
+    font-weight:600 !important;
     letter-spacing:2px;
     border:1px solid rgba(212,175,55,.55);
     border-radius:30px;
