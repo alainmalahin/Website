@@ -40,51 +40,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-  // ==========================
-  // EFECTO AL PULSAR ENTER
-  // ==========================
-  if (enterBtn) {
-
-    enterBtn.addEventListener("click", (e) => {
-
-      e.preventDefault();
-
-      if (portal) {
-        portal.classList.add("portal-open");
-      }
-
-      if (overlay) {
-        overlay.classList.add("active");
-      }
-
-    });
-
-  }
-});
-/* ===== ENTRADA CINEMATOGRÁFICA ===== */
+// ENTRADA CINEMATOGRÁFICA
 
 const cinematicEntry = document.querySelector(".cinematic-entry");
 const doorEnter = document.querySelector("#door-enter");
 
 if (cinematicEntry && doorEnter) {
 
-    doorEnter.addEventListener("click", () => {
+  doorEnter.addEventListener("click", () => {
 
-        doorEnter.style.opacity = "0";
-        doorEnter.style.pointerEvents = "none";
+    doorEnter.style.opacity = "0";
+    doorEnter.style.pointerEvents = "none";
 
-        cinematicEntry.classList.add("open");
+    cinematicEntry.classList.add("open");
 
-        setTimeout(() => {
-            cinematicEntry.style.opacity = "0";
-            cinematicEntry.style.transition = "opacity 2s ease";
-        }, 5500);
+    setTimeout(() => {
+      cinematicEntry.classList.add("walk");
+    }, 3000);
 
-        setTimeout(() => {
-            cinematicEntry.style.display = "none";
-        }, 7500);
+    setTimeout(() => {
+      cinematicEntry.style.opacity = "0";
+    }, 7000);
 
-    });
+    setTimeout(() => {
+      cinematicEntry.style.display = "none";
+    }, 8500);
+
+  });
 
 }
+
+});
