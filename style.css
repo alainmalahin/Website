@@ -294,3 +294,36 @@ body{
     }
 
 }
+/* ===== AJUSTE FINAL PORTADA ===== */
+
+/* SOUND MÁS ARRIBA Y PEQUEÑO */
+
+.sound-toggle{
+    top:calc(50% - 27vw) !important;
+    right:8% !important;
+
+    padding:3px 7px !important;
+
+    font-size:6px !important;
+    letter-spacing:1px !important;
+
+    z-index:100 !important;
+}
+
+/* BOTONES MÁS PEQUEÑOS */
+
+.main-menu{
+    top:49% !important;
+    gap:8px !important;
+}
+
+.main-menu a{
+    height:52px !important;
+    min-height:52px !important;
+
+    padding:2px 8px !important;
+
+    /* LETRAS IGUAL */
+    font-size:19px !important;
+    line-height:1.1 !important;
+}
