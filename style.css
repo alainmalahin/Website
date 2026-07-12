@@ -312,3 +312,30 @@ body{
     }
 
 }
+/* ===== MÓVIL HORIZONTAL PANTALLA COMPLETA ===== */
+
+@media (orientation: landscape) and (max-height: 500px){
+
+    .video-entry{
+        width:100vw !important;
+        height:100dvh !important;
+        inset:0 !important;
+    }
+
+    #entrance-video{
+        width:100vw !important;
+        height:100dvh !important;
+
+        object-fit:cover !important;
+        object-position:center center !important;
+    }
+
+    #hero{
+        position:absolute !important;
+        inset:0 !important;
+
+        width:100vw !important;
+        height:100dvh !important;
+    }
+
+}
