@@ -5,8 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!entranceVideo || !hero) return;
 
-    entranceVideo.addEventListener("ended", () => {
-        hero.classList.add("show");
+    entranceVideo.addEventListener("timeupdate", () => {
+
+        if (entranceVideo.currentTime >= 1.2) {
+            hero.classList.add("show");
+        }
+
     });
 
 });
