@@ -353,31 +353,3 @@ fit:contain;
 /* MÓVIL HORIZONTAL */
 
 @media screen and (orientation:landscape) and (max-height:600px){
-
-    .brand-slogan{
-        top:5% !important;
-        width:90% !important;
-        font-size:4vw !important;
-        line-height:1.05 !important;
-    }
-
-    .main-menu{
-        top:48% !important;
-        width:64% !important;
-        gap:8px !important;
-    }
-
-    .main-menu a{
-        height:48px !important;
-        font-size:18px !important;
-        line-height:1.05 !important;
-        padding:2px 8px !important;
-    }
-
-    .sound-toggle{
-        top:calc(50% - 27vw) !important;
-        right:2% !important;
-        padding:3px 6px !important;
-        font-size:6px !important;
-    }
-}
