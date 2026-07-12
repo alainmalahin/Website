@@ -1502,3 +1502,27 @@ h1{
     letter-spacing:3px;
     font-size:9px;
 }
+/* FORZAR ERA FINAL */
+
+#hero.show{
+    display:flex !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+#hero.show .hero-content,
+#hero.show .era-intro{
+    display:flex !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+}
+
+.era-intro{
+    position:fixed !important;
+    inset:0 !important;
+    z-index:999 !important;
+    justify-content:center !important;
+    align-items:center !important;
+    flex-direction:column !important;
+}
