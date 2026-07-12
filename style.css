@@ -1930,3 +1930,18 @@ h1{
 
     cursor:pointer;
 }
+.sound-toggle{
+    position:absolute !important;
+    top:3% !important;
+    right:18% !important;
+    z-index:99999 !important;
+
+    padding:5px 9px !important;
+    border:1px solid #d4af37 !important;
+    background:rgba(0,0,0,.60) !important;
+    color:#e8c85f !important;
+
+    font-family:"Cinzel",serif !important;
+    font-size:7px !important;
+    letter-spacing:1px !important;
+}
