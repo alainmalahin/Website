@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const entranceVideo = document.getElementById("entrance-video");
     const hero = document.getElementById("hero");
+    const soundToggle = document.getElementById("sound-toggle");
 
     if (!entranceVideo || !hero) return;
 
@@ -12,5 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+
+    if (soundToggle) {
+
+        soundToggle.addEventListener("click", () => {
+
+            entranceVideo.muted = !entranceVideo.muted;
+
+            soundToggle.textContent =
+                entranceVideo.muted ? "SOUND ON" : "SOUND OFF";
+
+        });
+
+    }
 
 });
