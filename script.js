@@ -78,7 +78,7 @@ const videoEntry = document.getElementById("video-entry");
 const hero = document.getElementById("hero");
 
 if (entranceVideo && hero) {
-entranceVideo.playbackRate = 1.35;
+
     entranceVideo.addEventListener("ended", () => {
 
         entranceVideo.pause();
