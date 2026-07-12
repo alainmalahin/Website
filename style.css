@@ -254,9 +254,9 @@ body{
     }
 
     .main-menu a{
-        height:48px;
+        height:40px;
 
-        font-size:10px;
+        font-size:12px;
         line-height:1.05;
 
         padding:2px 8px;
