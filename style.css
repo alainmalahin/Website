@@ -1818,3 +1818,44 @@ h1{
     0 0 15px rgba(212,175,55,.55),
     inset 0 0 15px rgba(212,175,55,.10) !important;
 }
+/* ===== AJUSTE DENTRO DEL VIDEO ===== */
+
+#hero{
+    position:absolute !important;
+    left:50% !important;
+    top:50% !important;
+
+    width:min(100vw,150vh) !important;
+    height:min(66.666vw,100vh) !important;
+
+    transform:translate(-50%,-50%) !important;
+    pointer-events:none !important;
+}
+
+.hero-content{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+}
+
+.brand-slogan{
+    top:8% !important;
+    font-size:clamp(18px,3.5vw,46px) !important;
+}
+
+.main-menu{
+    bottom:6% !important;
+    width:min(380px,70%) !important;
+    gap:9px !important;
+    pointer-events:auto !important;
+}
+
+.main-menu a{
+    width:100% !important;
+    min-width:100% !important;
+    min-height:40px !important;
+    padding:7px 12px !important;
+    font-size:9px !important;
+    letter-spacing:1.5px !important;
+}
