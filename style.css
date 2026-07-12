@@ -294,36 +294,63 @@ body{
     }
 
 }
-/* ===== AJUSTE FINAL PORTADA ===== */
+/* ===== POSICIONES FINALES PORTADA ===== */
 
-/* SOUND MÁS ARRIBA Y PEQUEÑO */
+/* SOUND: MÁS ARRIBA Y MÁS PEQUEÑO */
 
-.sound-toggle{
-    top:calc(50% - 27vw) !important;
+#video-entry .sound-toggle{
+    position:absolute !important;
+
+    top:calc(50% - 28.125vw - 32px) !important;
     right:8% !important;
 
-    padding:3px 7px !important;
+    padding:3px 6px !important;
 
     font-size:6px !important;
     letter-spacing:1px !important;
 
-    z-index:100 !important;
+    width:auto !important;
+    height:auto !important;
+
+    z-index:999 !important;
 }
 
-/* BOTONES MÁS PEQUEÑOS */
 
-.main-menu{
-    top:49% !important;
+/* BOTONES: CAJAS MÁS PEQUEÑAS */
+
+#hero .main-menu{
+    position:absolute !important;
+
+    left:50% !important;
+    top:50% !important;
+
+    transform:translateX(-50%) !important;
+
+    width:78% !important;
+
     gap:8px !important;
 }
 
-.main-menu a{
-    height:52px !important;
-    min-height:52px !important;
 
-    padding:2px 8px !important;
+/* LETRAS GRANDES, CAJAS BAJAS */
 
-    /* LETRAS IGUAL */
+#hero .main-menu a{
+    width:100% !important;
+
+    height:48px !important;
+    min-height:48px !important;
+
+    padding:0 8px !important;
+
     font-size:19px !important;
-    line-height:1.1 !important;
+    font-weight:600 !important;
+    line-height:1.05 !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    border:2px solid #e4bd43 !important;
+
+    background:rgba(0,0,0,.78) !important;
 }
