@@ -58,10 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.add("active");
       }
 
-      setTimeout(() => {
-        window.location.href = "origenes.html";
-      }, 1800);
-
     });
 
   }
