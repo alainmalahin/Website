@@ -134,3 +134,40 @@ nav a.active{
     color:#f5e9c8;
 
 }
+.bloque{
+
+    max-width:1000px;
+
+    margin:140px auto;
+
+    padding:0 40px;
+
+}
+
+.bloque h2{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(34px,5vw,58px);
+
+    color:#d9b55a;
+
+    margin-bottom:50px;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+}
+
+.bloque p{
+
+    font-size:34px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+    color:#f5e9c8;
+
+}
