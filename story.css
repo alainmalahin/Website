@@ -81,3 +81,56 @@ nav a.active{
     padding-bottom:8px;
 
 }
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 30px 40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+    url("images/historia-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+.hero h1{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(42px,7vw,90px);
+
+    color:#e5c15b;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(212,175,55,.35);
+
+}
+
+.frase{
+
+    font-size:clamp(26px,3vw,42px);
+
+    line-height:1.5;
+
+    max-width:900px;
+
+    color:#f5e9c8;
+
+}
