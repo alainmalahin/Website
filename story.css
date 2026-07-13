@@ -423,3 +423,62 @@ font-family: "Cinzel", serif;
     }
 
 }
+.story-era {
+
+    width: 100%;
+
+    padding: 90px 25px 120px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #000;
+
+}
+
+.era-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px 45px;
+
+    border: 1px solid #d9b55a;
+
+    color: #d9b55a;
+
+    background: rgba(0, 0, 0, .65);
+
+    text-decoration: none;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    box-shadow: 0 0 12px rgba(217, 181, 90, .25);
+
+}
+
+@media (max-width: 700px) {
+
+    .era-button {
+
+        width: 100%;
+
+        max-width: 360px;
+
+        padding: 18px 20px;
+
+        font-size: 14px;
+
+    }
+
+}
