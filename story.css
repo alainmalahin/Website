@@ -393,3 +393,153 @@ footer{
 }
 
 }
+/* =========================================
+   TARJETAS DE HISTORIA
+========================================= */
+
+.bloque{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:120px auto;
+
+    padding:60px;
+
+    background:rgba(15,15,15,.82);
+
+    border:1px solid rgba(212,175,55,.22);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:6px;
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.08);
+
+}
+
+.bloque::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:-1px;
+
+    transform:translateX(-50%);
+
+    width:140px;
+    height:2px;
+
+    background:#d4af37;
+
+}
+
+.bloque h2{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(28px,5vw,52px);
+
+    text-align:center;
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    margin-bottom:40px;
+
+}
+
+.bloque p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:24px;
+
+    line-height:1.9;
+
+    color:#efe8d3;
+
+}
+
+
+/* =========================================
+   EFECTO HOVER
+========================================= */
+
+.bloque:hover{
+
+    transform:translateY(-8px);
+
+    transition:.45s;
+
+    box-shadow:
+        0 0 40px rgba(212,175,55,.18);
+
+}
+
+
+/* =========================================
+   PIE
+========================================= */
+
+footer{
+
+    margin-top:140px;
+
+    padding:120px 30px;
+
+    text-align:center;
+
+}
+
+footer h3{
+
+    font-family:"Cinzel",serif;
+
+    color:#d4af37;
+
+    font-size:clamp(24px,4vw,46px);
+
+    letter-spacing:5px;
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media(max-width:768px){
+
+.bloque{
+
+    margin:70px 20px;
+
+    padding:35px 22px;
+
+}
+
+.bloque h2{
+
+    font-size:30px;
+
+}
+
+.bloque p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+}
