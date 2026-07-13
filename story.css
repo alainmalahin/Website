@@ -1,241 +1,425 @@
 * {
 
-  margin: 0;
+    margin: 0;
 
-  padding: 0;
+    padding: 0;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 
 }
 
-html,
+html {
+
+    width: 100%;
+
+    background: #000;
+
+    scroll-behavior: smooth;
+
+}
 
 body {
 
-  width: 100%;
+    width: 100%;
 
-  min-height: 100%;
+    min-height: 100vh;
 
-  background: #050300;
+    overflow-x: hidden;
 
-}
+    background: #000;
 
-body {
+    color: #f3e6c6;
 
-  color: #f3d58c;
-
-  font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
 }
 
-.story-page {
+/* =========================================
 
-  width: 100%;
+   IMAGEN PRINCIPAL
 
-  min-height: 100vh;
+========================================= */
 
-}
+.story-hero {
 
-.story-panel {
+    position: relative;
 
-  position: relative;
+    width: 100%;
 
-  width: 100%;
+    min-height: 100vh;
 
-  min-height: 100vh;
+    min-height: 100svh;
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  justify-content: center;
+    justify-content: center;
+    
+    padding: 60px 30px;
 
-  padding: 70px 8%;
+    background-image:
 
-  background-image:
+        linear-gradient(
 
-    linear-gradient(
+            rgba(0, 0, 0, 0.20),
 
-      rgba(5, 2, 0, 0.25),
+            rgba(0, 0, 0, 0.40)
 
-      rgba(5, 2, 0, 0.35)
+        ),
 
-    ),
+        url("images/story-bg.png.PNG");
 
-    url("images/story-bg.png.PNG");
+    background-size: cover;
 
-  background-size: cover;
+    background-position: center;
 
-  background-position: center;
-
-  background-repeat: no-repeat;
-
-}
-
-.story-panel::before {
- content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-
-    radial-gradient(
-
-      circle at center,
-
-      transparent 20%,
-
-      rgba(0, 0, 0, 0.55) 100%
-
-    );
-
-  pointer-events: none;
+    background-repeat: no-repeat;
 
 }
 
-.story-content {
+.story-hero::after {
 
-  position: relative;
+    content: "";
 
-  z-index: 2;
+    position: absolute;
 
-  width: 100%;
+    inset: 0;
 
-  max-width: 1050px;
+    background:
 
-  margin-left: auto;
+        linear-gradient(
 
-  text-align: center;
+            to bottom,
 
-}
+            rgba(0, 0, 0, 0.08) 0%,
 
-.story-content h1 {
+            rgba(0, 0, 0, 0.05) 60%,
 
-  margin-bottom: 25px;
+            #000 100%
 
-  font-family: "Cinzel", serif;
+        );
 
-  font-size: clamp(34px, 4.5vw, 66px);
-
-  font-weight: 500;
-
-  letter-spacing: 6px;
-
-  color: #e7b94f;
-
-  text-shadow:
-
-    0 2px 5px #000,
-
-    0 0 18px rgba(224, 164, 45, 0.55);
+    pointer-events: none;
 
 }
 
-.story-content p {
+.hero-content {
 
-  max-width: 980px;
+    position: relative;
 
-  margin: 0 auto 25px;
+    z-index: 2;
 
-  font-size: clamp(21px, 2.1vw, 32px);
+    width: 100%;
 
-  line-height: 1.35;
+    max-width: 1100px;
 
-  color: #f2d894;
+    text-align: center;
 
-  text-shadow:
+}
 
-    0 2px 4px #000,
+.hero-content h1 {
+font-family: "Cinzel", serif;
 
-    0 0 8px rgba(0, 0, 0, 0.8);
-    }
+    font-size: clamp(42px, 6vw, 88px);
 
-.story-content strong {
+    font-weight: 500;
 
-  font-family: "Cinzel", serif;
+    line-height: 1.15;
 
-  font-weight: 500;
+    letter-spacing: 5px;
+
+    color: #e6c35f;
+
+    text-shadow:
+
+        0 3px 8px #000,
+
+        0 0 22px rgba(212, 175, 55, 0.55);
 
 }
 
 .gold-line {
 
-  width: 70%;
+    width: 170px;
 
-  max-width: 700px;
+    height: 1px;
 
-  height: 1px;
+    margin: 35px auto;
 
-  margin: 25px auto;
+    background: #d4af37;
 
-  background: linear-gradient(
+    box-shadow:
 
-    90deg,
-
-    transparent,
-
-    #e3ad35,
-
-    #fff1a3,
-
-    #e3ad35,
-
-    transparent
-
-  );
-
-  box-shadow: 0 0 8px rgba(227, 173, 53, 0.8);
+        0 0 10px rgba(212, 175, 55, 0.85);
 
 }
 
-@media (max-width: 700px) {
+.hero-quote {
 
-  .story-panel {
+    font-size: clamp(26px, 3vw, 42px);
 
-    min-height: 100svh;
-
-    padding: 55px 22px;
-
-    background-position: center;
-
-  }
-
-  .story-content {
-
-    margin: 0 auto;
-
-  }
-
-  .story-content h1 {
-
-    font-size: 30px;
-
-    line-height: 1.25;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 25px;
-
-  }
-
-  .story-content p {
-
-    font-size: 20px;
+    font-weight: 500;
 
     line-height: 1.4;
 
-    margin-bottom: 22px;
+    color: #fff0cf;
 
-  }
+    text-shadow:
 
-  .gold-line {
+        0 2px 7px #000;
 
-    width: 85%;
+}
 
-    margin: 25px auto;
+/* =========================================
 
-  }
+   HISTORIA
+
+========================================= */
+
+.story-section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 100px 30px;
+
+    border-bottom: 1px solid rgba(217, 181, 90, 0.20);
+
+}
+
+.story-text {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.story-text h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(38px, 5vw, 68px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    letter-spacing: 3px;
+
+    color: #d9b55a;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+
+        0 0 15px rgba(217, 181, 90, 0.20);
+
+}
+
+.story-text p {
+
+    max-width: 850px;
+
+    margin: 0 auto 28px;
+
+    font-size: clamp(22px, 2.4vw, 30px);
+
+    line-height: 1.65;
+
+    color: #e8dfcf;
+
+}
+
+.strong-text {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(20px, 2.2vw, 27px) !important;
+
+    letter-spacing: 2px;
+
+    color: #d9b55a !important;
+    }
+
+/* =========================================
+
+   MÓVIL
+
+========================================= */
+
+@media (max-width: 700px) {
+
+    .story-hero {
+
+        min-height: 100svh;
+
+        padding: 50px 24px;
+
+        background-size: cover;
+
+        background-position: center center;
+
+    }
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 39px;
+
+        line-height: 1.2;
+
+        letter-spacing: 2px;
+
+    }
+
+    .gold-line {
+
+        width: 120px;
+
+        margin: 30px auto;
+
+    }
+
+    .hero-quote {
+
+        font-size: 25px;
+
+        line-height: 1.4;
+
+    }
+
+    .story-section {
+
+        width: 100%;
+
+        min-height: 100svh;
+
+        padding: 80px 26px;
+
+    }
+
+    .story-text {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+    .story-text h2 {
+
+        font-size: 33px;
+
+        line-height: 1.2;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .story-text p {
+
+        width: 100%;
+
+        font-size: 22px;
+
+        line-height: 1.55;
+
+        margin-bottom: 25px;
+
+    }
+
+    .strong-text {
+
+        font-size: 19px !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}
+
+/* =========================================
+
+   MÓVIL HORIZONTAL
+
+========================================= */
+
+@media (orientation: landscape) and (max-height: 600px) {
+
+    .story-hero {
+
+        min-height: 100vh;
+
+        padding: 40px 30px;
+
+        background-position: center;
+        }
+
+    .hero-content h1 {
+
+        font-size: 40px;
+
+    }
+
+    .gold-line {
+
+        margin: 20px auto;
+
+    }
+
+    .hero-quote {
+
+        font-size: 21px;
+
+    }
+
+    .story-section {
+
+        min-height: 100vh;
+
+        padding: 65px 8%;
+
+    }
+
+    .story-text h2 {
+
+        font-size: 35px;
+
+        margin-bottom: 28px;
+
+    }
+
+    .story-text p {
+
+        font-size: 20px;
+
+        line-height: 1.45;
+
+        margin-bottom: 16px;
+
+    }
 
 }
