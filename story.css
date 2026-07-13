@@ -171,3 +171,225 @@ nav a.active{
     color:#f5e9c8;
 
 }
+/* =========================================
+   SECCIONES
+========================================= */
+
+.bloque{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:120px auto;
+
+    padding:0 35px;
+
+    animation:fadeUp .8s ease;
+
+}
+
+.bloque::before{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:1px;
+
+    margin:0 auto 45px;
+
+    background:#d4af37;
+
+    opacity:.65;
+
+}
+
+.bloque h2{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(30px,5vw,56px);
+
+    text-align:center;
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    margin-bottom:45px;
+
+}
+
+.bloque p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:clamp(20px,2vw,28px);
+
+    line-height:1.9;
+
+    color:#efe7d2;
+
+}
+
+
+/* =========================================
+   EFECTO HOVER EN ENLACES
+========================================= */
+
+nav a{
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#fff;
+
+    text-shadow:
+    0 0 10px rgba(212,175,55,.8);
+
+}
+
+
+/* =========================================
+   PIE
+========================================= */
+
+footer{
+
+    margin-top:150px;
+
+    padding:120px 25px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(212,175,55,.25);
+
+}
+
+footer h3{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(24px,4vw,44px);
+
+    letter-spacing:5px;
+
+    color:#d4af37;
+
+}
+
+
+/* =========================================
+   ANIMACIÓN
+========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media(max-width:768px){
+
+header{
+
+    height:75px;
+
+    padding:0 20px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+nav{
+
+    gap:18px;
+
+}
+
+nav a{
+
+    font-size:11px;
+
+}
+
+.hero{
+
+    padding:110px 20px 40px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.frase{
+
+    font-size:22px;
+
+}
+
+.bloque{
+
+    margin:80px auto;
+
+    padding:0 20px;
+
+}
+
+.bloque h2{
+
+    font-size:28px;
+
+}
+
+.bloque p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+footer{
+
+    padding:80px 20px;
+
+}
+
+}
