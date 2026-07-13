@@ -726,3 +726,22 @@ and
         font-size:11px;
     }
 }
+/* OCULTAR NÚMEROS DE SECCIÓN */
+
+.section-number{
+
+display:none !important;
+
+}
+
+.number{
+
+display:none !important;
+
+}
+
+.era-number{
+
+display:none !important;
+
+}
