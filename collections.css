@@ -743,3 +743,35 @@ footer p{
             }
 
 }
+.page-menu {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 1000;
+
+    display: flex;
+    gap: 18px;
+}
+
+.page-menu a {
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #d9b55a;
+    text-decoration: none;
+
+    opacity: .8;
+}
+
+@media (max-width: 700px) {
+    .page-menu {
+        top: 16px;
+        right: 16px;
+        gap: 14px;
+    }
+
+    .page-menu a {
+        font-size: 9px;
+    }
+}
