@@ -1,1 +1,745 @@
+*{
 
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#000;
+
+color:#e8dfcf;
+
+font-family:"Cormorant Garamond",serif;
+
+}
+
+/* HEADER */
+
+.topbar{
+
+width:100%;
+
+background:#050505;
+
+text-align:center;
+
+padding:28px 20px 20px;
+
+border-bottom:1px solid rgba(217,181,90,.25);
+
+}
+
+.brand{
+
+font-family:"Cinzel",serif;
+
+font-size:28px;
+
+letter-spacing:6px;
+
+color:#d9b55a;
+
+margin-bottom:22px;
+
+}
+
+.top-menu{
+
+display:flex;
+
+justify-content:center;
+
+gap:38px;
+
+}
+
+.top-menu a{
+
+font-family:"Cinzel",serif;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+color:#d9b55a;
+
+text-decoration:none;
+
+padding-bottom:8px;
+
+}
+
+.top-menu a.active{
+
+color:#fff;
+
+border-bottom:1px solid #d9b55a;
+
+}
+
+/* HERO */
+
+.collection-hero{
+
+min-height:85vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.25),
+
+rgba(0,0,0,.75)
+
+),
+
+url("images/origenes-bg.png.PNG");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.hero-content{
+
+padding:40px 25px;
+
+}
+
+.hero-small{
+
+font-family:"Cinzel",serif;
+
+font-size:15px;
+
+letter-spacing:5px;
+
+color:#d9b55a;
+
+margin-bottom:25px;
+
+}
+
+.collection-hero h1{
+
+font-family:"Cinzel",serif;
+
+font-size:54px;
+
+letter-spacing:4px;
+
+color:#d9b55a;
+
+text-shadow:0 0 20px rgba(217,181,90,.35);
+
+margin-bottom:40px;
+
+}
+
+.hero-text{
+
+font-size:27px;
+
+line-height:1.7;
+
+}
+/* =========================================
+
+   ERA INTRO
+
+========================================= */
+
+.era-intro{
+
+    min-height:100vh;
+
+    padding:120px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(217,181,90,.20);
+
+}
+
+.era-number{
+
+    font-family:"Cinzel",serif;
+
+    font-size:100px;
+
+    color:rgba(217,181,90,.15);
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+}
+
+.era-intro h2,
+
+.collection-story h2,
+
+.collection-identity h2{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(38px,6vw,72px);
+
+    line-height:1.1;
+
+    letter-spacing:3px;
+
+    color:#d9b55a;
+
+    margin-bottom:35px;
+
+}
+
+.gold-line{
+
+    width:130px;
+
+    height:1px;
+
+    background:#d9b55a;
+
+    margin:10px auto 45px;
+
+}
+
+.era-description,
+
+.collection-story p,
+
+.collection-identity p{
+
+    font-size:clamp(22px,2.5vw,31px);
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+    color:#e8dfcf;
+
+}
+
+.era-highlight{
+
+    font-family:"Cinzel",serif;
+
+    color:#d9b55a !important;
+
+    letter-spacing:2px;
+
+    margin-top:35px;
+
+}
+
+/* =========================================
+
+   MANIFESTO
+
+========================================= */
+
+.manifesto{
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:80px 25px;
+
+    text-align:center;
+
+    background:
+
+    radial-gradient(
+
+        circle at center,
+
+        rgba(217,181,90,.13),
+
+        transparent 50%
+
+    );
+
+}
+
+.manifesto p{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(42px,7vw,95px);
+
+    line-height:1.15;
+
+    letter-spacing:4px;
+
+    color:#d9b55a;
+
+}
+
+/* =========================================
+
+   COLLECTION STORY
+
+========================================= */
+
+.collection-story,
+
+.collection-identity{
+
+    min-height:100vh;
+
+    padding:120px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(217,181,90,.20);
+    }
+    /* =========================================
+
+   COLLECTION FINAL
+
+========================================= */
+
+.collection-final{
+
+    min-height:100vh;
+
+    padding:120px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+
+        radial-gradient(
+
+            circle at center,
+
+            rgba(217,181,90,.14),
+
+            transparent 48%
+
+        );
+
+}
+
+.collection-final > p:first-child{
+
+    font-family:"Cinzel",serif;
+
+    font-size:15px;
+
+    letter-spacing:5px;
+
+    color:#d9b55a;
+
+    margin-bottom:25px;
+
+}
+
+.collection-final h2{
+
+    font-family:"Cinzel",serif;
+
+    font-size:clamp(70px,12vw,170px);
+
+    line-height:1;
+
+    letter-spacing:7px;
+
+    color:#d9b55a;
+
+    margin-bottom:40px;
+
+    text-shadow:
+
+        0 0 25px rgba(217,181,90,.25);
+
+}
+
+.coming{
+
+    font-family:"Cinzel",serif;
+
+    font-size:18px;
+
+    letter-spacing:6px;
+
+    color:#e8dfcf;
+
+    margin-bottom:55px;
+
+}
+
+.story-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:300px;
+
+    padding:19px 30px;
+
+    border:1px solid #d9b55a;
+
+    background:rgba(0,0,0,.65);
+
+    color:#d9b55a;
+
+    text-decoration:none;
+
+    font-family:"Cinzel",serif;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.story-button:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(217,181,90,.12);
+
+}
+
+/* =========================================
+
+   FOOTER
+
+========================================= */
+
+footer{
+
+    padding:55px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(217,181,90,.20);
+
+}
+
+footer p{
+
+    font-family:"Cinzel",serif;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    color:#d9b55a;
+
+}
+
+/* =========================================
+
+   MÓVIL
+
+========================================= */
+
+@media(max-width:900px){
+
+    .topbar{
+
+        padding:22px 15px 18px;
+
+    }
+
+    .brand{
+
+        font-size:22px;
+
+        letter-spacing:4px;
+
+        margin-bottom:20px;
+
+    }
+
+    .top-menu{
+
+        gap:22px;
+
+    }
+
+    .top-menu a{
+
+        font-size:10px;
+
+        letter-spacing:1px;
+
+    }
+
+    .collection-hero{
+
+        min-height:100svh;
+
+        background-position:center;
+
+    }
+
+    .collection-hero h1{
+
+        font-size:44px;
+
+        line-height:1.1;
+
+    }
+
+    .hero-text{
+
+        font-size:23px;
+
+    }
+
+    .era-number{
+
+        font-size:90px;
+
+    }
+
+    .era-intro,
+
+    .collection-story,
+
+    .collection-identity{
+
+        padding:90px 24px;
+
+    }
+
+    .era-description,
+
+    .collection-story p,
+
+    .collection-identity p{
+
+        font-size:22px;
+
+    }
+
+    .manifesto{
+
+        min-height:65vh;
+
+    }
+
+    .collection-final h2{
+
+        font-size:65px;
+
+        letter-spacing:4px;
+
+    }
+
+    .story-button{
+
+        width:100%;
+
+        max-width:340px;
+
+        min-width:0;
+
+    }
+
+}
+
+/* =========================================
+
+   MÓVIL HORIZONTAL
+
+========================================= */
+
+@media (orientation:landscape) and (max-height:600px){
+
+    .topbar{
+
+        padding:12px 25px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
+        text-align:left;
+
+    }
+
+    .brand{
+
+        font-size:17px;
+
+        margin:0;
+
+        letter-spacing:3px;
+
+    }
+
+    .top-menu{
+
+        gap:24px;
+
+    }
+
+    .top-menu a{
+
+        font-size:9px;
+
+    }
+
+    .collection-hero{
+
+        min-height:100vh;
+
+        padding:80px 30px 30px;
+
+    }
+
+    .hero-small{
+
+        font-size:11px;
+
+        margin-bottom:15px;
+
+    }
+
+    .collection-hero h1{
+
+        font-size:45px;
+
+        margin-bottom:20px;
+
+    }
+
+    .hero-text{
+
+        font-size:20px;
+
+        line-height:1.4;
+
+    }
+
+    .era-intro,
+
+    .collection-story,
+
+    .collection-identity{
+
+        min-height:100vh;
+
+        padding:70px 40px;
+
+    }
+
+    .era-number{
+
+        font-size:65px;
+
+        margin-bottom:10px;
+
+    }
+
+    .era-description,
+
+    .collection-story p,
+
+    .collection-identity p{
+
+        font-size:19px;
+
+        line-height:1.4;
+
+        margin-bottom:15px;
+
+    }
+
+    .manifesto{
+
+        min-height:100vh;
+
+    }
+
+    .collection-final{
+
+        min-height:100vh;
+
+        padding:80px 30px 30px;
+
+    }
+
+    .collection-final h2{
+
+        font-size:65px;
+
+        margin-bottom:20px;
+
+    }
+
+    .coming{
+
+        margin-bottom:25px;
+
+    }
+
+    .story-button{
+
+        padding:14px 25px;
+            }
+
+}
