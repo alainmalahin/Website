@@ -424,10 +424,11 @@ background:transparent;
 
   .language-switcher{
 
-    top:6px;
+    top:auto;
 
-    left:6px;
-
+    left:auto;
+bottom:3%;
+right:3%;
     font-size:6px;
 
     line-height:1;
