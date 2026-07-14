@@ -2,171 +2,142 @@
 <html lang="es">
 
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+  <title>ALAIN MALAHIN</title>
 
-<title>ALAIN MALAHIN</title>
+  <meta name="description"
+        content="History inspires. Identity defines.">
 
-<meta name="description"
-content="La historia inspira. La identidad define.">
+  <link rel="stylesheet" href="style.css?v=11">
 
-<link rel="stylesheet"
-href="style.css?v=10">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
-rel="stylesheet">
-
-<style>
-
-.language-switcher{
-position:fixed;
-bottom:18px;
-right:16px;
-z-index:9999;
-display:flex;
-align-items:center;
-gap:5px;
-font-family:"Cinzel",serif;
-}
-
-.language-switcher button{
-padding:0;
-margin:0;
-border:0;
-background:transparent;
-color:rgba(255,215,90,.55);
-font-family:"Cinzel",serif;
-font-size:9px;
-font-weight:600;
-letter-spacing:1px;
-cursor:pointer;
-}
-
-.language-switcher span{
-color:#d4af37;
-font-size:9px;
-}
-
-.language-switcher button.active{
-color:#ffd700;
-text-shadow:
-0 0 5px rgba(255,215,0,.95),
-0 0 12px rgba(255,215,0,.65);
-}
-
-@media(min-width:1200px){
-
-.language-switcher button,
-.language-switcher span{
-font-size:11px;
-}
-
-}
-
-</style>
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-<video
-src="videos/entrada-alain-malahin-final-web.mp4"
-  autoplay
-  muted
-  playsinline
-  controls
-  style="position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#000;z-index:999999;">
-</video>
-<div class="video-entry"
-id="video-entry">
 
-<video
-id="entrance-video"
-autoplay
-muted
-playsinline>
+  <audio id="ambient-audio" loop>
+    <source src="audio/ambient.mp3"
+            type="audio/mpeg">
+  </audio>
 
-<source
-src="videos/entrada.mp4"
-type="video/mp4">
+  <div class="video-entry"
+       id="video-entry">
 
-</video>
+    <video
+      id="entrance-video"
+      autoplay
+      muted
+      playsinline
+      preload="auto">
 
-</div>
+      <source
+        src="entrada-alain-malahin-final-web.mp4"
+        type="video/mp4">
 
-<main class="home">
+    </video>
 
-<div class="home-background"></div>
+    <header class="video-overlay"
+            id="hero">
 
-<div class="home-overlay"></div>
+      <div class="language-switcher"
+           aria-label="Language selector">
 
-<div class="language-switcher">
+        <button
+          type="button"
+          class="language-btn active"
+          data-lang="es">
+          ES
+        </button>
 
-<button
-type="button"
-id="lang-es">
-ES
-</button>
+        <span>/</span>
 
-<span>/</span>
+        <button
+          type="button"
+          class="language-btn"
+          data-lang="en">
+          EN
+        </button>
 
-<button
-type="button"
-id="lang-en">
-EN
-</button>
+      </div>
 
-</div>
+      <button
+        id="sound-toggle"
+        class="sound-toggle"
+        type="button">
+        SOUND ON
+      </button>
 
-<button
-class="sound-toggle"
-id="sound-toggle"
-type="button">
-SONIDO
-</button>
+      <div class="hero-content">
 
-<section class="home-content">
+        <h1 class="brand-slogan">
 
-<h1
-class="home-title"
-id="home-title">
-LA HISTORIA INSPIRA<br>
-LA IDENTIDAD DEFINE
-</h1>
+          <span data-es="LA HISTORIA INSPIRA"
+                data-en="HISTORY INSPIRES">
+            LA HISTORIA INSPIRA
+          </span>
 
-<nav class="home-navigation">
+          <br>
 
-<a
-href="story.html"
-id="story-link">
-LA HISTORIA DE<br>
-ALAIN MALAHIN
-</a>
+          <span data-es="LA IDENTIDAD DEFINE"
+                data-en="IDENTITY DEFINES">
+            LA IDENTIDAD DEFINE
+          </span>
 
-<a
-href="collections.html"
-id="collection-link">
-DESCUBRE<br>
-LA COLECCIÓN
-</a>
+        </h1>
 
-</nav>
+        <nav class="main-menu">
 
-</section>
+          <a href="story.html">
 
-</main>
+            <span data-es="LA HISTORIA DE"
+                  data-en="THE STORY OF">
+              LA HISTORIA DE
+            </span>
 
-<script src="script.js?v=10"></script>
+            <br>
+
+            ALAIN MALAHIN
+
+          </a>
+
+          <a href="collections.html">
+
+            <span data-es="DESCUBRE"
+                  data-en="DISCOVER">
+              DESCUBRE
+            </span>
+
+            <br>
+
+            <span data-es="LA COLECCIÓN"
+                  data-en="THE COLLECTION">
+              LA COLECCIÓN
+            </span>
+
+          </a>
+
+        </nav>
+
+      </div>
+
+    </header>
+
+  </div>
+
+  <script src="script.js?v=5"></script>
 
 </body>
 
