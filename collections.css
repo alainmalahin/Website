@@ -776,136 +776,29 @@ footer p{
     }
 }
 /* =========================================
-   ERA ORÍGENES — UNA SOLA PANTALLA MÓVIL
+   ERA ORÍGENES — MÓVIL
 ========================================= */
 
 @media (max-width: 700px) {
 
-    body {
-        overflow: hidden;
+    .origenes-page {
+        overflow-x: hidden;
     }
 
-    main {
+    .origenes-page main {
         width: 100%;
-        height: 100svh;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50% 25% 25%;
-
-        background: #000;
+        display: block;
     }
 
-    .collection-hero {
-        grid-column: 1;
-        grid-row: 1;
-
-        min-height: 0;
-        height: 100%;
-
-        padding: 20px 12px;
+    .origenes-page .collection-hero {
+        width: 100vw;
+        min-height: 100svh;
+        margin: 0;
+        padding: 20px;
 
         background-size: cover;
         background-position: center;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-small {
-        font-size: 8px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-        letter-spacing: 2px;
-    }
-
-    .hero-text {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    .era-intro {
-        grid-column: 2;
-        grid-row: 1;
-
-        min-height: 0;
-        height: 100%;
-
-        padding: 20px 14px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .era-number {
-        font-size: 30px;
-    }
-
-    .era-intro h2,
-    .collection-story h2 {
-        font-size: 19px;
-        margin-bottom: 10px;
-    }
-
-    .gold-line {
-        margin: 8px auto 12px;
-    }
-
-    .era-description,
-    .collection-story p {
-        font-size: 12px;
-        line-height: 1.35;
-        margin-bottom: 8px;
-    }
-
-    .manifesto {
-        grid-column: 1 / 3;
-        grid-row: 2;
-
-        min-height: 0;
-        height: 100%;
-
-        padding: 15px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .manifesto p {
-        font-size: 22px;
-        line-height: 1.25;
-    }
-
-    .collection-story {
-        grid-column: 1 / 3;
-        grid-row: 3;
-
-        min-height: 0;
-        height: 100%;
-
-        padding: 15px 25px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .collection-story .era-number {
-        display: none;
-    }
-
-    .collection-story p {
-        margin-bottom: 5px;
-    }
-
-    .era-highlight {
-        font-size: 13px !important;
+        background-repeat: no-repeat;
     }
 
 }
