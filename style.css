@@ -1,353 +1,541 @@
 *{
+
   margin:0;
+
   padding:0;
+
   box-sizing:border-box;
+
 }
 
 html,
+
 body{
+
   width:100%;
+
   height:100%;
+
   background:#000;
+
 }
 
 body{
+
   overflow:hidden;
+
   font-family:"Inter",sans-serif;
+
 }
 
 /* =========================
+
    CONTENEDOR
+
 ========================= */
 
 .video-entry{
+
   position:fixed;
+
   inset:0;
+
   width:100vw;
+
   height:100dvh;
+
   background:#000;
+
   overflow:hidden;
+
 }
 
 /* =========================
+
    VÍDEO COMPLETO
+
 ========================= */
 
 #entrance-video{
+
   position:absolute;
+
   inset:0;
+
   width:100%;
+
   height:100%;
+
   object-fit:contain;
+
   object-position:center;
+
   background:#000;
+
 }
 
 /* =========================
+
    CAPA EXACTA DEL VÍDEO 3:2
+
 ========================= */
 
 #hero{
+
   position:absolute;
+
   left:50%;
+
   top:50%;
+
   width:min(100vw, 150dvh);
+
   height:min(66.6667vw, 100dvh);
+
   transform:translate(-50%, -50%);
+
   z-index:20;
+
   opacity:0;
+
   visibility:hidden;
+
   transition:opacity 1s ease;
+
 }
 
 #hero.show{
+
   opacity:1;
+
   visibility:visible;
+
 }
 
 /* =========================
+
    CONTENIDO
+
 ========================= */
 
 .hero-content{
+
   position:absolute;
+
   inset:0;
+
   width:100%;
+
   height:100%;
+
   text-align:center;
+
 }
 
 /* =========================
+
    SLOGAN
+
 ========================= */
 
 .brand-slogan{
+
   position:absolute;
+
   top:5%;
+
   left:50%;
+
   transform:translateX(-50%);
+
   width:94%;
+
   margin:0;
 
   font-family:"Cinzel",serif;
+
   font-size:clamp(22px, 4vw, 42px);
+
   font-weight:400;
+
   line-height:1.25;
+
   letter-spacing:3px;
 
   color:#e5c15b;
 
   text-shadow:
+
     1px 1px 2px #000,
+
     0 0 6px rgba(212,175,55,.55),
+
     0 0 14px rgba(212,175,55,.25);
+
 }
 
 .brand-slogan span{
+
   font-weight:600;
+
 }
 
 /* =========================
+
    MENÚ
+
 ========================= */
 
 .main-menu{
+
   position:absolute;
+
   left:50%;
+
   top:48%;
+
   transform:translateX(-50%);
+
   width:52%;
 
   display:flex;
+
   flex-direction:column;
+
   gap:8px;
+
 }
 
 /* =========================
+
    BOTONES
+
 ========================= */
 
 .main-menu a{
+
   width:100%;
+
   height:20px;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   padding:2px 8px;
 
   border:2px solid #e4bd43;
+
   background:rgba(0,0,0,.78);
 
   color:#efca62;
+
   text-decoration:none;
 
   font-family:"Cinzel",serif;
+
   font-size:8px;
+
   font-weight:600;
+
   line-height:1.05;
+
   letter-spacing:.5px;
+
   text-align:center;
 
+  white-space:nowrap;
+
+  text-transform:uppercase;
+
   text-shadow:
+
     1px 1px 2px #000,
+
     0 0 7px rgba(212,175,55,.65);
 
   box-shadow:
+
     0 0 8px rgba(212,175,55,.65),
+
     inset 0 0 10px rgba(212,175,55,.10);
+
 }
 
 .main-menu a:active{
+
   transform:scale(.97);
+
 }
 
 /* =========================
+
    SOUND
+
 ========================= */
 
 .sound-toggle{
+
   position:absolute;
+
   top:2%;
+
   right:2%;
+
   z-index:100;
 
   padding:3px 5px;
 
   border:1px solid #d4af37;
+
   background:rgba(0,0,0,.65);
 
   color:#e8c45b;
 
   font-family:"Cinzel",serif;
+
   font-size:5px;
+
   letter-spacing:.5px;
 
   cursor:pointer;
+
 }
 
 /* =========================================
+
    ALAIN MALAHIN — SELECTOR ES / EN
+
 ========================================= */
 
 .language-switcher{
+
   position:absolute;
+
   top:6px;
+
   left:6px;
+
   z-index:200;
 
   display:flex;
+
   align-items:center;
+
   gap:4px;
 
   padding:3px 6px;
 
   border:1px solid #d4af37;
+
   background:rgba(0,0,0,.65);
 
   color:#e8c45b;
 
   font-family:"Cinzel",serif;
+
   font-size:7px;
+
   letter-spacing:1px;
 
   box-shadow:
+
     0 0 7px rgba(212,175,55,.45),
+
     inset 0 0 7px rgba(212,175,55,.08);
+
 }
 
 .language-switcher span{
+
   color:#d4af37;
+
 }
 
 .lang-btn{
+
   margin:0;
+
   padding:0;
+
   border:0;
 
   background:transparent;
+
   color:rgba(232,196,91,.55);
 
   font-family:"Cinzel",serif;
+
   font-size:7px;
+
   font-weight:600;
+
   letter-spacing:1px;
 
   cursor:pointer;
 
   transition:
+
     color .3s ease,
+
     text-shadow .3s ease;
+
 }
 
 .lang-btn.active{
+
   color:#ffd96a;
 
   text-shadow:
+
     0 0 5px rgba(255,217,106,.9),
+
     0 0 10px rgba(212,175,55,.6);
+
 }
 
 /* =========================
+
    MÓVIL VERTICAL
+
 ========================= */
 
 @media screen and (orientation:portrait){
 
   .brand-slogan{
+
     font-size:10px;
+
     line-height:1.15;
+
   }
 
-.main-menu{
-  width:48%;
-}
+  .main-menu{
 
-.main-menu a{
-  height:20px;
-  padding:0 6px;
-  font-size:12px;
-  line-height:1;
-  letter-spacing:0.4px;
-  white-space:nowrap;
-  text-transform:uppercase;
-}
+    width:48%;
 
-.main-menu a{
-  height:20px;
-  padding:0 6px;
-  font-size:12px;
-  line-height:1;
-  letter-spacing:0.4px;
-  white-space:nowrap;
-  text-transform:uppercase;
-}
-  .language-switcher{
-    top:6px;
-    left:6px;
-    font-size:6px;
+  }
+
+  .main-menu a{
+
+    height:20px;
+
+    padding:0 6px;
+
+    font-size:10px;
+
     line-height:1;
-  text-transform:uppercase;
+
+    letter-spacing:.2px;
+
+    white-space:nowrap;
+
+    text-transform:uppercase;
+
+  }
+
+  .language-switcher{
+
+    top:6px;
+
+    left:6px;
+
+    font-size:6px;
+
+    line-height:1;
+
   }
 
   .lang-btn{
+
     font-size:6px;
-    }
+
+  }
 
 }
 
-
 /* =========================
+
    MÓVIL HORIZONTAL
+
 ========================= */
 
 @media screen and (orientation:landscape) and (max-height:600px){
 
   .brand-slogan{
+
     font-size:27px;
+
     line-height:1.15;
+
   }
 
   .main-menu{
+
     width:65%;
+
   }
 
   .main-menu a{
+
     height:48px;
+
     font-size:18px;
+
   }
+
 }
 
 /* =========================
+
    ORDENADOR
+
 ========================= */
 
 @media screen and (min-width:1200px){
 
   .brand-slogan{
+
     font-size:52px;
+
   }
 
   .main-menu{
+
     width:65%;
+
     max-width:850px;
+
   }
 
   .main-menu a{
+
     height:90px;
+
     font-size:30px;
+
   }
 
   .language-switcher{
+
     top:16px;
+
     left:18px;
+
     padding:7px 11px;
+
     gap:7px;
+
     font-size:11px;
+
   }
 
   .lang-btn{
+
     font-size:11px;
+
   }
+
 }
