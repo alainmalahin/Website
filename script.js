@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     entranceVideo.addEventListener("timeupdate", () => {
 
-      if (entranceVideo.currentTime >= 5) {
+      if (entranceVideo.currentTime >= 3) {
 
         hero.classList.add("show");
 
