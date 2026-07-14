@@ -218,6 +218,7 @@ newsletterForm.addEventListener("submit", async function(event) {
 
   if (response.ok) {
     newsletterForm.style.display = "none";
+    document.getElementById("newsletter-text").style.display = "none";
     newsletterSuccess.style.display = "block";
   }
 });
