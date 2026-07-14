@@ -190,7 +190,16 @@ langEs.classList.add("active");
 localStorage.setItem("alainLanguage", "es");
 
 }
+const newsletterEmail = document.querySelector(
+  '.newsletter-form input[type="email"]'
+);
 
+if (newsletterEmail) {
+  newsletterEmail.placeholder =
+    selectedLanguage === "es"
+      ? newsletterEmail.dataset.placeholderEs
+      : newsletterEmail.dataset.placeholderEn;
+}
 }
 
 langEs.addEventListener("click", function(){
