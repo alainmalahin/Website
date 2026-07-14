@@ -285,7 +285,8 @@ body{
   right:2%;
 
   z-index:100;
-
+opacity:1;
+visibility:visible;
   padding:3px 5px;
 
   border:1px solid #d4af37;
