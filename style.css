@@ -1,80 +1,234 @@
 /* =========================================
-   ALAIN MALAHIN — SELECTOR ES / EN
+   ALAIN MALAHIN — HOME
 ========================================= */
 
-.language-switcher{
-  position:absolute;
-  top:6px;
-  left:6px;
-  z-index:200;
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height:100%;
+  background:#000;
+}
+
+body{
+  overflow:hidden;
+  color:#fff;
+  font-family:"Cinzel",serif;
+}
+
+/* =========================================
+   VIDEO DE ENTRADA
+========================================= */
+
+.video-entry{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:#000;
   display:flex;
   align-items:center;
-  gap:4px;
-  padding:3px 6px;
-  border:1px solid #d4af37;
-  background:rgba(0,0,0,.65);
-  color:#e8c45b;
+  justify-content:center;
+  transition:opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.video-entry.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.video-entry video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* =========================================
+   HOME
+========================================= */
+
+.home{
+  position:relative;
+  width:100%;
+  min-height:100svh;
+  overflow:hidden;
+  background:#000;
+}
+
+.home-background{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    url("images/entrada.jpg")
+    center center / cover
+    no-repeat;
+  transform:scale(1.02);
+}
+
+.home-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.12) 0%,
+      rgba(0,0,0,.16) 45%,
+      rgba(0,0,0,.68) 100%
+    );
+}
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.home-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+  padding:40px 22px 70px;
+  text-align:center;
+}
+
+.home-title{
+  margin:0 0 28px;
+  color:#ffd700;
   font-family:"Cinzel",serif;
-  font-size:7px;
-  letter-spacing:1px;
-  box-shadow:
-    0 0 7px rgba(212,175,55,.45),
-    inset 0 0 7px rgba(212,175,55,.08);
+  font-size:clamp(27px,7vw,62px);
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:2px;
+  text-shadow:
+    0 0 5px rgba(255,215,0,.95),
+    0 0 14px rgba(255,215,0,.55),
+    0 0 28px rgba(255,170,0,.28);
 }
 
-.language-switcher span{
-  color:#d4af37;
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.home-navigation{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
 }
 
-.lang-btn{
+.home-navigation a{
+  color:#ffd700;
+  text-decoration:none;
+  font-family:"Cinzel",serif;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.45;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  text-shadow:
+    0 0 6px rgba(255,215,0,.65),
+    0 0 14px rgba(255,180,0,.28);
+}
+
+/* =========================================
+   SONIDO
+========================================= */
+
+.sound-toggle{
+  position:fixed;
+  top:18px;
+  right:16px;
+  z-index:9999;
   margin:0;
   padding:0;
   border:0;
   background:transparent;
-  color:rgba(232,196,91,.55);
+  color:#ffd700;
   font-family:"Cinzel",serif;
-  font-size:7px;
+  font-size:9px;
   font-weight:600;
   letter-spacing:1px;
   cursor:pointer;
-  transition:
-    color .3s ease,
-    text-shadow .3s ease;
+  text-shadow:0 0 8px rgba(255,215,0,.65);
 }
 
-.lang-btn.active{
-  color:#ffd96a;
+/* =========================================
+   SELECTOR ES / EN
+========================================= */
+
+.language-switcher{
+  position:fixed;
+  bottom:18px;
+  right:16px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  font-family:"Cinzel",serif;
+}
+
+.language-switcher button{
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:rgba(255,215,90,.55);
+  font-family:"Cinzel",serif;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.language-switcher span{
+  color:#d4af37;
+  font-size:9px;
+}
+
+.language-switcher button.active{
+  color:#ffd700;
   text-shadow:
-    0 0 5px rgba(255,217,106,.9),
-    0 0 10px rgba(212,175,55,.6);
+    0 0 5px rgba(255,215,0,.95),
+    0 0 12px rgba(255,215,0,.65);
 }
 
-@media(max-width:768px){
-
-  .language-switcher{
-    top:6px;
-    left:6px;
-    font-size:6px;
-  }
-
-  .lang-btn{
-    font-size:6px;
-  }
-
-}
+/* =========================================
+   ORDENADOR
+========================================= */
 
 @media(min-width:1200px){
 
-  .language-switcher{
-    top:16px;
-    left:18px;
-    padding:7px 11px;
-    gap:7px;
-    font-size:11px;
+  .home-content{
+    padding-bottom:90px;
   }
 
-  .lang-btn{
-    font-size:11px;
+  .home-navigation{
+    flex-direction:row;
+    gap:45px;
   }
 
+  .home-navigation a{
+    font-size:14px;
+  }
+
+  .sound-toggle{
+    font-size:11px;
+    top:20px;
+    right:22px;
+  }
+
+  .language-switcher button,
+  .language-switcher span{
+    font-size:11px;
+  }
 }
