@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ERA I · ORIGINS | ALAIN MALAHIN</title>
+<title>ERA I · ORÍGENES | ALAIN MALAHIN</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -18,17 +18,67 @@
 
 <link rel="stylesheet" href="collections.css">
 
+<style>
+
+.language-switcher{
+position:fixed;
+top:14px;
+right:16px;
+z-index:9999;
+display:flex;
+align-items:center;
+gap:6px;
+font-family:"Cinzel",serif;
+}
+
+.language-switcher button{
+margin:0;
+padding:0;
+border:0;
+background:transparent;
+color:rgba(255,215,0,.55);
+font-family:"Cinzel",serif;
+font-size:10px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+.language-switcher span{
+color:#ffd700;
+font-size:10px;
+}
+
+.language-switcher button.active{
+color:#ffd700;
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 12px rgba(255,215,0,.65);
+}
+
+</style>
+
 </head>
 
 <body class="origenes-page">
 
+<div class="language-switcher">
+
+<button type="button" id="lang-es">ES</button>
+
+<span>/</span>
+
+<button type="button" id="lang-en">EN</button>
+
+</div>
+
 <nav class="page-menu">
 
-<a href="index.html">HOME</a>
+<a href="index.html" id="home-link">INICIO</a>
 
-<a href="story.html">HISTORY</a>
+<a href="story.html" id="history-link">HISTORIA</a>
 
-<a href="collections.html">COLLECTION</a>
+<a href="collections.html" id="collection-link">COLECCIÓN</a>
 
 </nav>
 
@@ -40,74 +90,74 @@
 
 <div class="origins-content">
 
-<h1>ERA I · ORIGINS</h1>
+<h1 id="origins-title">ERA I · ORÍGENES</h1>
 
 <div class="origins-line"></div>
 
-<p class="origins-intro">
+<p class="origins-intro" id="origins-intro">
 
-Before cities.<br>
+Antes de las ciudades.<br>
 
-Before laws.<br>
+Antes de las leyes.<br>
 
-Before written words.
-
-</p>
-
-<p>
-
-There was a time when human beings challenged the deep darkness
-of caves to imprint their souls upon stone.
+Antes de las palabras escritas.
 
 </p>
 
-<p>
+<p id="text-one">
 
-With traces of fire, charcoal and ochre, our ancestors painted
-humanity's first declaration of existence.
-
-</p>
-
-<p>
-
-Art was not born to decorate.
+Hubo un tiempo en que el ser humano desafió la profunda oscuridad
+de las cavernas para dejar la huella de su alma sobre la piedra.
 
 </p>
 
-<p>
+<p id="text-two">
 
-It was born as a bridge between human beings, nature and the invisible.
-
-</p>
-
-<p>
-
-ERA · ORIGINS was born as a tribute to that first creative impulse.
+Con trazos de fuego, carbón y ocre, nuestros antepasados pintaron
+la primera declaración de existencia de la humanidad.
 
 </p>
 
-<p>
+<p id="text-three">
 
-It does not seek to recreate the past.
-
-</p>
-
-<p>
-
-It seeks to remind us that every story has an origin.
+El arte no nació para decorar.
 
 </p>
 
-<p>
+<p id="text-four">
 
-Each design in this collection is inspired by the earliest
-artistic expressions of humanity.
+Nació como un puente entre el ser humano, la naturaleza y lo invisible.
 
 </p>
 
-<p class="origins-final">
+<p id="text-five">
 
-This is the first story of ALAIN MALAHIN.
+ERA · ORÍGENES nació como homenaje a aquel primer impulso creativo.
+
+</p>
+
+<p id="text-six">
+
+No busca recrear el pasado.
+
+</p>
+
+<p id="text-seven">
+
+Busca recordarnos que toda historia tiene un origen.
+
+</p>
+
+<p id="text-eight">
+
+Cada diseño de esta colección está inspirado en las primeras
+expresiones artísticas de la humanidad.
+
+</p>
+
+<p class="origins-final" id="text-final">
+
+Esta es la primera historia de ALAIN MALAHIN.
 
 </p>
 
@@ -116,6 +166,147 @@ This is the first story of ALAIN MALAHIN.
 </section>
 
 </main>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const langEs = document.getElementById("lang-es");
+const langEn = document.getElementById("lang-en");
+
+const homeLink = document.getElementById("home-link");
+const historyLink = document.getElementById("history-link");
+const collectionLink = document.getElementById("collection-link");
+
+const originsTitle = document.getElementById("origins-title");
+const originsIntro = document.getElementById("origins-intro");
+
+const textOne = document.getElementById("text-one");
+const textTwo = document.getElementById("text-two");
+const textThree = document.getElementById("text-three");
+const textFour = document.getElementById("text-four");
+const textFive = document.getElementById("text-five");
+const textSix = document.getElementById("text-six");
+const textSeven = document.getElementById("text-seven");
+const textEight = document.getElementById("text-eight");
+const textFinal = document.getElementById("text-final");
+
+function setLanguage(language){
+
+if(language === "en"){
+
+document.documentElement.lang = "en";
+
+homeLink.textContent = "HOME";
+historyLink.textContent = "HISTORY";
+collectionLink.textContent = "COLLECTION";
+
+originsTitle.textContent = "ERA I · ORIGINS";
+
+originsIntro.innerHTML =
+"Before cities.<br>Before laws.<br>Before written words.";
+
+textOne.textContent =
+"There was a time when human beings challenged the deep darkness of caves to imprint their souls upon stone.";
+
+textTwo.textContent =
+"With traces of fire, charcoal and ochre, our ancestors painted humanity's first declaration of existence.";
+
+textThree.textContent =
+"Art was not born to decorate.";
+
+textFour.textContent =
+"It was born as a bridge between human beings, nature and the invisible.";
+
+textFive.textContent =
+"ERA · ORIGINS was born as a tribute to that first creative impulse.";
+
+textSix.textContent =
+"It does not seek to recreate the past.";
+
+textSeven.textContent =
+"It seeks to remind us that every story has an origin.";
+
+textEight.textContent =
+"Each design in this collection is inspired by the earliest artistic expressions of humanity.";
+
+textFinal.textContent =
+"This is the first story of ALAIN MALAHIN.";
+
+langEs.classList.remove("active");
+langEn.classList.add("active");
+
+localStorage.setItem("alainLanguage", "en");
+
+}else{
+
+document.documentElement.lang = "es";
+
+homeLink.textContent = "INICIO";
+historyLink.textContent = "HISTORIA";
+collectionLink.textContent = "COLECCIÓN";
+
+originsTitle.textContent = "ERA I · ORÍGENES";
+
+originsIntro.innerHTML =
+"Antes de las ciudades.<br>Antes de las leyes.<br>Antes de las palabras escritas.";
+
+textOne.textContent =
+"Hubo un tiempo en que el ser humano desafió la profunda oscuridad de las cavernas para dejar la huella de su alma sobre la piedra.";
+
+textTwo.textContent =
+"Con trazos de fuego, carbón y ocre, nuestros antepasados pintaron la primera declaración de existencia de la humanidad.";
+
+textThree.textContent =
+"El arte no nació para decorar.";
+
+textFour.textContent =
+"Nació como un puente entre el ser humano, la naturaleza y lo invisible.";
+
+textFive.textContent =
+"ERA · ORÍGENES nació como homenaje a aquel primer impulso creativo.";
+
+textSix.textContent =
+"No busca recrear el pasado.";
+
+textSeven.textContent =
+"Busca recordarnos que toda historia tiene un origen.";
+
+textEight.textContent =
+"Cada diseño de esta colección está inspirado en las primeras expresiones artísticas de la humanidad.";
+
+textFinal.textContent =
+"Esta es la primera historia de ALAIN MALAHIN.";
+
+langEn.classList.remove("active");
+langEs.classList.add("active");
+
+localStorage.setItem("alainLanguage", "es");
+
+}
+
+}
+
+langEs.addEventListener("click", function(){
+
+setLanguage("es");
+
+});
+
+langEn.addEventListener("click", function(){
+
+setLanguage("en");
+
+});
+
+const savedLanguage =
+localStorage.getItem("alainLanguage") || "es";
+
+setLanguage(savedLanguage);
+
+});
+
+</script>
 
 </body>
 
