@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -11,7 +11,7 @@ content="width=device-width, initial-scale=1.0">
 <title>ALAIN MALAHIN</title>
 
 <meta name="description"
-content="History inspires. Identity defines.">
+content="La historia inspira. La identidad define.">
 
 <link rel="stylesheet"
 href="style.css?v=10">
@@ -26,6 +26,65 @@ crossorigin>
 <link
 href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
 rel="stylesheet">
+
+<style>
+
+.language-switcher{
+  position:absolute;
+  top:10px;
+  left:10px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:5px 8px;
+  border:1px solid #d4af37;
+  background:rgba(0,0,0,.55);
+  font-family:"Cinzel",serif;
+}
+
+.language-switcher button{
+  padding:0;
+  margin:0;
+  border:0;
+  background:transparent;
+  color:rgba(255,215,90,.55);
+  font-family:"Cinzel",serif;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.language-switcher span{
+  color:#d4af37;
+  font-size:9px;
+}
+
+.language-switcher button.active{
+  color:#ffd700;
+  text-shadow:
+  0 0 5px rgba(255,215,0,.95),
+  0 0 12px rgba(255,215,0,.65);
+}
+
+@media(min-width:1200px){
+
+  .language-switcher{
+    top:18px;
+    left:20px;
+    padding:7px 11px;
+    gap:7px;
+  }
+
+  .language-switcher button,
+  .language-switcher span{
+    font-size:11px;
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -51,11 +110,35 @@ type="video/mp4">
 class="video-overlay"
 id="hero">
 
+<div class="language-switcher"
+aria-label="Language selector">
+
+<button
+type="button"
+id="lang-es"
+class="active">
+
+ES
+
+</button>
+
+<span>/</span>
+
+<button
+type="button"
+id="lang-en">
+
+EN
+
+</button>
+
+</div>
+
 <button
 id="sound-toggle"
 class="sound-toggle">
 
-SOUND ON
+SONIDO
 
 </button>
 
@@ -63,27 +146,33 @@ SOUND ON
 
 <h1 class="brand-slogan">
 
-<span>HISTORY INSPIRES</span>
+<span id="slogan-one">
+LA HISTORIA INSPIRA
+</span>
 
 <br>
 
-<span>IDENTITY DEFINES</span>
+<span id="slogan-two">
+LA IDENTIDAD DEFINE
+</span>
 
 </h1>
 
 <nav class="main-menu">
 
-<a href="story.html">
+<a href="story.html"
+id="story-link">
 
-THE STORY OF<br>
+LA HISTORIA DE<br>
 ALAIN MALAHIN
 
 </a>
 
-<a href="collections.html">
+<a href="collections.html"
+id="collection-link">
 
-DISCOVER<br>
-THE COLLECTION
+DESCUBRE<br>
+LA COLECCIÓN
 
 </a>
 
@@ -96,6 +185,143 @@ THE COLLECTION
 </div>
 
 <script src="script.js?v=4"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const langEs = document.getElementById("lang-es");
+  const langEn = document.getElementById("lang-en");
+
+  const sloganOne = document.getElementById("slogan-one");
+  const sloganTwo = document.getElementById("slogan-two");
+
+  const storyLink = document.getElementById("story-link");
+  const collectionLink = document.getElementById("collection-link");
+
+  const soundToggle = document.getElementById("sound-toggle");
+  const entranceVideo = document.getElementById("entrance-video");
+
+  function changeLanguage(language){
+
+    if(language === "en"){
+
+      document.documentElement.lang = "en";
+
+      sloganOne.textContent = "HISTORY INSPIRES";
+      sloganTwo.textContent = "IDENTITY DEFINES";
+
+      storyLink.innerHTML =
+      "THE STORY OF<br>ALAIN MALAHIN";
+
+      collectionLink.innerHTML =
+      "DISCOVER<br>THE COLLECTION";
+
+      langEs.classList.remove("active");
+      langEn.classList.add("active");
+
+      if(soundToggle && entranceVideo){
+
+        soundToggle.textContent =
+        entranceVideo.muted
+        ? "SOUND ON"
+        : "SOUND OFF";
+
+      }
+
+      localStorage.setItem(
+        "alainLanguage",
+        "en"
+      );
+
+    }else{
+
+      document.documentElement.lang = "es";
+
+      sloganOne.textContent =
+      "LA HISTORIA INSPIRA";
+
+      sloganTwo.textContent =
+      "LA IDENTIDAD DEFINE";
+
+      storyLink.innerHTML =
+      "LA HISTORIA DE<br>ALAIN MALAHIN";
+
+      collectionLink.innerHTML =
+      "DESCUBRE<br>LA COLECCIÓN";
+
+      langEn.classList.remove("active");
+      langEs.classList.add("active");
+
+      if(soundToggle && entranceVideo){
+
+        soundToggle.textContent =
+        entranceVideo.muted
+        ? "SONIDO"
+        : "SILENCIO";
+
+      }
+
+      localStorage.setItem(
+        "alainLanguage",
+        "es"
+      );
+
+    }
+
+  }
+
+  langEs.addEventListener("click", function(){
+
+    changeLanguage("es");
+
+  });
+
+  langEn.addEventListener("click", function(){
+
+    changeLanguage("en");
+
+  });
+
+  if(soundToggle && entranceVideo){
+
+    soundToggle.addEventListener("click", function(){
+
+      setTimeout(function(){
+
+        const language =
+        localStorage.getItem("alainLanguage") || "es";
+
+        if(language === "en"){
+
+          soundToggle.textContent =
+          entranceVideo.muted
+          ? "SOUND ON"
+          : "SOUND OFF";
+
+        }else{
+
+          soundToggle.textContent =
+          entranceVideo.muted
+          ? "SONIDO"
+          : "SILENCIO";
+
+        }
+
+      }, 0);
+
+    });
+
+  }
+
+  const savedLanguage =
+  localStorage.getItem("alainLanguage") || "es";
+
+  changeLanguage(savedLanguage);
+
+});
+
+</script>
 
 </body>
 
