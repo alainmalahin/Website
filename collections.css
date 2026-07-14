@@ -1113,3 +1113,79 @@ body.origenes-page {
         margin-top: 35px !important;
     }
 }
+/* =========================
+   NEWSLETTER ORÍGENES
+========================= */
+
+.newsletter{
+  margin-top:28px;
+  width:100%;
+  text-align:center;
+}
+
+.newsletter p{
+  margin-bottom:14px;
+  font-family:"Cinzel",serif;
+  font-size:14px;
+  letter-spacing:1.5px;
+  color:#f2eadf;
+}
+
+.newsletter-form{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+
+.newsletter-form input{
+  width:230px;
+  padding:10px 12px;
+  border:1px solid #d4af37;
+  background:rgba(0,0,0,.65);
+  color:#fff;
+  font-family:"Cinzel",serif;
+  font-size:10px;
+  letter-spacing:1px;
+  outline:none;
+}
+
+.newsletter-form input::placeholder{
+  color:rgba(255,255,255,.65);
+}
+
+.newsletter-form button{
+  padding:10px 14px;
+  border:1px solid #d4af37;
+  background:rgba(0,0,0,.75);
+  color:#e8c45b;
+  font-family:"Cinzel",serif;
+  font-size:10px;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+@media screen and (max-width:600px){
+
+  .newsletter{
+    margin-top:22px;
+  }
+
+  .newsletter p{
+    font-size:10px;
+    letter-spacing:1px;
+  }
+
+  .newsletter-form{
+    flex-direction:column;
+  }
+
+  .newsletter-form input{
+    width:230px;
+  }
+
+  .newsletter-form button{
+    width:230px;
+  }
+
+}
