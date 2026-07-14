@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -18,15 +18,65 @@
 
 <link rel="stylesheet" href="collections.css">
 
+<style>
+
+.language-switcher{
+position:fixed;
+top:14px;
+right:16px;
+z-index:9999;
+display:flex;
+align-items:center;
+gap:6px;
+font-family:"Cinzel",serif;
+}
+
+.language-switcher button{
+margin:0;
+padding:0;
+border:0;
+background:transparent;
+color:rgba(255,215,0,.55);
+font-family:"Cinzel",serif;
+font-size:10px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+.language-switcher span{
+color:#ffd700;
+font-size:10px;
+}
+
+.language-switcher button.active{
+color:#ffd700;
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 12px rgba(255,215,0,.65);
+}
+
+</style>
+
 </head>
 
 <body>
 
+<div class="language-switcher">
+
+<button type="button" id="lang-es">ES</button>
+
+<span>/</span>
+
+<button type="button" id="lang-en">EN</button>
+
+</div>
+
 <nav class="page-menu">
 
-<a href="index.html">HOME</a>
+<a href="index.html" id="home-link">INICIO</a>
 
-<a href="story.html">HISTORY</a>
+<a href="story.html" id="history-link">HISTORIA</a>
 
 </nav>
 
@@ -38,13 +88,15 @@
 
 <p class="hero-small">ERA I</p>
 
-<h1>ORIGINS</h1>
+<h1 id="collection-title">ORÍGENES</h1>
 
-<p class="hero-text">
+<p class="hero-text" id="collection-text">
 
-THE FIRST COLLECTION
+LA PRIMERA COLECCIÓN
 
-COMING SOON
+<br>
+
+PRÓXIMAMENTE
 
 </p>
 
@@ -53,6 +105,84 @@ COMING SOON
 </section>
 
 </main>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const langEs = document.getElementById("lang-es");
+const langEn = document.getElementById("lang-en");
+
+const homeLink = document.getElementById("home-link");
+const historyLink = document.getElementById("history-link");
+
+const collectionTitle = document.getElementById("collection-title");
+const collectionText = document.getElementById("collection-text");
+
+function setLanguage(language){
+
+if(language === "en"){
+
+document.documentElement.lang = "en";
+
+homeLink.textContent = "HOME";
+
+historyLink.textContent = "HISTORY";
+
+collectionTitle.textContent = "ORIGINS";
+
+collectionText.innerHTML =
+"THE FIRST COLLECTION<br>COMING SOON";
+
+langEs.classList.remove("active");
+
+langEn.classList.add("active");
+
+localStorage.setItem("alainLanguage", "en");
+
+}else{
+
+document.documentElement.lang = "es";
+
+homeLink.textContent = "INICIO";
+
+historyLink.textContent = "HISTORIA";
+
+collectionTitle.textContent = "ORÍGENES";
+
+collectionText.innerHTML =
+"LA PRIMERA COLECCIÓN<br>PRÓXIMAMENTE";
+
+langEn.classList.remove("active");
+
+langEs.classList.add("active");
+
+localStorage.setItem("alainLanguage", "es");
+
+}
+
+}
+
+langEs.addEventListener("click", function(){
+
+setLanguage("es");
+
+});
+
+langEn.addEventListener("click", function(){
+
+setLanguage("en");
+
+});
+
+const savedLanguage =
+localStorage.getItem("alainLanguage") || "es";
+
+setLanguage(savedLanguage);
+
+});
+
+</script>
 
 </body>
 
