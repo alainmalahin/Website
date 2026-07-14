@@ -388,3 +388,82 @@ body.story-page {
         margin-top: 28px !important;
     }
 }
+/* ===== STORY FOTO + TEXTO JUNTO ===== */
+
+body.story-page {
+    background: #000 !important;
+}
+
+body.story-page .story-panel {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.52)
+        ),
+        url("images/story-bg.png.PNG") !important;
+
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+
+    padding-top: 85px !important;
+    padding-bottom: 70px !important;
+}
+
+body.story-page .story-divider,
+body.story-page .gold-line {
+    display: none !important;
+}
+
+body.story-page .story-space {
+    display: none !important;
+}
+
+body.story-page .story-content h1 {
+    margin-bottom: 18px !important;
+}
+
+body.story-page .story-content h2 {
+    margin-top: 28px !important;
+    margin-bottom: 12px !important;
+}
+
+body.story-page .story-content p {
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 700px) {
+
+    body.story-page .story-panel {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding: 75px 34px 60px !important;
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.40),
+                rgba(0, 0, 0, 0.52)
+            ),
+            url("images/story-bg.png.PNG") !important;
+
+        background-size: cover !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+    }
+
+    body.story-page .story-content h2 {
+        margin-top: 25px !important;
+        margin-bottom: 10px !important;
+    }
+
+    body.story-page .story-content p {
+        margin-bottom: 9px !important;
+    }
+}
