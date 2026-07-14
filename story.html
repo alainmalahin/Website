@@ -1,145 +1,498 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-  <title>HISTORY | ALAIN MALAHIN</title>
+<title>HISTORY | ALAIN MALAHIN</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description"
+content="La historia de ALAIN MALAHIN.">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-  <link rel="stylesheet" href="story.css">
+<link
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="story.css">
+
+<style>
+
+.language-switcher{
+position:fixed;
+top:14px;
+right:16px;
+z-index:9999;
+display:flex;
+align-items:center;
+gap:6px;
+font-family:"Cinzel",serif;
+}
+
+.language-switcher button{
+margin:0;
+padding:0;
+border:0;
+background:transparent;
+color:rgba(255,215,0,.55);
+font-family:"Cinzel",serif;
+font-size:10px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+.language-switcher span{
+color:#ffd700;
+font-size:10px;
+}
+
+.language-switcher button.active{
+color:#ffd700;
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 12px rgba(255,215,0,.65);
+}
+
+</style>
 
 </head>
 
-<body class="story-page">
+<body>
+
+<div class="language-switcher">
+
+<button
+type="button"
+id="lang-es">
+
+ES
+
+</button>
+
+<span>/</span>
+
+<button
+type="button"
+id="lang-en">
+
+EN
+
+</button>
+
+</div>
 
 <nav class="page-menu">
 
-  <a href="index.html">HOME</a>
+<a href="index.html"
+id="home-link">
 
-  <a href="collections.html">COLLECTION</a>
+INICIO
+
+</a>
+
+<a href="collections.html"
+id="collection-link">
+
+COLECCIÓN
+
+</a>
 
 </nav>
 
-
 <main>
 
-<section class="story-full-page">
+<section class="story-hero">
 
-  <div class="story-overlay"></div>
+<div class="story-hero-content">
 
+<h1 id="history-title">
 
-  <div class="story-full-content">
+HISTORIA DE<br>
+ALAIN MALAHIN
 
+</h1>
 
-    <h1>HISTORY OF<br>ALAIN MALAHIN</h1>
+<p id="history-intro">
 
-    <div class="gold-line"></div>
+Toda historia tiene un origen.<br>
+Esta es la mía.
 
-    <p>
-      Every story has an origin.<br>
-      This is mine.
-    </p>
+</p>
 
+</div>
 
-    <div class="story-space"></div>
+</section>
 
+<section class="story-section">
 
-    <h2>MY STORY</h2>
+<div class="story-content">
 
-    <p>
-      ALAIN MALAHIN was born from a curiosity that had been with me
-      since I was a child.
-      I was always drawn to clothing, not because I wanted to follow fashion,
-      but because I wanted to wear something different.
-    </p>
+<h2 id="my-story-title">
 
-    <p>
-      I imagined different garments and even asked my mother to knit
-      clothes inspired by my own ideas.
-    </p>
+MI HISTORIA
 
-    <p>
-      As time passed, I continued to feel an interest in fashion,
-      although for many years I thought it was a dream too distant
-      or even impossible.
-    </p>
+</h2>
 
+<p id="my-story-one">
 
-    <div class="story-divider"></div>
+ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente.
 
+</p>
 
-    <h2>HOW IT BEGAN</h2>
+<p id="my-story-two">
 
-    <p>
-      During a trip to Crete in June 2026 and after more than twenty years
-      working in hospitality, I understood that the time had come
-      to begin a new path.
-    </p>
+Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas.
 
-    <p>
-      On this journey I found time to reflect and understood that
-      this project should not remain just an idea.
-    </p>
+</p>
 
-    <p>
-      I did not have all the resources, but I had the determination to begin.
-    </p>
+<p id="my-story-three">
 
-    <p class="strong-text">
-      AND NOT AS JUST ANOTHER BRAND.
-    </p>
+Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.
 
-    <p>
-      But as a project that seeks to unite history, design and identity
-      in every collection.
-    </p>
+</p>
 
+<h2 id="began-title">
 
-    <div class="story-divider"></div>
+CÓMO EMPEZÓ
 
+</h2>
 
-    <h2>WHY ERA?</h2>
+<p id="began-one">
 
-    <p>
-      I understood that the fashion market is full of collections
-      that follow passing trends.
-    </p>
+Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino.
 
-    <p>
-      I wanted to create something different.
-    </p>
+</p>
 
-    <p>
-      Not just clothing.
-    </p>
+<p id="began-two">
 
-    <p class="strong-text">
-      I WANTED TO CREATE COLLECTIONS WITH MEANING.
-    </p>
+En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea.
 
+</p>
 
-    <div class="story-divider"></div>
+<p id="began-three">
 
+No tenía todos los recursos, pero tenía la determinación de empezar.
 
-    <a href="origenes.html" class="era-button">
-      HISTORY · ERA ORIGINS
-    </a>
+</p>
 
+<p id="brand-statement">
 
-  </div>
+Y NO COMO UNA MARCA MÁS.
+
+</p>
+
+<p id="brand-text">
+
+Sino como un proyecto que busca unir historia, diseño e identidad en cada colección.
+
+</p>
+
+<h2 id="era-title">
+
+¿POR QUÉ ERA?
+
+</h2>
+
+<p id="era-one">
+
+Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras.
+
+</p>
+
+<p id="era-two">
+
+Quería crear algo diferente.
+
+</p>
+
+<p id="era-three">
+
+No solo ropa.
+
+</p>
+
+<p id="era-statement">
+
+QUERÍA CREAR COLECCIONES CON SIGNIFICADO.
+
+</p>
+
+<a href="origenes.html"
+id="origins-link">
+
+HISTORIA · ERA ORÍGENES
+
+</a>
+
+</div>
 
 </section>
 
 </main>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const langEs =
+document.getElementById("lang-es");
+
+const langEn =
+document.getElementById("lang-en");
+
+const homeLink =
+document.getElementById("home-link");
+
+const collectionLink =
+document.getElementById("collection-link");
+
+const historyTitle =
+document.getElementById("history-title");
+
+const historyIntro =
+document.getElementById("history-intro");
+
+const myStoryTitle =
+document.getElementById("my-story-title");
+
+const myStoryOne =
+document.getElementById("my-story-one");
+
+const myStoryTwo =
+document.getElementById("my-story-two");
+
+const myStoryThree =
+document.getElementById("my-story-three");
+
+const beganTitle =
+document.getElementById("began-title");
+
+const beganOne =
+document.getElementById("began-one");
+
+const beganTwo =
+document.getElementById("began-two");
+
+const beganThree =
+document.getElementById("began-three");
+
+const brandStatement =
+document.getElementById("brand-statement");
+
+const brandText =
+document.getElementById("brand-text");
+
+const eraTitle =
+document.getElementById("era-title");
+
+const eraOne =
+document.getElementById("era-one");
+
+const eraTwo =
+document.getElementById("era-two");
+
+const eraThree =
+document.getElementById("era-three");
+
+const eraStatement =
+document.getElementById("era-statement");
+
+const originsLink =
+document.getElementById("origins-link");
+
+
+function setLanguage(language){
+
+if(language === "en"){
+
+document.documentElement.lang = "en";
+
+homeLink.textContent = "HOME";
+
+collectionLink.textContent = "COLLECTION";
+
+historyTitle.innerHTML =
+"HISTORY OF<br>ALAIN MALAHIN";
+
+historyIntro.innerHTML =
+"Every story has an origin.<br>This is mine.";
+
+myStoryTitle.textContent =
+"MY STORY";
+
+myStoryOne.textContent =
+"ALAIN MALAHIN was born from a curiosity that had been with me since I was a child. I was always drawn to clothing, not because I wanted to follow fashion, but because I wanted to wear something different.";
+
+myStoryTwo.textContent =
+"I imagined different garments and even asked my mother to knit clothes inspired by my own ideas.";
+
+myStoryThree.textContent =
+"As time passed, I continued to feel an interest in fashion, although for many years I thought it was a dream too distant or even impossible.";
+
+beganTitle.textContent =
+"HOW IT BEGAN";
+
+beganOne.textContent =
+"During a trip to Crete in June 2026 and after more than twenty years working in hospitality, I understood that the time had come to begin a new path.";
+
+beganTwo.textContent =
+"On this journey I found time to reflect and understood that this project should not remain just an idea.";
+
+beganThree.textContent =
+"I did not have all the resources, but I had the determination to begin.";
+
+brandStatement.textContent =
+"AND NOT AS JUST ANOTHER BRAND.";
+
+brandText.textContent =
+"But as a project that seeks to unite history, design and identity in every collection.";
+
+eraTitle.textContent =
+"WHY ERA?";
+
+eraOne.textContent =
+"I understood that the fashion market is full of collections that follow passing trends.";
+
+eraTwo.textContent =
+"I wanted to create something different.";
+
+eraThree.textContent =
+"Not just clothing.";
+
+eraStatement.textContent =
+"I WANTED TO CREATE COLLECTIONS WITH MEANING.";
+
+originsLink.textContent =
+"HISTORY · ERA ORIGINS";
+
+langEs.classList.remove("active");
+
+langEn.classList.add("active");
+
+localStorage.setItem(
+"alainLanguage",
+"en"
+);
+
+}else{
+
+document.documentElement.lang = "es";
+
+homeLink.textContent = "INICIO";
+
+collectionLink.textContent =
+"COLECCIÓN";
+
+historyTitle.innerHTML =
+"HISTORIA DE<br>ALAIN MALAHIN";
+
+historyIntro.innerHTML =
+"Toda historia tiene un origen.<br>Esta es la mía.";
+
+myStoryTitle.textContent =
+"MI HISTORIA";
+
+myStoryOne.textContent =
+"ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente.";
+
+myStoryTwo.textContent =
+"Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas.";
+
+myStoryThree.textContent =
+"Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.";
+
+beganTitle.textContent =
+"CÓMO EMPEZÓ";
+
+beganOne.textContent =
+"Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino.";
+
+beganTwo.textContent =
+"En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea.";
+
+beganThree.textContent =
+"No tenía todos los recursos, pero tenía la determinación de empezar.";
+
+brandStatement.textContent =
+"Y NO COMO UNA MARCA MÁS.";
+
+brandText.textContent =
+"Sino como un proyecto que busca unir historia, diseño e identidad en cada colección.";
+
+eraTitle.textContent =
+"¿POR QUÉ ERA?";
+
+eraOne.textContent =
+"Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras.";
+
+eraTwo.textContent =
+"Quería crear algo diferente.";
+
+eraThree.textContent =
+"No solo ropa.";
+
+eraStatement.textContent =
+"QUERÍA CREAR COLECCIONES CON SIGNIFICADO.";
+
+originsLink.textContent =
+"HISTORIA · ERA ORÍGENES";
+
+langEn.classList.remove("active");
+
+langEs.classList.add("active");
+
+localStorage.setItem(
+"alainLanguage",
+"es"
+);
+
+}
+
+}
+
+
+langEs.addEventListener(
+"click",
+function(){
+
+setLanguage("es");
+
+}
+);
+
+
+langEn.addEventListener(
+"click",
+function(){
+
+setLanguage("en");
+
+}
+);
+
+
+const savedLanguage =
+localStorage.getItem("alainLanguage")
+|| "es";
+
+setLanguage(savedLanguage);
+
+});
+
+</script>
 
 </body>
 
