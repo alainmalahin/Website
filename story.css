@@ -329,3 +329,35 @@ body.story-page .page-menu a,
 body.story-page .era-button {
     color: #d9b55a !important;
 }
+/* ===== COLORES STORY FORZADOS ===== */
+
+.story-content h1 {
+    color: #d9b55a !important;
+    -webkit-text-fill-color: #d9b55a !important;
+}
+
+.story-content h2 {
+    color: #d9b55a !important;
+    -webkit-text-fill-color: #d9b55a !important;
+}
+
+.story-content p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.story-content .strong-text {
+    color: #d9b55a !important;
+    -webkit-text-fill-color: #d9b55a !important;
+}
+
+.page-menu a {
+    color: #d9b55a !important;
+    -webkit-text-fill-color: #d9b55a !important;
+}
+
+.era-button {
+    color: #d9b55a !important;
+    -webkit-text-fill-color: #d9b55a !important;
+    border-color: #d9b55a !important;
+}
