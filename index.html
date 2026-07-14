@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ALAIN MALAHIN</title>
 
-<meta name="description" content="History inspires. Identity defines.">
+<meta name="description" content="La historia inspira. La identidad define.">
 
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <audio id="ambient-audio" loop>
+
 <source src="audio/ambient.mp3" type="audio/mpeg">
+
 </audio>
 
 <div class="video-entry" id="video-entry">
@@ -33,31 +37,74 @@ autoplay
 muted
 playsinline
 preload="auto"
-
 >
+
 <source src="entrada-alain-malahin-final-web.mp4" type="video/mp4">
+
 </video>
+
 <header class="video-overlay" id="hero">
+
+<div class="language-switcher" aria-label="Language selector">
+
+<button type="button" class="lang-btn" data-lang="es">ES</button>
+
+<span>/</span>
+
+<button type="button" class="lang-btn" data-lang="en">EN</button>
+
+</div>
+
 <button id="sound-toggle" class="sound-toggle">
-SOUND ON
+
+SONIDO
+
 </button>
+
 <div class="hero-content">
 
 <h1 class="brand-slogan">
-HISTORY INSPIRES<br>
-<span>IDENTITY DEFINES</span>
+
+<span
+data-es="LA HISTORIA INSPIRA"
+data-en="HISTORY INSPIRES"
+>
+LA HISTORIA INSPIRA
+</span>
+
+<br>
+
+<span
+data-es="LA IDENTIDAD DEFINE"
+data-en="IDENTITY DEFINES"
+>
+LA IDENTIDAD DEFINE
+</span>
+
 </h1>
 
 <nav class="main-menu">
 
 <a href="story.html">
-THE STORY OF<br>
-ALAIN MALAHIN
+
+<span
+data-es="LA HISTORIA DE<br>ALAIN MALAHIN"
+data-en="THE STORY OF<br>ALAIN MALAHIN"
+>
+LA HISTORIA DE<br>ALAIN MALAHIN
+</span>
+
 </a>
 
 <a href="collections.html">
-DISCOVER<br>
-THE COLLECTION
+
+<span
+data-es="DESCUBRE<br>LA COLECCIÓN"
+data-en="DISCOVER<br>THE COLLECTION"
+>
+DESCUBRE<br>LA COLECCIÓN
+</span>
+
 </a>
 
 </nav>
@@ -68,7 +115,7 @@ THE COLLECTION
 
 </div>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 
 </body>
 
