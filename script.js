@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     entranceVideo.addEventListener("timeupdate", () => {
 
-        if (entranceVideo.currentTime >= 3,5) {
+        if (entranceVideo.currentTime >= 4) {
             hero.classList.add("show");
         }
 
