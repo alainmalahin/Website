@@ -194,11 +194,31 @@ const newsletterEmail = document.querySelector(
   '.newsletter-form input[type="email"]'
 );
 
+const newsletterButton = document.querySelector(
+  '.newsletter-form button'
+);
+
+const newsletterText = document.getElementById("newsletter-text");
+
 if (newsletterEmail) {
   newsletterEmail.placeholder =
-    selectedLanguage === "es"
-      ? newsletterEmail.dataset.placeholderEs
-      : newsletterEmail.dataset.placeholderEn;
+    language === "es"
+      ? "TU CORREO ELECTRÓNICO"
+      : "YOUR EMAIL ADDRESS";
+}
+
+if (newsletterButton) {
+  newsletterButton.textContent =
+    language === "es"
+      ? "SUSCRIBIRME"
+      : "SUBSCRIBE";
+}
+
+if (newsletterText) {
+  newsletterText.textContent =
+    language === "es"
+      ? "SÉ EL PRIMERO EN DESCUBRIR ORÍGENES."
+      : "BE THE FIRST TO DISCOVER ORIGINS.";
 }
 }
 
