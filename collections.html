@@ -1,45 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Collections | ALAIN MALAHIN</title>
+<meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Collections | ALAIN MALAHIN</title>
 
-  <link rel="stylesheet" href="collections.css">
+<link rel="stylesheet" href="style.css?v=11">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
+<div class="language-switcher" aria-label="Language selector">
+
+<button type="button" class="lang-btn" data-lang="es">ES</button>
+
+<span>/</span>
+
+<button type="button" class="lang-btn" data-lang="en">EN</button>
+
+</div>
+
 <nav class="page-menu">
-  <a href="index.html">HOME</a>
-  <a href="story.html">HISTORY</a>
+
+<a href="index.html">
+
+<span data-es="INICIO" data-en="HOME">INICIO</span>
+
+</a>
+
+<a href="story.html">
+
+<span data-es="HISTORIA" data-en="HISTORY">HISTORIA</span>
+
+</a>
+
 </nav>
-  <main>
 
-    <section class="collection-hero">
+<main>
 
-      <div class="hero-content">
+<section>
 
-        <p class="hero-small">ERA I</p>
+<p>ERA I</p>
 
-        <h1>ORIGINS</h1>
+<h1
+data-es="ORÍGENES"
+data-en="ORIGINS"
+>
+ORÍGENES
+</h1>
 
-        <p class="hero-text">
-          THE FIRST COLLECTION
-              COMING SOON
-        </p>
+<p
+data-es="LA PRIMERA COLECCIÓN · PRÓXIMAMENTE"
+data-en="THE FIRST COLLECTION · COMING SOON"
+>
+LA PRIMERA COLECCIÓN · PRÓXIMAMENTE
+</p>
 
-      </div>
+</section>
 
-    </section>
+</main>
 
-  </main>
+<script src="script.js?v=5"></script>
 
 </body>
 
