@@ -341,3 +341,50 @@ body.story-page {
         letter-spacing: 1.3px;
     }
 }
+/* ===== STORY: QUITAR LÍNEAS Y JUNTAR TEXTO ===== */
+
+.story-divider,
+.gold-line {
+    display: none !important;
+}
+
+.story-content h1 {
+    margin-bottom: 22px !important;
+}
+
+.story-content h2 {
+    margin-top: 28px !important;
+    margin-bottom: 12px !important;
+}
+
+.story-content p {
+    margin-bottom: 12px !important;
+}
+
+.story-space {
+    display: none !important;
+}
+
+.era-button {
+    margin-top: 30px !important;
+}
+
+@media (max-width: 700px) {
+
+    .story-content h1 {
+        margin-bottom: 18px !important;
+    }
+
+    .story-content h2 {
+        margin-top: 26px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .story-content p {
+        margin-bottom: 10px !important;
+    }
+
+    .era-button {
+        margin-top: 28px !important;
+    }
+}
