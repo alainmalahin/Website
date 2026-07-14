@@ -261,15 +261,18 @@ body{
   }
 
   .main-menu{
-    width:48%;
-  }
+  width:48%;
+}
 
-  .main-menu a{
-    height:20px;
-    padding:0 6px;
-    font-size:10px;
-  }
-
+.main-menu a{
+  height:20px;
+  padding:0 6px;
+  font-size:12px;
+  line-height:1;
+  letter-spacing:0.4px;
+  white-space:nowrap;
+  text-transform:uppercase;
+}
   .language-switcher{
     top:6px;
     left:6px;
