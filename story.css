@@ -535,3 +535,249 @@ font-family: "Cinzel", serif;
         font-size: 9px;
     }
 }
+/* =========================================
+   HISTORY — ONE FULL PHOTO PAGE
+========================================= */
+
+.story-page {
+    margin: 0;
+    background: #000;
+    overflow-x: hidden;
+}
+
+.story-full-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    background-image: url("images/story-bg.png.PNG");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 130px 30px 120px;
+
+    box-sizing: border-box;
+}
+
+.story-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .58);
+}
+
+.story-full-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.story-full-content h1 {
+    margin: 0 0 25px;
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(42px, 7vw, 78px);
+    font-weight: 500;
+
+    line-height: 1.1;
+    letter-spacing: 3px;
+
+    color: #d9b55a;
+
+    text-shadow:
+        0 3px 8px #000,
+        0 0 18px rgba(212, 175, 55, .4);
+}
+
+.story-full-content h2 {
+    margin: 80px 0 35px;
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #d9b55a;
+
+    text-shadow:
+        0 3px 8px #000;
+}
+
+.story-full-content p {
+    max-width: 680px;
+
+    margin: 0 auto 28px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 30px);
+
+    line-height: 1.5;
+
+    color: #f3e6d2;
+
+    text-shadow:
+        0 2px 6px #000,
+        0 0 10px rgba(0, 0, 0, .95);
+}
+
+.story-full-content .strong-text {
+    font-family: "Cinzel", serif;
+
+    color: #d9b55a;
+
+    letter-spacing: 2px;
+}
+
+.gold-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 0 auto 35px;
+
+    background: #d9b55a;
+}
+
+.story-divider {
+    width: 75%;
+    height: 1px;
+
+    margin: 80px auto;
+
+    background: rgba(217, 181, 90, .35);
+}
+
+.story-space {
+    height: 40px;
+}
+
+.era-button {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 22px 50px;
+
+    border: 1px solid #d9b55a;
+
+    font-family: "Cinzel", serif;
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #d9b55a;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 14px rgba(217, 181, 90, .25);
+}
+
+
+/* =========================================
+   HISTORY MENU
+========================================= */
+
+.page-menu {
+    position: fixed;
+
+    top: 18px;
+    right: 22px;
+
+    z-index: 1000;
+
+    display: flex;
+    gap: 18px;
+}
+
+.page-menu a {
+    font-family: "Cinzel", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #d9b55a;
+
+    text-decoration: none;
+
+    opacity: .8;
+}
+
+
+/* =========================================
+   HISTORY MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .story-full-page {
+        padding: 100px 25px 90px;
+
+        background-position: center top;
+
+        background-attachment: scroll;
+    }
+
+    .story-full-content h1 {
+        font-size: 38px;
+
+        line-height: 1.15;
+
+        letter-spacing: 2px;
+    }
+
+    .story-full-content h2 {
+        margin-top: 65px;
+
+        margin-bottom: 30px;
+
+        font-size: 30px;
+    }
+
+    .story-full-content p {
+        font-size: 21px;
+
+        line-height: 1.45;
+
+        margin-bottom: 24px;
+    }
+
+    .story-divider {
+        width: 85%;
+
+        margin: 65px auto;
+    }
+
+    .era-button {
+        width: 100%;
+
+        padding: 20px 10px;
+
+        box-sizing: border-box;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .page-menu {
+        top: 16px;
+        right: 16px;
+
+        gap: 14px;
+    }
+
+    .page-menu a {
+        font-size: 9px;
+    }
+
+}
