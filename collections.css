@@ -856,3 +856,89 @@ footer p{
         padding-bottom: 55px;
     }
 }
+/* =========================================
+   ORÍGENES — TODO EN UNA SOLA PANTALLA MÓVIL
+========================================= */
+
+@media (max-width: 700px) {
+
+    body.origenes-page {
+        overflow: hidden !important;
+    }
+
+    body.origenes-page main {
+        width: 100% !important;
+        height: 100svh !important;
+        min-height: 100svh !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 52% 48% !important;
+
+        overflow: hidden !important;
+    }
+
+    body.origenes-page .collection-hero {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 15px 25px !important;
+
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    body.origenes-page .era-intro,
+    body.origenes-page .manifesto,
+    body.origenes-page .collection-story {
+        min-height: 0 !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.origenes-page .era-intro {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        padding: 12px 28px !important;
+    }
+
+    body.origenes-page .manifesto,
+    body.origenes-page .collection-story {
+        display: contents !important;
+    }
+
+    body.origenes-page h2 {
+        font-size: 20px !important;
+        margin: 0 0 8px !important;
+    }
+
+    body.origenes-page .gold-line {
+        width: 65px !important;
+        margin: 5px auto 10px !important;
+    }
+
+    body.origenes-page p,
+    body.origenes-page .era-description,
+    body.origenes-page .collection-story p {
+        font-size: 11px !important;
+        line-height: 1.25 !important;
+        margin: 0 0 7px !important;
+    }
+
+    body.origenes-page .era-highlight {
+        font-size: 12px !important;
+        margin-top: 5px !important;
+    }
+}
