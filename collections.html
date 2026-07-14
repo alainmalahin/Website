@@ -201,7 +201,27 @@ setLanguage(savedLanguage);
 });
 
 </script>
+<script>
+const newsletterForm = document.querySelector(".newsletter-form");
+const newsletterSuccess = document.getElementById("newsletter-success");
 
+newsletterForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const response = await fetch(newsletterForm.action, {
+    method: "POST",
+    body: new FormData(newsletterForm),
+    headers: {
+      "Accept": "application/json"
+    }
+  });
+
+  if (response.ok) {
+    newsletterForm.style.display = "none";
+    newsletterSuccess.style.display = "block";
+  }
+});
+</script>
 </body>
 
 </html>
