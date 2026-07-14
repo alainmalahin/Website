@@ -315,3 +315,9 @@ body {
         letter-spacing: 1.3px;
     }
 }
+.story-page {
+    background-image: url("history-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
