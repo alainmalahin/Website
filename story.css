@@ -4,45 +4,20 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html {
     width: 100%;
     min-height: 100%;
     background: #000;
 }
 
 body {
-    overflow-x: hidden;
-    font-family: "Cormorant Garamond", serif;
-    color: #f3e6d2;
-}
-
-
-/* =========================================
-   STORY PAGE
-========================================= */
-
-body.story-page {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background: #000;
-}
+    overflow-x: hidden;
 
-
-/* =========================================
-   FULL WIDTH PHOTO
-========================================= */
-
-.story-panel {
-    position: relative;
-
-    width: 100%;
-    max-width: none;
-
-    margin: 0;
-
-    padding: 105px 55px 100px;
+    font-family: "Cormorant Garamond", serif;
+    color: #f4ead8;
 
     background-image:
         linear-gradient(
@@ -54,19 +29,37 @@ body.story-page {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 
-/* =========================================
-   CONTENT
-========================================= */
+/* =========================
+   STORY
+========================= */
+
+.story-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.story-panel {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 75px 32px 55px;
+
+    background: transparent;
+}
 
 .story-content {
     position: relative;
     z-index: 2;
 
-    width: 88%;
-    max-width: 720px;
+    width: 100%;
+    max-width: 680px;
 
     margin: 0 auto;
 
@@ -74,396 +67,232 @@ body.story-page {
 }
 
 
-/* =========================================
+/* =========================
    MAIN TITLE
-========================================= */
+========================= */
 
 .story-content h1 {
-    margin: 0 0 25px;
+    margin: 0 0 16px;
 
     font-family: "Cinzel", serif;
-    font-size: 50px;
+
+    font-size: 37px;
     font-weight: 500;
     line-height: 1.1;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 
-    color: #e1b94f;
+    color: #e3b94f;
 
-    text-shadow:
-        0 2px 5px #000,
-        0 0 8px rgba(225, 185, 79, 0.7),
-        0 0 18px rgba(225, 185, 79, 0.35);
-}
-
-
-/* =========================================
-   SECTION TITLES
-========================================= */
-
-.story-content h2 {
-    margin: 65px 0 30px;
-
-    font-family: "Cinzel", serif;
-    font-size: 38px;
-    font-weight: 500;
-    line-height: 1.15;
-    letter-spacing: 3px;
-
-    color: #e1b94f;
-
-    text-shadow:
-        0 2px 5px #000,
-        0 0 8px rgba(225, 185, 79, 0.6);
-}
-
-
-/* =========================================
-   TEXT
-========================================= */
-
-.story-content p {
-    width: 100%;
-    max-width: 650px;
-
-    margin: 0 auto 27px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 1.42;
-
-    color: #fff7e9;
+    white-space: nowrap;
 
     text-shadow:
         0 2px 4px #000,
-        0 0 7px #000,
-        0 0 12px rgba(0, 0, 0, 0.95);
+        0 0 8px rgba(227, 185, 79, 0.75),
+        0 0 16px rgba(227, 185, 79, 0.35);
 }
 
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.story-content h2 {
+    margin: 22px 0 8px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 1px;
+
+    color: #e3b94f;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 4px #000,
+        0 0 7px rgba(227, 185, 79, 0.65);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.story-content p {
+    width: 100%;
+
+    margin: 0 auto 9px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.28;
+
+    color: #fff7e9;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 3px #000,
+        0 0 6px #000,
+        0 0 10px rgba(0, 0, 0, 1);
+}
+
+
+/* =========================
+   GOLD TEXT
+========================= */
 
 .story-content .strong-text {
     font-family: "Cinzel", serif;
 
-    color: #e1b94f;
+    color: #e3b94f;
 
-    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 1px;
 
     text-shadow:
-        0 2px 5px #000,
-        0 0 8px rgba(225, 185, 79, 0.65);
+        0 2px 4px #000,
+        0 0 7px rgba(227, 185, 79, 0.7);
 }
 
 
-/* =========================================
-   GOLD LINE
-========================================= */
+/* =========================
+   REMOVE LINES
+========================= */
 
-.gold-line {
-    width: 100px;
-    height: 1px;
-
-    margin: 0 auto 35px;
-
-    background: #e1b94f;
-
-    box-shadow: 0 0 7px rgba(225, 185, 79, 0.6);
-}
-
-
-/* =========================================
-   DIVIDERS
-========================================= */
-
-.story-divider {
-    width: 75%;
-    height: 1px;
-
-    margin: 55px auto;
-
-    background: rgba(225, 185, 79, 0.45);
-}
-
+.gold-line,
+.story-divider,
 .story-space {
-    height: 0;
+    display: none;
 }
 
 
-/* =========================================
+/* =========================
    BUTTON
-========================================= */
+========================= */
 
 .era-button {
     display: block;
 
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 510px;
 
-    margin: 70px auto 0;
+    margin: 28px auto 0;
 
-    padding: 20px 15px;
+    padding: 17px 10px;
 
-    border: 1px solid #e1b94f;
+    border: 1px solid #e3b94f;
 
     font-family: "Cinzel", serif;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
 
-    color: #e1b94f;
+    color: #e3b94f;
 
     text-decoration: none;
     text-align: center;
 
     box-shadow:
-        0 0 8px rgba(225, 185, 79, 0.2);
+        0 0 7px rgba(227, 185, 79, 0.25);
 }
 
 
-/* =========================================
+/* =========================
    MENU
-========================================= */
+========================= */
 
 .page-menu {
     position: absolute;
 
-    top: 25px;
-    right: 30px;
+    top: 22px;
+    right: 18px;
 
-    z-index: 10;
+    z-index: 100;
 
     display: flex;
-    gap: 18px;
+    gap: 15px;
 }
 
 .page-menu a {
     font-family: "Cinzel", serif;
-    font-size: 10px;
-    letter-spacing: 2px;
 
-    color: #e1b94f;
+    font-size: 8px;
+    letter-spacing: 1.3px;
+
+    color: #e3b94f;
 
     text-decoration: none;
 
-    opacity: 0.9;
-
     text-shadow:
-        0 0 6px rgba(225, 185, 79, 0.5);
+        0 0 6px rgba(227, 185, 79, 0.55);
 }
 
 
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
 @media (max-width: 700px) {
 
-    .story-panel {
-        width: 100%;
-        max-width: none;
-
-        margin: 0;
-
-        padding: 85px 34px 80px;
+    body {
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.42),
+                rgba(0, 0, 0, 0.52)
+            ),
+            url("images/story-bg.png.PNG");
 
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
     }
 
+    .story-panel {
+        width: 100%;
+
+        padding: 70px 30px 50px;
+
+        background: transparent;
+    }
+
     .story-content {
         width: 100%;
         max-width: none;
-
-        margin: 0 auto;
     }
 
     .story-content h1 {
-        margin-bottom: 22px;
-
-        font-size: 37px;
+        font-size: 26px;
         line-height: 1.1;
-        letter-spacing: 2px;
+        letter-spacing: 0.5px;
+
+        white-space: nowrap;
+
+        margin-bottom: 15px;
     }
 
     .story-content h2 {
-        margin: 58px 0 27px;
-
-        font-size: 30px;
-        line-height: 1.15;
-        letter-spacing: 2px;
+        font-size: 26px;
+        margin: 20px 0 7px;
     }
 
     .story-content p {
-        width: 100%;
-        max-width: none;
+        font-size: 19px;
+        line-height: 1.25;
 
-        margin: 0 auto 24px;
-
-        font-size: 21px;
-        line-height: 1.42;
+        margin-bottom: 8px;
     }
 
     .story-content .strong-text {
-        font-size: 18px;
-        line-height: 1.4;
-        letter-spacing: 1.5px;
-    }
-
-    .gold-line {
-        width: 75px;
-        margin-bottom: 30px;
-    }
-
-    .story-divider {
-        width: 80%;
-        margin: 48px auto;
+        font-size: 17px;
+        line-height: 1.25;
     }
 
     .era-button {
-        width: 100%;
-
-        margin-top: 60px;
-
-        padding: 18px 8px;
-
-        font-size: 10px;
-        letter-spacing: 1.5px;
-    }
-
-    .page-menu {
-        top: 20px;
-        right: 16px;
-
-        gap: 13px;
-    }
-
-    .page-menu a {
-        font-size: 8px;
-        letter-spacing: 1.3px;
-    }
-}
-/* ===== STORY: QUITAR LÍNEAS Y JUNTAR TEXTO ===== */
-
-.story-divider,
-.gold-line {
-    display: none !important;
-}
-
-.story-content h1 {
-    margin-bottom: 22px !important;
-}
-
-.story-content h2 {
-    margin-top: 28px !important;
-    margin-bottom: 12px !important;
-}
-
-.story-content p {
-    margin-bottom: 12px !important;
-}
-
-.story-space {
-    display: none !important;
-}
-
-.era-button {
-    margin-top: 30px !important;
-}
-
-@media (max-width: 700px) {
-
-    .story-content h1 {
-        margin-bottom: 18px !important;
-    }
-
-    .story-content h2 {
-        margin-top: 26px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .story-content p {
-        margin-bottom: 10px !important;
-    }
-
-    .era-button {
-        margin-top: 28px !important;
-    }
-}
-/* ===== STORY FOTO + TEXTO JUNTO ===== */
-
-body.story-page {
-    background: #000 !important;
-}
-
-body.story-page .story-panel {
-    width: 100% !important;
-    max-width: none !important;
-    min-height: 100vh !important;
-
-    margin: 0 !important;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.40),
-            rgba(0, 0, 0, 0.52)
-        ),
-        url("images/story-bg.png.PNG") !important;
-
-    background-size: cover !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-
-    padding-top: 85px !important;
-    padding-bottom: 70px !important;
-}
-
-body.story-page .story-divider,
-body.story-page .gold-line {
-    display: none !important;
-}
-
-body.story-page .story-space {
-    display: none !important;
-}
-
-body.story-page .story-content h1 {
-    margin-bottom: 18px !important;
-}
-
-body.story-page .story-content h2 {
-    margin-top: 28px !important;
-    margin-bottom: 12px !important;
-}
-
-body.story-page .story-content p {
-    margin-bottom: 10px !important;
-}
-
-@media (max-width: 700px) {
-
-    body.story-page .story-panel {
-        width: 100% !important;
-        max-width: none !important;
-
-        padding: 75px 34px 60px !important;
-
-        background-image:
-            linear-gradient(
-                rgba(0, 0, 0, 0.40),
-                rgba(0, 0, 0, 0.52)
-            ),
-            url("images/story-bg.png.PNG") !important;
-
-        background-size: cover !important;
-        background-position: center top !important;
-        background-repeat: no-repeat !important;
-    }
-
-    body.story-page .story-content h2 {
-        margin-top: 25px !important;
-        margin-bottom: 10px !important;
-    }
-
-    body.story-page .story-content p {
-        margin-bottom: 9px !important;
+        margin-top: 25px;
     }
 }
