@@ -13,7 +13,8 @@ content="width=device-width, initial-scale=1.0">
 <meta name="description"
 content="La historia inspira. La identidad define.">
 
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet"
+href="style.css?v=10">
 
 <link rel="preconnect"
 href="https://fonts.googleapis.com">
@@ -29,48 +30,47 @@ rel="stylesheet">
 <style>
 
 .language-switcher{
-  position:fixed;
-  bottom:18px;
-  right:16px;
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  gap:5px;
-  font-family:"Cinzel",serif;
+position:fixed;
+bottom:18px;
+right:16px;
+z-index:9999;
+display:flex;
+align-items:center;
+gap:5px;
+font-family:"Cinzel",serif;
 }
 
 .language-switcher button{
-  padding:0;
-  margin:0;
-  border:0;
-  background:transparent;
-  color:rgba(255,215,90,.55);
-  font-family:"Cinzel",serif;
-  font-size:9px;
-  font-weight:600;
-  letter-spacing:1px;
-  cursor:pointer;
+padding:0;
+margin:0;
+border:0;
+background:transparent;
+color:rgba(255,215,90,.55);
+font-family:"Cinzel",serif;
+font-size:9px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
 }
 
 .language-switcher span{
-  color:#d4af37;
-  font-size:9px;
+color:#d4af37;
+font-size:9px;
 }
 
 .language-switcher button.active{
-  color:#ffd700;
-  text-shadow:
-  0 0 5px rgba(255,215,0,.95),
-  0 0 12px rgba(255,215,0,.65);
+color:#ffd700;
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 12px rgba(255,215,0,.65);
 }
 
 @media(min-width:1200px){
 
-
-  .language-switcher button,
-  .language-switcher span{
-    font-size:11px;
-  }
+.language-switcher button,
+.language-switcher span{
+font-size:11px;
+}
 
 }
 
@@ -87,29 +87,28 @@ id="video-entry">
 id="entrance-video"
 autoplay
 muted
-playsinline
-preload="auto">
+playsinline>
 
 <source
-src="entrada-alain-malahin-final-web.mp4"
+src="videos/entrada.mp4"
 type="video/mp4">
 
 </video>
 
-<header
-class="video-overlay"
-id="hero">
+</div>
 
-<div class="language-switcher"
-aria-label="Language selector">
+<main class="home">
+
+<div class="home-background"></div>
+
+<div class="home-overlay"></div>
+
+<div class="language-switcher">
 
 <button
 type="button"
-id="lang-es"
-class="active">
-
+id="lang-es">
 ES
-
 </button>
 
 <span>/</span>
@@ -117,201 +116,50 @@ ES
 <button
 type="button"
 id="lang-en">
-
 EN
-
 </button>
 
 </div>
 
 <button
+class="sound-toggle"
 id="sound-toggle"
-class="sound-toggle">
-
+type="button">
 SONIDO
-
 </button>
 
-<div class="hero-content">
+<section class="home-content">
 
-<h1 class="brand-slogan">
-
-<span id="slogan-one">
-LA HISTORIA INSPIRA
-</span>
-
-<br>
-
-<span id="slogan-two">
+<h1
+class="home-title"
+id="home-title">
+LA HISTORIA INSPIRA<br>
 LA IDENTIDAD DEFINE
-</span>
-
 </h1>
 
-<nav class="main-menu">
+<nav class="home-navigation">
 
-<a href="story.html"
+<a
+href="story.html"
 id="story-link">
-
 LA HISTORIA DE<br>
 ALAIN MALAHIN
-
 </a>
 
-<a href="collections.html"
+<a
+href="collections.html"
 id="collection-link">
-
 DESCUBRE<br>
 LA COLECCIÓN
-
 </a>
 
 </nav>
 
-</div>
+</section>
 
-</header>
+</main>
 
-</div>
-
-<script src="script.js?v=4"></script>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function(){
-
-  const langEs = document.getElementById("lang-es");
-  const langEn = document.getElementById("lang-en");
-
-  const sloganOne = document.getElementById("slogan-one");
-  const sloganTwo = document.getElementById("slogan-two");
-
-  const storyLink = document.getElementById("story-link");
-  const collectionLink = document.getElementById("collection-link");
-
-  const soundToggle = document.getElementById("sound-toggle");
-  const entranceVideo = document.getElementById("entrance-video");
-
-  function changeLanguage(language){
-
-    if(language === "en"){
-
-      document.documentElement.lang = "en";
-
-      sloganOne.textContent = "HISTORY INSPIRES";
-      sloganTwo.textContent = "IDENTITY DEFINES";
-
-      storyLink.innerHTML =
-      "THE STORY OF<br>ALAIN MALAHIN";
-
-      collectionLink.innerHTML =
-      "DISCOVER<br>THE COLLECTION";
-
-      langEs.classList.remove("active");
-      langEn.classList.add("active");
-
-      if(soundToggle && entranceVideo){
-
-        soundToggle.textContent =
-        entranceVideo.muted
-        ? "SOUND ON"
-        : "SOUND OFF";
-
-      }
-
-      localStorage.setItem(
-        "alainLanguage",
-        "en"
-      );
-
-    }else{
-
-      document.documentElement.lang = "es";
-
-      sloganOne.textContent =
-      "LA HISTORIA INSPIRA";
-
-      sloganTwo.textContent =
-      "LA IDENTIDAD DEFINE";
-
-      storyLink.innerHTML =
-      "LA HISTORIA DE<br>ALAIN MALAHIN";
-
-      collectionLink.innerHTML =
-      "DESCUBRE<br>LA COLECCIÓN";
-
-      langEn.classList.remove("active");
-      langEs.classList.add("active");
-
-      if(soundToggle && entranceVideo){
-
-        soundToggle.textContent =
-        entranceVideo.muted
-        ? "SONIDO"
-        : "SILENCIO";
-
-      }
-
-      localStorage.setItem(
-        "alainLanguage",
-        "es"
-      );
-
-    }
-
-  }
-
-  langEs.addEventListener("click", function(){
-
-    changeLanguage("es");
-
-  });
-
-  langEn.addEventListener("click", function(){
-
-    changeLanguage("en");
-
-  });
-
-  if(soundToggle && entranceVideo){
-
-    soundToggle.addEventListener("click", function(){
-
-      setTimeout(function(){
-
-        const language =
-        localStorage.getItem("alainLanguage") || "es";
-
-        if(language === "en"){
-
-          soundToggle.textContent =
-          entranceVideo.muted
-          ? "SOUND ON"
-          : "SOUND OFF";
-
-        }else{
-
-          soundToggle.textContent =
-          entranceVideo.muted
-          ? "SONIDO"
-          : "SILENCIO";
-
-        }
-
-      }, 0);
-
-    });
-
-  }
-
-  const savedLanguage =
-  localStorage.getItem("alainLanguage") || "es";
-
-  changeLanguage(savedLanguage);
-
-});
-
-</script>
+<script src="script.js?v=10"></script>
 
 </body>
 
