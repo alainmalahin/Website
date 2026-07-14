@@ -1,16 +1,11 @@
-/* =========================================
-   ALAIN MALAHIN — HISTORY
-   FULL WIDTH / ONE PHOTO / PREMIUM
-========================================= */
-
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     min-height: 100%;
     background: #000;
@@ -18,49 +13,47 @@ body {
 
 body {
     overflow-x: hidden;
+    font-family: "Cormorant Garamond", serif;
+    color: #f3e6d2;
 }
 
 
 /* =========================================
-   FULL HISTORY PAGE
+   STORY PAGE
 ========================================= */
 
-.story-full-page {
+body.story-page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: #000;
+}
+
+
+/* =========================================
+   FULL WIDTH PHOTO
+========================================= */
+
+.story-panel {
     position: relative;
 
     width: 100%;
-    min-height: 100svh;
+    max-width: none;
 
     margin: 0;
 
-    background-image: url("images/story-bg.png.PNG");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    padding: 105px 55px 100px;
 
-    overflow: hidden;
-}
-
-
-/* =========================================
-   DARK PREMIUM OVERLAY
-========================================= */
-
-.story-overlay {
-    position: absolute;
-    inset: 0;
-
-    z-index: 1;
-
-    background:
+    background-image:
         linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.38),
-            rgba(0, 0, 0, 0.50),
-            rgba(0, 0, 0, 0.58)
-        );
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.52)
+        ),
+        url("images/story-bg.png.PNG");
 
-    pointer-events: none;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 
@@ -68,22 +61,16 @@ body {
    CONTENT
 ========================================= */
 
-.story-full-content {
+.story-content {
     position: relative;
     z-index: 2;
 
-    width: 90%;
-    max-width: 760px;
-    min-height: 100svh;
+    width: 88%;
+    max-width: 720px;
 
     margin: 0 auto;
-    padding: 100px 25px 70px;
 
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 
@@ -91,23 +78,21 @@ body {
    MAIN TITLE
 ========================================= */
 
-.story-full-content h1 {
-    margin: 0 0 20px;
+.story-content h1 {
+    margin: 0 0 25px;
 
     font-family: "Cinzel", serif;
-    font-size: clamp(42px, 6vw, 68px);
+    font-size: 50px;
     font-weight: 500;
-    line-height: 1.08;
+    line-height: 1.1;
     letter-spacing: 3px;
 
-    color: #e0b94f;
-
-    text-align: center;
+    color: #e1b94f;
 
     text-shadow:
-        0 2px 4px rgba(0, 0, 0, 1),
-        0 0 8px rgba(224, 185, 79, 0.55),
-        0 0 20px rgba(224, 185, 79, 0.22);
+        0 2px 5px #000,
+        0 0 8px rgba(225, 185, 79, 0.7),
+        0 0 18px rgba(225, 185, 79, 0.35);
 }
 
 
@@ -115,22 +100,20 @@ body {
    SECTION TITLES
 ========================================= */
 
-.story-full-content h2 {
-    margin: 34px 0 20px;
+.story-content h2 {
+    margin: 65px 0 30px;
 
     font-family: "Cinzel", serif;
-    font-size: clamp(30px, 4.5vw, 44px);
+    font-size: 38px;
     font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 2.5px;
+    line-height: 1.15;
+    letter-spacing: 3px;
 
-    color: #e0b94f;
-
-    text-align: center;
+    color: #e1b94f;
 
     text-shadow:
-        0 2px 5px rgba(0, 0, 0, 1),
-        0 0 9px rgba(224, 185, 79, 0.45);
+        0 2px 5px #000,
+        0 0 8px rgba(225, 185, 79, 0.6);
 }
 
 
@@ -138,44 +121,36 @@ body {
    TEXT
 ========================================= */
 
-.story-full-content p {
+.story-content p {
     width: 100%;
-    max-width: 690px;
+    max-width: 650px;
 
-    margin: 0 auto 16px;
+    margin: 0 auto 27px;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(21px, 2.5vw, 27px);
+    font-size: 25px;
     font-weight: 500;
     line-height: 1.42;
 
-    color: #f5eee3;
-
-    text-align: center;
+    color: #fff7e9;
 
     text-shadow:
-        0 2px 3px #000,
+        0 2px 4px #000,
         0 0 7px #000,
         0 0 12px rgba(0, 0, 0, 0.95);
 }
 
 
-/* =========================================
-   GOLD STRONG TEXT
-========================================= */
-
-.story-full-content .strong-text {
+.story-content .strong-text {
     font-family: "Cinzel", serif;
 
-    font-size: clamp(19px, 2.3vw, 25px);
-    line-height: 1.35;
-    letter-spacing: 1.5px;
+    color: #e1b94f;
 
-    color: #e0b94f;
+    letter-spacing: 2px;
 
     text-shadow:
-        0 2px 4px #000,
-        0 0 8px rgba(224, 185, 79, 0.45);
+        0 2px 5px #000,
+        0 0 8px rgba(225, 185, 79, 0.65);
 }
 
 
@@ -187,12 +162,11 @@ body {
     width: 100px;
     height: 1px;
 
-    margin: 0 auto 25px;
+    margin: 0 auto 35px;
 
-    background: #e0b94f;
+    background: #e1b94f;
 
-    box-shadow:
-        0 0 7px rgba(224, 185, 79, 0.55);
+    box-shadow: 0 0 7px rgba(225, 185, 79, 0.6);
 }
 
 
@@ -201,12 +175,12 @@ body {
 ========================================= */
 
 .story-divider {
-    width: 72%;
+    width: 75%;
     height: 1px;
 
-    margin: 30px auto;
+    margin: 55px auto;
 
-    background: rgba(224, 185, 79, 0.42);
+    background: rgba(225, 185, 79, 0.45);
 }
 
 .story-space {
@@ -215,28 +189,32 @@ body {
 
 
 /* =========================================
-   ERA BUTTON
+   BUTTON
 ========================================= */
 
 .era-button {
-    display: inline-block;
+    display: block;
 
-    align-self: center;
+    width: 80%;
+    max-width: 500px;
 
-    margin-top: 24px;
-    padding: 17px 42px;
+    margin: 70px auto 0;
 
-    border: 1px solid #e0b94f;
+    padding: 20px 15px;
+
+    border: 1px solid #e1b94f;
 
     font-family: "Cinzel", serif;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 2px;
 
-    color: #e0b94f;
+    color: #e1b94f;
+
     text-decoration: none;
+    text-align: center;
 
     box-shadow:
-        0 0 12px rgba(224, 185, 79, 0.28);
+        0 0 8px rgba(225, 185, 79, 0.2);
 }
 
 
@@ -258,120 +236,108 @@ body {
 
 .page-menu a {
     font-family: "Cinzel", serif;
-
     font-size: 10px;
     letter-spacing: 2px;
 
-    color: #e0b94f;
+    color: #e1b94f;
+
     text-decoration: none;
 
     opacity: 0.9;
 
     text-shadow:
-        0 0 6px rgba(224, 185, 79, 0.4);
+        0 0 6px rgba(225, 185, 79, 0.5);
 }
 
 
 /* =========================================
-   MOBILE — SAME STYLE AS ORIGINS
+   MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
-    .story-full-page {
-        width: 100%;
-        min-height: 100svh;
-
-        margin: 0;
-
-        background-size: cover;
-        background-position: center center;
-    }
-
-    .story-overlay {
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0.38),
-                rgba(0, 0, 0, 0.50),
-                rgba(0, 0, 0, 0.60)
-            );
-    }
-
-    .story-full-content {
+    .story-panel {
         width: 100%;
         max-width: none;
 
-        min-height: 100svh;
+        margin: 0;
 
-        padding: 105px 34px 60px;
+        padding: 85px 34px 80px;
 
-        justify-content: flex-start;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
     }
 
-    .story-full-content h1 {
-        margin: 0 0 18px;
+    .story-content {
+        width: 100%;
+        max-width: none;
 
-        font-size: 42px;
-        line-height: 1.12;
+        margin: 0 auto;
+    }
+
+    .story-content h1 {
+        margin-bottom: 22px;
+
+        font-size: 37px;
+        line-height: 1.1;
         letter-spacing: 2px;
     }
 
-    .story-full-content h2 {
-        margin: 34px 0 20px;
+    .story-content h2 {
+        margin: 58px 0 27px;
 
-        font-size: 31px;
+        font-size: 30px;
         line-height: 1.15;
         letter-spacing: 2px;
     }
 
-    .story-full-content p {
-        max-width: 620px;
+    .story-content p {
+        width: 100%;
+        max-width: none;
 
-        margin: 0 auto 17px;
+        margin: 0 auto 24px;
 
         font-size: 21px;
         line-height: 1.42;
     }
 
-    .story-full-content .strong-text {
-        font-size: 20px;
+    .story-content .strong-text {
+        font-size: 18px;
         line-height: 1.4;
-        letter-spacing: 1.3px;
+        letter-spacing: 1.5px;
     }
 
     .gold-line {
-        width: 85px;
-
-        margin-bottom: 28px;
+        width: 75px;
+        margin-bottom: 30px;
     }
 
     .story-divider {
-        width: 72%;
-
-        margin: 32px auto;
+        width: 80%;
+        margin: 48px auto;
     }
 
     .era-button {
-        width: 90%;
+        width: 100%;
 
-        margin-top: 25px;
+        margin-top: 60px;
 
-        padding: 16px 10px;
+        padding: 18px 8px;
 
-        font-size: 11px;
+        font-size: 10px;
         letter-spacing: 1.5px;
     }
 
     .page-menu {
         top: 20px;
-        right: 20px;
+        right: 16px;
 
-        gap: 16px;
+        gap: 13px;
     }
 
     .page-menu a {
-        font-size: 9px;
-        letter-spacing: 1.5px;
+        font-size: 8px;
+        letter-spacing: 1.3px;
     }
 }
