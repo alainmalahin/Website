@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -22,11 +21,11 @@ href="https://fonts.gstatic.com"
 crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
-href="story.css">
+href="story.css?v=21">
 
 <style>
 
@@ -46,7 +45,7 @@ margin:0;
 padding:0;
 border:0;
 background:transparent;
-color:rgba(255,215,0,.55);
+color:rgba(255,215,0,.50);
 font-family:"Cinzel",serif;
 font-size:10px;
 font-weight:600;
@@ -56,14 +55,211 @@ cursor:pointer;
 
 .language-switcher span{
 color:#ffd700;
+font-family:"Cinzel",serif;
 font-size:10px;
 }
 
 .language-switcher button.active{
 color:#ffd700;
 text-shadow:
+0 0 5px rgba(255,215,0,1),
+0 0 12px rgba(255,215,0,.75);
+}
+
+.story-hero{
+min-height:100svh !important;
+height:auto !important;
+display:flex !important;
+align-items:flex-start !important;
+justify-content:center !important;
+position:relative !important;
+padding:48px 22px 24px !important;
+
+background-image:
+linear-gradient(
+rgba(0,0,0,.22),
+rgba(0,0,0,.48)
+),
+url("images/story-bg.png.PNG") !important;
+
+background-size:cover !important;
+background-position:center !important;
+background-repeat:no-repeat !important;
+}
+
+.hero-content{
+position:relative !important;
+z-index:2 !important;
+width:100% !important;
+max-width:700px !important;
+margin:0 auto !important;
+text-align:center !important;
+}
+
+.hero-content h1{
+margin:0 0 5px !important;
+color:#ffd700 !important;
+font-family:"Cinzel",serif !important;
+font-size:30px !important;
+font-weight:500 !important;
+line-height:1.05 !important;
+letter-spacing:2px !important;
+
+text-shadow:
 0 0 5px rgba(255,215,0,.95),
-0 0 12px rgba(255,215,0,.65);
+0 0 14px rgba(255,190,0,.65),
+0 2px 5px #000 !important;
+}
+
+.gold-line{
+width:56px !important;
+height:1px !important;
+margin:7px auto 8px !important;
+background:#ffd700 !important;
+
+box-shadow:
+0 0 8px rgba(255,215,0,.95) !important;
+}
+
+.hero-quote{
+margin:0 0 8px !important;
+color:#ffd700 !important;
+font-family:"Cinzel",serif !important;
+font-size:11px !important;
+font-weight:600 !important;
+line-height:1.35 !important;
+letter-spacing:1.2px !important;
+text-transform:uppercase !important;
+
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 12px rgba(255,190,0,.60),
+0 2px 4px #000 !important;
+}
+
+.story-compact{
+width:100%;
+max-width:660px;
+margin:0 auto;
+text-align:center;
+}
+
+.story-compact h2{
+margin:9px 0 4px;
+color:#ffd700;
+font-family:"Cinzel",serif;
+font-size:22px;
+font-weight:500;
+line-height:1.05;
+letter-spacing:1.8px;
+
+text-shadow:
+0 0 5px rgba(255,215,0,.95),
+0 0 13px rgba(255,190,0,.55),
+0 2px 5px #000;
+}
+
+.story-compact p{
+margin:0 auto 6px;
+color:#ffffff;
+font-family:"Cormorant Garamond",serif;
+font-size:15.5px;
+font-weight:500;
+line-height:1.2;
+
+text-shadow:
+0 1px 3px #000,
+0 0 7px rgba(0,0,0,.95);
+}
+
+.story-divider{
+width:40px;
+height:1px;
+margin:7px auto;
+background:rgba(255,215,0,.75);
+
+box-shadow:
+0 0 6px rgba(255,215,0,.55);
+}
+
+.story-compact .strong-text{
+margin:6px auto 5px !important;
+color:#ffd700 !important;
+font-family:"Cinzel",serif !important;
+font-size:13px !important;
+font-weight:500 !important;
+line-height:1.2 !important;
+letter-spacing:1px !important;
+text-transform:uppercase !important;
+
+text-shadow:
+0 0 5px rgba(255,215,0,.90),
+0 0 12px rgba(255,190,0,.50),
+0 2px 4px #000 !important;
+}
+
+.story-compact .era-button{
+display:inline-flex !important;
+align-items:center !important;
+justify-content:center !important;
+width:auto !important;
+margin-top:5px !important;
+padding:7px 12px !important;
+border:1px solid rgba(255,215,0,.78) !important;
+background:rgba(0,0,0,.35) !important;
+color:#ffd700 !important;
+font-family:"Cinzel",serif !important;
+font-size:9px !important;
+line-height:1.2 !important;
+letter-spacing:1px !important;
+text-decoration:none !important;
+
+text-shadow:
+0 0 5px rgba(255,215,0,.80) !important;
+
+box-shadow:
+0 0 8px rgba(255,215,0,.22) !important;
+}
+
+@media(max-width:700px){
+
+.story-hero{
+padding:45px 20px 20px !important;
+}
+
+.hero-content h1{
+font-size:24px !important;
+}
+
+.hero-quote{
+font-size:9px !important;
+}
+
+.story-compact h2{
+font-size:19px !important;
+margin:7px 0 4px !important;
+}
+
+.story-compact p{
+font-size:14.5px !important;
+line-height:1.16 !important;
+margin-bottom:5px !important;
+}
+
+.story-divider{
+margin:6px auto !important;
+}
+
+.story-compact .strong-text{
+font-size:12px !important;
+margin:5px auto 4px !important;
+}
+
+.story-compact .era-button{
+font-size:8px !important;
+padding:6px 10px !important;
+}
+
 }
 
 </style>
@@ -71,15 +267,12 @@ text-shadow:
 </head>
 
 <body>
-
 <div class="language-switcher">
 
 <button
 type="button"
 id="lang-es">
-
 ES
-
 </button>
 
 <span>/</span>
@@ -87,161 +280,130 @@ ES
 <button
 type="button"
 id="lang-en">
-
 EN
-
 </button>
 
 </div>
 
+
 <nav class="page-menu">
 
-<a href="index.html"
+<a
+href="index.html"
 id="home-link">
-
 INICIO
-
 </a>
 
-<a href="collections.html"
+<a
+href="collections.html"
 id="collection-link">
-
 COLECCIÓN
-
 </a>
 
 </nav>
+
 
 <main>
 
 <section class="story-hero">
 
-<div class="story-hero-content">
+<div class="hero-content">
+
 
 <h1 id="history-title">
-
 HISTORIA DE<br>
 ALAIN MALAHIN
-
 </h1>
 
-<p id="history-intro">
 
-Toda historia tiene un origen.<br>
-Esta es la mía.
+<div class="gold-line"></div>
 
+
+<p
+class="hero-quote"
+id="history-intro">
+TODA HISTORIA TIENE UN ORIGEN.<br>
+ESTA ES LA MÍA.
 </p>
 
-</div>
 
-</section>
+<div class="story-compact">
 
-<section class="story-section">
-
-<div class="story-content">
 
 <h2 id="my-story-title">
-
 MI HISTORIA
-
 </h2>
 
-<p id="my-story-one">
 
-ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente.
-
+<p id="my-story-text">
+ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente. Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas. Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.
 </p>
 
-<p id="my-story-two">
 
-Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas.
+<div class="story-divider"></div>
 
-</p>
-
-<p id="my-story-three">
-
-Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.
-
-</p>
 
 <h2 id="began-title">
-
 CÓMO EMPEZÓ
-
 </h2>
 
-<p id="began-one">
 
-Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino.
-
+<p id="began-text">
+Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino. En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea. No tenía todos los recursos, pero tenía la determinación de empezar.
 </p>
 
-<p id="began-two">
 
-En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea.
-
-</p>
-
-<p id="began-three">
-
-No tenía todos los recursos, pero tenía la determinación de empezar.
-
-</p>
-
-<p id="brand-statement">
-
+<p
+class="strong-text"
+id="brand-statement">
 Y NO COMO UNA MARCA MÁS.
-
 </p>
+
 
 <p id="brand-text">
-
 Sino como un proyecto que busca unir historia, diseño e identidad en cada colección.
-
 </p>
+
+
+<div class="story-divider"></div>
+
 
 <h2 id="era-title">
-
 ¿POR QUÉ ERA?
-
 </h2>
 
-<p id="era-one">
 
-Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras.
-
+<p id="era-text">
+Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras. Quería crear algo diferente. No solo ropa.
 </p>
 
-<p id="era-two">
 
-Quería crear algo diferente.
-
-</p>
-
-<p id="era-three">
-
-No solo ropa.
-
-</p>
-
-<p id="era-statement">
-
+<p
+class="strong-text"
+id="era-statement">
 QUERÍA CREAR COLECCIONES CON SIGNIFICADO.
-
 </p>
 
-<a href="origenes.html"
+
+<div class="story-divider"></div>
+
+
+<a
+href="origenes.html"
+class="era-button"
 id="origins-link">
-
 HISTORIA · ERA ORÍGENES
-
 </a>
+
+
+</div>
 
 </div>
 
 </section>
 
 </main>
+
 
 <script>
 
@@ -268,26 +430,14 @@ document.getElementById("history-intro");
 const myStoryTitle =
 document.getElementById("my-story-title");
 
-const myStoryOne =
-document.getElementById("my-story-one");
-
-const myStoryTwo =
-document.getElementById("my-story-two");
-
-const myStoryThree =
-document.getElementById("my-story-three");
+const myStoryText =
+document.getElementById("my-story-text");
 
 const beganTitle =
 document.getElementById("began-title");
 
-const beganOne =
-document.getElementById("began-one");
-
-const beganTwo =
-document.getElementById("began-two");
-
-const beganThree =
-document.getElementById("began-three");
+const beganText =
+document.getElementById("began-text");
 
 const brandStatement =
 document.getElementById("brand-statement");
@@ -298,14 +448,8 @@ document.getElementById("brand-text");
 const eraTitle =
 document.getElementById("era-title");
 
-const eraOne =
-document.getElementById("era-one");
-
-const eraTwo =
-document.getElementById("era-two");
-
-const eraThree =
-document.getElementById("era-three");
+const eraText =
+document.getElementById("era-text");
 
 const eraStatement =
 document.getElementById("era-statement");
@@ -328,31 +472,19 @@ historyTitle.innerHTML =
 "HISTORY OF<br>ALAIN MALAHIN";
 
 historyIntro.innerHTML =
-"Every story has an origin.<br>This is mine.";
+"EVERY STORY HAS AN ORIGIN.<br>THIS IS MINE.";
 
 myStoryTitle.textContent =
 "MY STORY";
 
-myStoryOne.textContent =
-"ALAIN MALAHIN was born from a curiosity that had been with me since I was a child. I was always drawn to clothing, not because I wanted to follow fashion, but because I wanted to wear something different.";
-
-myStoryTwo.textContent =
-"I imagined different garments and even asked my mother to knit clothes inspired by my own ideas.";
-
-myStoryThree.textContent =
-"As time passed, I continued to feel an interest in fashion, although for many years I thought it was a dream too distant or even impossible.";
+myStoryText.textContent =
+"ALAIN MALAHIN was born from a curiosity that had been with me since I was a child. I was always drawn to clothing, not because I wanted to follow fashion, but because I wanted to wear something different. I imagined different garments and even asked my mother to knit clothes inspired by my own ideas. As time passed, I continued to feel an interest in fashion, although for many years I thought it was a dream too distant or even impossible.";
 
 beganTitle.textContent =
 "HOW IT BEGAN";
 
-beganOne.textContent =
-"During a trip to Crete in June 2026 and after more than twenty years working in hospitality, I understood that the time had come to begin a new path.";
-
-beganTwo.textContent =
-"On this journey I found time to reflect and understood that this project should not remain just an idea.";
-
-beganThree.textContent =
-"I did not have all the resources, but I had the determination to begin.";
+beganText.textContent =
+"During a trip to Crete in June 2026 and after more than twenty years working in hospitality, I understood that the time had come to begin a new path. On this journey I found time to reflect and understood that this project should not remain just an idea. I did not have all the resources, but I had the determination to begin.";
 
 brandStatement.textContent =
 "AND NOT AS JUST ANOTHER BRAND.";
@@ -363,14 +495,8 @@ brandText.textContent =
 eraTitle.textContent =
 "WHY ERA?";
 
-eraOne.textContent =
-"I understood that the fashion market is full of collections that follow passing trends.";
-
-eraTwo.textContent =
-"I wanted to create something different.";
-
-eraThree.textContent =
-"Not just clothing.";
+eraText.textContent =
+"I understood that the fashion market is full of collections that follow passing trends. I wanted to create something different. Not just clothing.";
 
 eraStatement.textContent =
 "I WANTED TO CREATE COLLECTIONS WITH MEANING.";
@@ -388,43 +514,29 @@ localStorage.setItem(
 );
 
 }else{
-
 document.documentElement.lang = "es";
 
 homeLink.textContent = "INICIO";
 
-collectionLink.textContent =
-"COLECCIÓN";
+collectionLink.textContent = "COLECCIÓN";
 
 historyTitle.innerHTML =
 "HISTORIA DE<br>ALAIN MALAHIN";
 
 historyIntro.innerHTML =
-"Toda historia tiene un origen.<br>Esta es la mía.";
+"TODA HISTORIA TIENE UN ORIGEN.<br>ESTA ES LA MÍA.";
 
 myStoryTitle.textContent =
 "MI HISTORIA";
 
-myStoryOne.textContent =
-"ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente.";
-
-myStoryTwo.textContent =
-"Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas.";
-
-myStoryThree.textContent =
-"Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.";
+myStoryText.textContent =
+"ALAIN MALAHIN nació de una curiosidad que me acompañaba desde niño. Siempre me atrajo la ropa, no porque quisiera seguir la moda, sino porque quería vestir algo diferente. Imaginaba prendas diferentes e incluso pedía a mi madre que tejiera ropa inspirada en mis propias ideas. Con el paso del tiempo, continué sintiendo interés por la moda, aunque durante muchos años pensé que era un sueño demasiado lejano o incluso imposible.";
 
 beganTitle.textContent =
 "CÓMO EMPEZÓ";
 
-beganOne.textContent =
-"Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino.";
-
-beganTwo.textContent =
-"En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea.";
-
-beganThree.textContent =
-"No tenía todos los recursos, pero tenía la determinación de empezar.";
+beganText.textContent =
+"Durante un viaje a Creta en junio de 2026 y después de más de veinte años trabajando en hostelería, comprendí que había llegado el momento de comenzar un nuevo camino. En este viaje encontré tiempo para reflexionar y comprendí que este proyecto no debía quedarse solo en una idea. No tenía todos los recursos, pero tenía la determinación de empezar.";
 
 brandStatement.textContent =
 "Y NO COMO UNA MARCA MÁS.";
@@ -435,14 +547,8 @@ brandText.textContent =
 eraTitle.textContent =
 "¿POR QUÉ ERA?";
 
-eraOne.textContent =
-"Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras.";
-
-eraTwo.textContent =
-"Quería crear algo diferente.";
-
-eraThree.textContent =
-"No solo ropa.";
+eraText.textContent =
+"Comprendí que el mercado de la moda está lleno de colecciones que siguen tendencias pasajeras. Quería crear algo diferente. No solo ropa.";
 
 eraStatement.textContent =
 "QUERÍA CREAR COLECCIONES CON SIGNIFICADO.";
@@ -485,8 +591,7 @@ setLanguage("en");
 
 
 const savedLanguage =
-localStorage.getItem("alainLanguage")
-|| "es";
+localStorage.getItem("alainLanguage") || "es";
 
 setLanguage(savedLanguage);
 
