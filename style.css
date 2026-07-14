@@ -333,3 +333,14 @@ body{
     font-size:11px;
   }
 }
+/* CORRECCIÓN BOTÓN HISTORIA */
+
+#hero a{
+  white-space: nowrap;
+}
+
+@media(max-width:768px){
+  #hero a{
+    font-size: clamp(11px, 2.7vw, 16px);
+  }
+}
