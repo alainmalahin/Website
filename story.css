@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  font-family: "Cormorant Garamond", serif;
+  color: #fffaf0;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.52) 0%,
+      rgba(0, 0, 0, 0.38) 28%,
+      rgba(0, 0, 0, 0.46) 62%,
+      rgba(0, 0, 0, 0.62) 100%
+    ),
+    url("images/story-bg.png.PNG");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.story-panel {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 80px 36px 65px;
+  background: transparent;
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.story-content h1 {
+  margin: 0 0 26px;
+
+  font-family: "Cinzel", serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 2px;
+
+  color: #ffd700;
+
+  text-align: center;
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 0 5px rgba(255, 215, 0, 1),
+    0 0 12px rgba(255, 215, 0, 0.85),
+    0 0 24px rgba(255, 190, 0, 0.55);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.story-content h2 {
+  margin: 46px 0 20px;
+
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 2.5px;
+
+  color: #ffd700;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 0 5px rgba(255, 215, 0, 1),
+    0 0 11px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 190, 0, 0.5);
+}
+
+/* =========================
+   NORMAL TEXT
+========================= */
+
+.story-content p {
+  width: 100%;
+  max-width: 680px;
+
+  margin: 0 auto 20px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.52;
+  letter-spacing: 0.2px;
+
+  color: #fffaf0;
+
+  text-align: center;
+
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 1),
+    0 2px 5px rgba(0, 0, 0, 1),
+    0 0 10px rgba(0, 0, 0, 0.95),
+    0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   GOLD HIGHLIGHT TEXT
+========================= */
+
+.story-content .strong-text {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 29px auto;
+
+  font-family: "Cinzel", serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.48;
+  letter-spacing: 1.8px;
+
+  color: #ffd700;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 0 5px rgba(255, 215, 0, 1),
+    0 0 11px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 190, 0, 0.5);
+}
+
+/* =========================
+   DIVIDERS
+========================= */
+
+.gold-line,
+.story-divider {
+  display: block;
+
+  width: 84px;
+  height: 1px;
+
+  margin: 38px auto;
+
+  border: 0;
+
+  background: #ffd700;
+
+  box-shadow:
+    0 0 5px rgba(255, 215, 0, 0.9),
+    0 0 12px rgba(255, 215, 0, 0.55);
+}
+
+.story-space {
+  display: block;
+  height: 12px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.era-button {
+  display: block;
+
+  width: 100%;
+  max-width: 540px;
+
+  margin: 52px auto 0;
+  padding: 19px 12px;
+
+  border: 1px solid #ffd700;
+
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+
+  color: #ffd700;
+
+  text-decoration: none;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.34);
+
+  box-shadow:
+    0 0 5px rgba(255, 215, 0, 0.7),
+    0 0 14px rgba(255, 215, 0, 0.32),
+    inset 0 0 20px rgba(0, 0, 0, 0.55);
+
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, 1),
+    0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+/* =========================
+   MENU
+========================= */
+
+.page-menu {
+  position: absolute;
+
+  top: 25px;
+  right: 24px;
+
+  z-index: 100;
+
+  display: flex;
+  gap: 20px;
+}
+
+.page-menu a {
+  font-family: "Cinzel", serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.7px;
+
+  color: #ffd700;
+
+  text-decoration: none;
+
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, 1),
+    0 0 5px rgba(255, 215, 0, 0.9),
+    0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  body {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.52) 0%,
+        rgba(0, 0, 0, 0.38) 28%,
+        rgba(0, 0, 0, 0.46) 62%,
+        rgba(0, 0, 0, 0.62) 100%
+      ),
+      url("images/story-bg.png.PNG");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .story-panel {
+    width: 100%;
+
+    padding:
+      76px
+      22px
+      58px;
+
+    background: transparent;
+  }
+
+  .story-content {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .story-content h1 {
+    margin-bottom: 27px;
+
+    font-size: 26px;
+    line-height: 1.16;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+  }
+
+  .story-content h2 {
+    margin: 45px 0 19px;
+
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+
+  .story-content p {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 0 auto 19px;
+
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+
+    color: #fffaf0;
+  }
+
+  .story-content .strong-text {
+    width: 100%;
+    max-width: 340px;
+
+    margin: 29px auto;
+
+    font-size: 17px;
+    line-height: 1.48;
+    letter-spacing: 1.5px;
+  }
+
+  .gold-line,
+  .story-divider {
+    width: 72px;
+
+    margin: 37px auto;
+  }
+
+  .story-space {
+    height: 10px;
+  }
+
+  .era-button {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 48px auto 0;
+    padding: 18px 10px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .page-menu {
+    top: 24px;
+    right: 19px;
+
+    gap: 18px;
+  }
+
+  .page-menu a {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+}
