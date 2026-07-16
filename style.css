@@ -526,3 +526,33 @@ right:3%;
   }
 
 }
+.footer{
+    margin-top:80px;
+    padding:40px 20px;
+    border-top:1px solid rgba(255,215,0,.15);
+    text-align:center;
+    color:#bfa76a;
+    font-family:"Cinzel",serif;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.footer nav{
+    margin-top:18px;
+}
+
+.footer a{
+    color:#d8c28a;
+    text-decoration:none;
+    margin:0 12px;
+    transition:.3s;
+}
+
+.footer a:hover{
+    color:#ffd700;
+    text-shadow:0 0 10px rgba(255,215,0,.6);
+}
+
+.footer span{
+    color:#7a6a3a;
+}
