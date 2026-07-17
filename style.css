@@ -230,7 +230,7 @@ body.home{
     overflow:hidden;
 
     width:340px;
-    height:72px;
+    height:70px;
 
     display:flex;
     justify-content:center;
@@ -238,26 +238,25 @@ body.home{
 
     text-decoration:none;
 
-    border-radius:18px;
+    border-radius:14px;
 
-    border:2px solid #fff3b0;
+    border:2px solid #b88a2c;
 
     background:linear-gradient(
         180deg,
-        #fff7c7 0%,
-        #ffe98a 18%,
-        #ffd54f 40%,
-        #f4c430 60%,
-        #d4af37 82%,
-        #b8860b 100%
+        #6f4b12 0%,
+        #8b6420 12%,
+        #b88a2c 28%,
+        #d6b15c 45%,
+        #b88a2c 62%,
+        #8a6422 82%,
+        #5d3c0b 100%
     );
 
     box-shadow:
-        0 0 15px rgba(255,223,90,.9),
-        0 0 35px rgba(255,215,0,.8),
-        0 0 60px rgba(255,215,0,.7),
-        inset 0 2px 3px rgba(255,255,255,.9),
-        inset 0 -2px 4px rgba(120,80,0,.3);
+        inset 0 2px 1px rgba(255,240,180,.35),
+        inset 0 -2px 2px rgba(70,40,0,.45),
+        0 0 12px rgba(184,138,44,.45);
 
     transition:.4s;
 }
@@ -271,32 +270,29 @@ body.home{
 
     font-family:"Cinzel",serif;
 
-    font-size:25px;
+    font-size:24px;
 
-    font-weight:700;
+    font-weight:600;
 
     letter-spacing:4px;
 
-    color:#fff8d6;
+    color:#f7e2a0;
 
     text-shadow:
-        0 0 3px #fff,
-        0 0 10px #ffe066,
-        0 0 22px #ffd700;
+        1px 1px 0 #5b3d0d,
+        0 0 5px rgba(255,220,120,.35);
 
 }
 
 .main-menu a:hover{
 
-    transform:scale(1.06);
+    transform:scale(1.04);
 
-    border-color:#ffffff;
+    border-color:#d8b86c;
 
     box-shadow:
-        0 0 20px #fff4a3,
-        0 0 45px #ffd700,
-        0 0 80px #ffbf00,
-        0 0 120px rgba(255,215,0,.9);
+        inset 0 2px 2px rgba(255,255,220,.4),
+        0 0 18px rgba(212,175,55,.55);
 
 }
 
