@@ -199,3 +199,35 @@ Users can configure their browser to accept, block or delete cookies at any time
 </div>
 
 </div>
+<script>
+const es = document.getElementById("es");
+const en = document.getElementById("en");
+
+const btnEs = document.getElementById("btn-es");
+const btnEn = document.getElementById("btn-en");
+
+btnEs.addEventListener("click", function () {
+    es.classList.remove("hidden");
+    en.classList.add("hidden");
+    btnEs.classList.add("active");
+    btnEn.classList.remove("active");
+    localStorage.setItem("alainLanguage", "es");
+});
+
+btnEn.addEventListener("click", function () {
+    en.classList.remove("hidden");
+    es.classList.add("hidden");
+    btnEn.classList.add("active");
+    btnEs.classList.remove("active");
+    localStorage.setItem("alainLanguage", "en");
+});
+
+const lang = localStorage.getItem("alainLanguage") || "es";
+
+if (lang === "en") {
+    btnEn.click();
+}
+</script>
+
+</body>
+</html>
