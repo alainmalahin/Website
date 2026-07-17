@@ -1,100 +1,201 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Cookies | ALAIN MALAHIN</title>
+
+<title>Cookies | ALAIN MALAHIN</title>
+
 <link rel="stylesheet" href="style.css?v=15">
 
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+
+<link rel="apple-touch-icon" href="images/favicon.jpg">
+
 <style>
+
 body{
+
     background:#000;
+
     color:#d9c27a;
+
     font-family:"Inter",sans-serif;
+
     padding:40px 20px;
+
     line-height:1.8;
+
 }
 
 .container{
+
     max-width:900px;
+
     margin:auto;
+
 }
 
-h1{
+h1,h2{
+
     font-family:"Cinzel",serif;
+
     color:#ffd700;
-    margin-bottom:30px;
+
 }
 
-h2{
+.language-switcher{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.language-switcher button{
+
+    background:none;
+
+    border:none;
+
+    color:#d4af37;
+
+    cursor:pointer;
+
     font-family:"Cinzel",serif;
-    color:#e4bd43;
-    margin-top:35px;
-    margin-bottom:10px;
+
+    font-size:12px;
+
+}
+
+.language-switcher button.active{
+
+    color:#ffd700;
+
 }
 
 a{
+
     color:#ffd700;
+
     text-decoration:none;
+
 }
+
+.hidden{
+
+    display:none;
+
+}
+
 </style>
-<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
-<link rel="apple-touch-icon" href="images/favicon.jpg">
+
 </head>
 
 <body>
 
+<div class="language-switcher">
+
+<button id="btn-es" class="active">ES</button>
+
+<button id="btn-en">EN</button>
+
+</div>
+
 <div class="container">
+
+<div id="es">
 
 <h1>Política de Cookies</h1>
 
-<p>Este sitio web puede utilizar cookies técnicas y de análisis para mejorar la experiencia del usuario y conocer el uso de la página.</p>
+<p>
+
+Este sitio web puede utilizar cookies técnicas y de análisis para mejorar la experiencia del usuario y conocer el uso de la página.
+
+</p>
 
 <h2>¿Qué son las cookies?</h2>
 
-<p>Las cookies son pequeños archivos que se almacenan en el dispositivo del usuario para recordar determinadas preferencias y recopilar información estadística.</p>
+<p>
+
+Las cookies son pequeños archivos que se almacenan en el dispositivo del usuario para recordar determinadas preferencias y recopilar información estadística.
+
+</p>
 
 <h2>Google Analytics</h2>
 
-<p>Este sitio puede utilizar Google Analytics para recopilar datos estadísticos de forma anónima.</p>
+<p>
+
+Este sitio puede utilizar Google Analytics para recopilar datos estadísticos de forma anónima.
+
+</p>
 
 <h2>Gestión de cookies</h2>
 
-<p>El usuario puede configurar su navegador para aceptar, bloquear o eliminar las cookies en cualquier momento.</p>
+<p>
 
-<p style="margin-top:50px;">
+El usuario puede configurar su navegador para aceptar, bloquear o eliminar las cookies en cualquier momento.
+
+</p>
+
+<p>
+
 <a href="index.html">← Volver al inicio</a>
+
 </p>
 
 </div>
-<script>
-const es = document.getElementById("es");
-const en = document.getElementById("en");
 
-const btnEs = document.getElementById("btn-es");
-const btnEn = document.getElementById("btn-en");
+<div id="en" class="hidden">
 
-btnEs.addEventListener("click", function () {
-    es.classList.remove("hidden");
-    en.classList.add("hidden");
-    btnEs.classList.add("active");
-    btnEn.classList.remove("active");
-    localStorage.setItem("alainLanguage", "es");
-});
+<h1>Cookie Policy</h1>
 
-btnEn.addEventListener("click", function () {
-    en.classList.remove("hidden");
-    es.classList.add("hidden");
-    btnEn.classList.add("active");
-    btnEs.classList.remove("active");
-    localStorage.setItem("alainLanguage", "en");
-});
+<p>
 
-const lang = localStorage.getItem("alainLanguage") || "es";
+This website may use technical and analytical cookies to improve the user experience and understand how the site is used.
 
-if (lang === "en") {
-    btnEn.click();
-}
-</script>
-</body>
-</html>
+</p>
+
+<h2>What are cookies?</h2>
+
+<p>
+
+Cookies are small files stored on the user's device to remember preferences and collect anonymous statistical information.
+
+</p>
+
+<h2>Google Analytics</h2>
+
+<p>
+
+This website may use Google Analytics to collect anonymous usage statistics.
+
+</p>
+
+<h2>Managing cookies</h2>
+
+<p>
+
+Users can configure their browser to accept, block or delete cookies at any time.
+
+</p>
+
+<p>
+
+<a href="index.html">← Back to Home</a>
+
+</p>
+
+</div>
+
+</div>
