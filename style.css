@@ -548,3 +548,109 @@ visibility:visible;
 .top-menu a:hover{
     color:#ffd700;
 }
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.page{
+    background:#000;
+    color:#d4af37;
+    font-family:"Inter",sans-serif;
+    min-height:100vh;
+}
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px;
+}
+
+.page-nav{
+    display:flex;
+    gap:24px;
+}
+
+.page-nav a{
+    color:#d4af37;
+    text-decoration:none;
+    font-family:"Cinzel",serif;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.page-content{
+    max-width:900px;
+    margin:80px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.page-content h1{
+    font-family:"Cinzel",serif;
+    font-size:48px;
+    font-weight:600;
+    margin-bottom:30px;
+    color:#d4af37;
+}
+
+.page-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.contact-box{
+    margin-top:50px;
+    padding:35px;
+    border:1px solid rgba(212,175,55,.35);
+    background:rgba(255,255,255,.03);
+}
+
+.contact-box p{
+    margin:20px 0;
+    color:#d4af37;
+}
+
+.contact-box a{
+    color:#d4af37;
+    text-decoration:none;
+}
+
+.contact-box a:hover{
+    color:#ffd700;
+}
+
+@media (max-width:768px){
+
+.page-header{
+    flex-direction:column;
+    gap:20px;
+}
+
+.page-nav{
+    gap:14px;
+}
+
+.page-nav a{
+    font-size:12px;
+}
+
+.page-content{
+    margin:50px auto;
+}
+
+.page-content h1{
+    font-size:32px;
+}
+
+.page-content p{
+    font-size:16px;
+}
+
+.contact-box{
+    padding:20px;
+}
+
+}
