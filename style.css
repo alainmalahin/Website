@@ -556,3 +556,52 @@ right:3%;
 .footer span{
     color:#7a6a3a;
 }
+/* ===== MENÚ SUPERIOR ===== */
+
+.top-menu{
+    position:fixed;
+    top:22px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:26px;
+    z-index:9999;
+}
+
+.top-menu a{
+    color:#d4af37;
+    text-decoration:none;
+    font-family:"Cinzel",serif;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.top-menu a:hover{
+    color:#ffd700;
+}
+
+.language-switcher{
+    position:fixed;
+    top:22px;
+    right:22px;
+    z-index:9999;
+}
+
+@media (max-width:768px){
+
+.top-menu{
+    top:18px;
+    gap:14px;
+}
+
+.top-menu a{
+    font-size:11px;
+}
+
+.language-switcher{
+    top:18px;
+    right:15px;
+}
+
+}
