@@ -516,3 +516,27 @@ visibility:visible;
 .footer span{
     color:#7a6a3a;
 }
+/* ===== MENÚ SUPERIOR ===== */
+
+.top-menu{
+    position:absolute;
+    top:18px;
+    left:20px;
+    display:flex;
+    gap:24px;
+    z-index:300;
+}
+
+.top-menu a{
+    color:#d4af37;
+    text-decoration:none;
+    font-family:"Cinzel",serif;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-shadow:0 0 8px rgba(212,175,55,.5);
+}
+
+.top-menu a:hover{
+    color:#ffd700;
+}
