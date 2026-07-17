@@ -21,11 +21,11 @@ body{
 }
 
 body{
-
-  overflow:hidden;
-
   font-family:"Inter",sans-serif;
+}
 
+body.home{
+  overflow:hidden;
 }
 
 /* =========================
