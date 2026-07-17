@@ -231,7 +231,23 @@ body.home{
   transform:scale(.97);
 
 }
+.main-menu span{
+    font-family:"Cinzel",serif;
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:3px;
+    color:#d4af37;
+    text-transform:uppercase;
+}
 
+.main-menu a:hover{
+    background:#bfa76a;
+    transform:scale(1.05);
+}
+
+.main-menu a:hover span{
+    color:#000;
+}
 /* =========================
 
    SOUND
