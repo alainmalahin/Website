@@ -352,56 +352,64 @@ visibility:visible;
 }
 
 /* =========================
-
    MÓVIL VERTICAL
-
 ========================= */
 
 @media screen and (orientation:portrait){
 
   .brand-slogan{
-
     font-size:14px;
-
     line-height:1.15;
+  }
 
+  .top-menu{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:18px;
+    z-index:300;
+  }
+
+  .top-menu a{
+    color:#d4af37;
+    text-decoration:none;
+    font-family:"Cinzel",serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
   }
 
   .main-menu{
-
     width:65%;
-
   }
 
   .main-menu a{
-
     height:32px;
-
     padding:0 6px;
-
     font-size:12px;
-
     line-height:1;
-
     letter-spacing:.2px;
-
     white-space:nowrap;
-
     text-transform:uppercase;
-
   }
 
   .language-switcher{
-    top:18px;
+    position:absolute;
+    top:20px;
     right:18px;
     left:auto;
     bottom:auto;
-    font-size:14px;
+    z-index:300;
+    font-size:13px;
     line-height:1;
-}
+  }
 
   .lang-btn{
-    font-size:14px;
+    font-size:13px;
+  }
+
 }
 /* =========================
 
