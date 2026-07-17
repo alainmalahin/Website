@@ -392,26 +392,17 @@ visibility:visible;
   }
 
   .language-switcher{
-
-    top:auto;
-
+    top:18px;
+    right:18px;
     left:auto;
-bottom:3%;
-right:3%;
-    font-size:6px;
-
+    bottom:auto;
+    font-size:14px;
     line-height:1;
-
-  }
-
-  .lang-btn{
-
-    font-size:6px;
-
-  }
-
 }
 
+  .lang-btn{
+    font-size:14px;
+}
 /* =========================
 
    MÓVIL HORIZONTAL
