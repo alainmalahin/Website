@@ -225,35 +225,23 @@ body.home{
 ========================= */
 
 .main-menu a{
+    position: relative;
 
-    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width:360px;
+    width: 360px;
+    height: 90px;
 
-    height:82px;
+    background: url("images/button-gold.png") center center / 100% 100% no-repeat;
 
-    display:flex;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
 
-    justify-content:center;
-
-    align-items:center;
-
-    text-decoration:none;
-
-    background:url("images/button-gold.png") center center / 100% 100% no-repeat;
-
-    border:none;
-
-    border-radius:42px;
-
-    overflow:hidden;
-
-    transition:.35s ease;
-
-    box-shadow:
-        0 8px 18px rgba(0,0,0,.45),
-        0 0 18px rgba(212,175,55,.30);
-
+    transition: transform .25s ease, filter .25s ease;
 }
 
 .main-menu a:active{
@@ -287,11 +275,8 @@ body.home{
 }
 
 .main-menu a:hover{
-
-    transform:scale(1.04);
-
-    filter:brightness(1.08);
-
+    transform: scale(1.04);
+    filter: brightness(1.15);
 }
 
 .main-menu a:hover span{
