@@ -225,18 +225,24 @@ body.home{
 ========================= */
 
 .main-menu a{
-    width: 360px;
-    height: 110px;              /* Antes 90px */
+    position: relative;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background:url("images/button-gold.png") center center no-repeat;
-    background-size:contain; /* En lugar de 100% 100% */
+    width: 430px;
+    height: 95px;
 
-    border:none;
-    overflow:hidden;
+    background: url("images/button-gold.png") center center no-repeat;
+    background-size: 100% auto;
+
+    border: none;
+    text-decoration: none;
+    overflow: visible;
+    cursor: pointer;
+
+    transition: transform .25s ease, filter .25s ease;
 }
 
 .main-menu a:active{
@@ -245,34 +251,29 @@ body.home{
 
 }
 .main-menu span{
-position: relative;
-z-index: 2;
-line-height: 1;
-    font-family:"Cinzel",serif;
+    position: relative;
+    z-index: 2;
 
-    font-size:28px;
+    font-family: "Cinzel", serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
 
-    font-weight:700;
+    color: #111111;
 
-    letter-spacing:3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
 
-    color:#111111;
-
-    text-transform:uppercase;
-
-    text-decoration:none;
+    -webkit-text-stroke: 1.3px #e8c45b;
 
     text-shadow:
-        -1px -1px 0 #ffd86a,
-         1px -1px 0 #ffd86a,
-        -1px  1px 0 #ffd86a,
-         1px  1px 0 #ffd86a,
-         0 0 10px rgba(255,215,0,.8);
-
+        0 0 2px #fff2b3,
+        0 0 8px #b88a17;
 }
 
 .main-menu a:hover{
-    transform: scale(1.04);
+    transform: scale(1.03);
     filter: brightness(1.15);
 }
 
