@@ -245,7 +245,9 @@ body.home{
 
 }
 .main-menu span{
-
+position: relative;
+z-index: 2;
+line-height: 1;
     font-family:"Cinzel",serif;
 
     font-size:32px;
