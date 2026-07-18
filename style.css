@@ -233,7 +233,7 @@ body.home{
     align-items:center;
 
     background:url("images/button-gold.png") center center no-repeat;
-    background-size:100% auto;  /* En lugar de 100% 100% */
+    background-size:100% 100%;  /* En lugar de 100% 100% */
 
     border:none;
     overflow:hidden;
@@ -250,7 +250,7 @@ z-index: 2;
 line-height: 1;
     font-family:"Cinzel",serif;
 
-    font-size:32px;
+    font-size:28px;
 
     font-weight:700;
 
