@@ -225,35 +225,18 @@ body.home{
 ========================= */
 
 .main-menu a{
+    width:430px;
+    height:95px;
+
     display:flex;
     justify-content:center;
     align-items:center;
 
-    width:430px;
-    height:110px;
+    background:url("images/button-gold.png") center center / 100% auto no-repeat;
 
-    background:#1a1a1a;
-
-    border:5px solid transparent;
-    border-radius:55px;
-
-    background-image:
-        linear-gradient(#1a1a1a,#1a1a1a),
-        linear-gradient(180deg,
-            #fff5b0 0%,
-            #ffd84f 18%,
-            #c78a00 40%,
-            #ffe88a 60%,
-            #9a6700 82%,
-            #fff4b5 100%);
-
-    background-origin:border-box;
-    background-clip:padding-box,border-box;
-
-    box-shadow:
-        0 0 18px rgba(255,215,0,.45);
-
+    border:none;
     text-decoration:none;
+    overflow:visible;
 }
 
 .main-menu a:hover{
