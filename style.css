@@ -226,39 +226,36 @@ body.home{
 
 .main-menu a{
 
-    position:relative;
-    overflow:hidden;
-
     width:340px;
-    height:70px;
+    height:68px;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    text-decoration:none;
-
     border-radius:14px;
 
-    border:2px solid #b88a2c;
+    border:2px solid #8c6222;
 
     background:linear-gradient(
-        180deg,
-        #6f4b12 0%,
-        #8b6420 12%,
-        #b88a2c 28%,
-        #d6b15c 45%,
-        #b88a2c 62%,
-        #8a6422 82%,
-        #5d3c0b 100%
+        to bottom,
+        #4d3207 0%,
+        #6b4610 12%,
+        #8d6420 25%,
+        #b78833 42%,
+        #e1c06d 50%,
+        #b78833 58%,
+        #8d6420 74%,
+        #6b4610 88%,
+        #3b2405 100%
     );
 
     box-shadow:
-        inset 0 2px 1px rgba(255,240,180,.35),
-        inset 0 -2px 2px rgba(70,40,0,.45),
-        0 0 12px rgba(184,138,44,.45);
+        inset 0 2px 2px rgba(255,236,170,.35),
+        inset 0 -3px 3px rgba(30,15,0,.45),
+        0 0 10px rgba(183,136,51,.35);
 
-    transition:.4s;
+    transition:.35s;
 }
 
 .main-menu a:active{
@@ -272,15 +269,15 @@ body.home{
 
     font-size:24px;
 
-    font-weight:600;
+    font-weight:700;
 
     letter-spacing:4px;
 
-    color:#f7e2a0;
+    color:#1a1205;
 
     text-shadow:
-        1px 1px 0 #5b3d0d,
-        0 0 5px rgba(255,220,120,.35);
+
+        0 1px 1px rgba(255,240,180,.35);
 
 }
 
@@ -288,11 +285,12 @@ body.home{
 
     transform:scale(1.04);
 
-    border-color:#d8b86c;
+    border-color:#d5b46a;
 
     box-shadow:
-        inset 0 2px 2px rgba(255,255,220,.4),
-        0 0 18px rgba(212,175,55,.55);
+
+        inset 0 2px 2px rgba(255,255,210,.45),
+        0 0 18px rgba(212,175,55,.45);
 
 }
 
