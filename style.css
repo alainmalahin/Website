@@ -226,19 +226,25 @@ body.home{
 
 .main-menu a{
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     width:430px;
-    height:120px;
+    height:110px;
 
-    background:url("images/button-gold.png") center center / 100% 100% no-repeat;
+    background:#1a1a1a;
 
-    border:none;
+    border:4px solid #d8a928;
+    border-radius:55px;
+
+    box-shadow:
+        0 0 0 2px #f8e08b,
+        0 0 0 5px #8f6512,
+        inset 0 0 0 2px #f6d66a,
+        0 0 18px rgba(255,215,0,.35);
+
     text-decoration:none;
-    cursor:pointer;
-
-    transition:.25s;
+    overflow:hidden;
 }
 
 .main-menu a:hover{
