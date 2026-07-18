@@ -225,56 +225,45 @@ body.home{
 ========================= */
 
 .main-menu a{
-    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:430px;
+    height:120px;
 
-    width: 430px;
-    height: 95px;
+    background:url("images/button-gold.png") center center / 100% 100% no-repeat;
 
-    background: url("images/button-gold.png") center center no-repeat;
-    background-size: 100% auto;
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
 
-    border: none;
-    text-decoration: none;
-    overflow: visible;
-    cursor: pointer;
-
-    transition: transform .25s ease, filter .25s ease;
+    transition:.25s;
 }
 
-.main-menu a:active{
-
-  transform:scale(.97);
-
+.main-menu a:hover{
+    transform:scale(1.03);
+    filter:brightness(1.1);
 }
+
 .main-menu span{
-
-    position: relative;
-    z-index: 2;
-    line-height: 1;
+    position:relative;
+    z-index:2;
 
     font-family:"Cinzel",serif;
     font-size:32px;
     font-weight:700;
-    letter-spacing:3px;
+    letter-spacing:2px;
+
     color:#111111;
-    text-transform:uppercase;
+
+    -webkit-text-stroke:1.3px #f2d37a;
+
+    text-shadow:
+        0 0 4px rgba(255,230,150,.9),
+        0 0 12px rgba(184,138,23,.6);
+
     text-decoration:none;
-
-}
-
-.main-menu a:hover{
-    transform: scale(1.03);
-    filter: brightness(1.15);
-}
-
-.main-menu a:hover span{
-
-    color:#111111;
-
 }
 
 
