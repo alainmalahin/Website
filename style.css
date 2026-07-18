@@ -225,23 +225,18 @@ body.home{
 ========================= */
 
 .main-menu a{
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     width: 360px;
-    height: 90px;
+    height: 110px;              /* Antes 90px */
 
-    background: url("images/button-gold.png") center center / 100% 100% no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    overflow: hidden;
+    background:url("images/button-gold.png") center center no-repeat;
+    background-size:100% auto;  /* En lugar de 100% 100% */
 
-    transition: transform .25s ease, filter .25s ease;
+    border:none;
+    overflow:hidden;
 }
 
 .main-menu a:active{
