@@ -225,8 +225,8 @@ body.home{
 ========================= */
 
 .main-menu a{
-    width:480px;
-    height:160px;
+    width:450px;
+    height:120px;
 
     display:flex;
     justify-content:center;
@@ -235,7 +235,7 @@ body.home{
     background-image:url("images/button-gold.png");
     background-repeat:no-repeat;
     background-position:center center;
-    background-size:480px 95px;
+    background-size:450px 95px;
 
     border:none;
         padding:0;
