@@ -236,7 +236,9 @@ body.home{
     width:100%;
     height:auto;
 }
-
+.main-menu-btn img{
+    pointer-events:none;
+}
 
 /* =========================
 
@@ -353,15 +355,9 @@ visibility:visible;
     width:65%;
   }
 
-  .main-menu a{
-    height:32px;
-    padding:0 6px;
-    font-size:12px;
-    line-height:1;
-    letter-spacing:.2px;
-    white-space:nowrap;
-    text-transform:uppercase;
-  }
+  .main-menu-btn{
+    width:320px;
+}
 
   .language-switcher{
     position:absolute;
@@ -433,13 +429,9 @@ visibility:visible;
 
   }
 
-  .main-menu a{
-
-    height:90px;
-
-    font-size:30px;
-
-  }
+  .main-menu-btn{
+    width:460px;
+}
 
   .language-switcher{
 
