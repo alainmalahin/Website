@@ -225,7 +225,7 @@ body.home{
 ========================= */
 
 .main-menu a{
-    width:360px;
+    width:430px;
     height:110px;
 
     display:flex;
@@ -234,11 +234,15 @@ body.home{
 
     background-image:url("images/button-gold.png");
     background-repeat:no-repeat;
-    background-position:center -8px;
-    background-size:112% auto;
+    background-position:center center;
+    background-size:430px 110px;
 
     border:none;
-    overflow:visible;
+        padding:0;
+
+    margin:0;
+
+    overflow:hidden;
 }
 
 .main-menu a:hover{
