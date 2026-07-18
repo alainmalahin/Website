@@ -225,18 +225,20 @@ body.home{
 ========================= */
 
 .main-menu a{
-    width: 360px;
-    height: 110px;              /* Antes 90px */
+    width:360px;
+    height:110px;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    background:url("images/button-gold.png") center center no-repeat;
-    background-size:100% 100%;  /* En lugar de 100% 100% */
+    background-image:url("images/button-gold.png");
+    background-repeat:no-repeat;
+    background-position:center -8px;
+    background-size:112% auto;
 
     border:none;
-    overflow:hidden;
+    overflow:visible;
 }
 
 .main-menu a:hover{
